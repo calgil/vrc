@@ -1,4 +1,4 @@
-import s from "../styles/NewsletterForm.module.scss";
+import s from "../styles/components/NewsletterForm.module.scss";
 
 type NewsletterFormProps = {
   heading: string;
