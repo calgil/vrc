@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import s from "../styles/pages/Home.module.scss";
 import { Hero } from "@/components/Hero";
 import { OurStory } from "@/components/OurStory";
+import { CoreValues } from "@/components/CoreValues";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function Home() {
       <main className={s.main}>
         <Hero />
         <OurStory />
+        <CoreValues />
       </main>
     </>
   );
