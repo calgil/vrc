@@ -1,4 +1,4 @@
-@use "./abstracts" as a;
+@use "../abstracts" as a;
 
 .heroBg {
   position: relative;
@@ -12,6 +12,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .logoContainer {

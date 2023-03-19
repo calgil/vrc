@@ -1,0 +1,42 @@
+@use "../abstracts" as a;
+
+// TODO: move this to layout!
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  padding: 80px 0;
+  margin-top: 10px;
+  color: a.$blue;
+  text-align: center;
+  font-size: 2.1rem;
+}
+
+.ourStory {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 90px;
+}
+.storyText {
+  padding: 25px 30px;
+  max-width: 670px;
+  line-height: 1.2;
+  color: a.$primaryText;
+
+  h6 {
+    font-size: 1.45em;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-family: a.$lightFontFamily;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.4em;
+  }
+}

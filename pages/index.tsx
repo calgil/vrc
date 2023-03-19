@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import s from "@/styles/Home.module.scss";
+import s from "../styles/pages/Home.module.scss";
 import { Hero } from "@/components/Hero";
 import { OurStory } from "@/components/OurStory";
 
