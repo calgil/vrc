@@ -1,116 +1,81 @@
-import {
-  Col,
-  Container,
-  Grid,
-  Link,
-  Row,
-  Text,
-  useTheme,
-} from "@nextui-org/react";
 import Image from "next/image";
-import s from "../styles/Hero.module.css";
+import Link from "next/link";
+import s from "../styles/Hero.module.scss";
 import { NewsletterForm } from "./NewsletterForm";
 
 export const Hero = () => {
-  const { theme } = useTheme();
   return (
-    <Container
-      justify="flex-start"
-      direction="column"
-      wrap="nowrap"
-      xl
-      className={s.heroBg}
-      css={{
+    <div
+      style={{
         backgroundImage:
-          "linear-gradient(108deg, rgba(36, 123, 130, 0.89) 64.91%, transparent 65%), url(/home-header.jpg)",
+          "linear-gradient(108deg, rgb(0, 105, 117, 0.89) 64.91%, transparent 65%), url(/home-header.jpg)",
       }}
+      className={s.heroBg}
     >
-      <Image
-        className={s.logo}
-        src="/stolen-logo.png"
-        alt="logo"
-        width={300}
-        height={117}
-      />
-      <Col className={s.heroText}>
-        <Text
-          weight={"bold"}
-          h3
-          css={{
-            color: "$primarySolidContrast",
-            fontSize: "$4xl",
-            fontWeight: "$semibold",
-          }}
-        >
-          Transforming the veterinary experience
-        </Text>
-        <Text
-          weight={"bold"}
-          h3
-          css={{
-            color: "$primarySolidContrast",
-            fontSize: "$4xl",
-            fontWeight: "$semibold",
-          }}
-        >
-          through empathy and transparency
-        </Text>
-        <Text
-          weight={"bold"}
-          h1
-          css={{ color: "$primarySolidContrast", fontWeight: "$semibold" }}
-        >
-          Opening Summer 2023!
-        </Text>
-        <NewsletterForm
-          heading="Stay in the Know!"
-          description="Subscribe to our newsletter to receive the latest information and news
-        about our Grand Opening!"
-        />
-      </Col>
-      <Row className={s.social}>
-        <Text className={s.connect} css={{ fontSize: "$xl" }}>
-          <strong>Connect with us</strong>
-        </Text>
-        <Image
-          className={s.socialIcon}
-          height={30}
-          width={30}
-          src="/fb.png"
-          alt="facebook"
-        />
-        <Image
-          className={s.socialIcon}
-          height={30}
-          width={30}
-          src="/ig.png"
-          alt="facebook"
-        />
-        <Image
-          className={s.socialIcon}
-          height={30}
-          width={30}
-          src="/li.png"
-          alt="facebook"
-        />
-        <Image
-          className={s.socialIcon}
-          height={30}
-          width={30}
-          src="/twitter.png"
-          alt="facebook"
-        />
-      </Row>
-      <Grid className={s.down}>
-        <Link href="#">
+      <div className={s.container}>
+        <div className={s.logoContainer}>
           <Image
-            width={130}
-            height={120}
-            src="/downArrow.png"
-            alt="down arrow"
+            className={s.logo}
+            src="/vrc-logo.png"
+            alt="logo"
+            width={350}
+            height={117}
           />
-        </Link>
-      </Grid>
-    </Container>
+        </div>
+        <div className={s.heroText}>
+          <h3>Transforming the veterinary experience</h3>
+          <h3>through empathy and transparency</h3>
+          <h1>Opening Summer 2023!</h1>
+          <NewsletterForm
+            heading="Stay in the Know!"
+            description="Subscribe to our newsletter to receive the latest information and news
+        about our Grand Opening!"
+          />
+          <div className={s.social}>
+            <h6 className={s.connect}>
+              <strong>Connect with us</strong>
+            </h6>
+            <Image
+              className={s.socialIcon}
+              height={30}
+              width={30}
+              src="/fb.png"
+              alt="facebook"
+            />
+            <Image
+              className={s.socialIcon}
+              height={30}
+              width={30}
+              src="/li.png"
+              alt="linkedIn"
+            />
+            <Image
+              className={s.socialIcon}
+              height={30}
+              width={30}
+              src="/twitter.png"
+              alt="twitter"
+            />
+            <Image
+              className={s.socialIcon}
+              height={30}
+              width={30}
+              src="/ig.png"
+              alt="instagram"
+            />
+          </div>
+        </div>
+        <div className={s.down}>
+          <Link href="#">
+            <Image
+              width={130}
+              height={120}
+              src="/downArrow.png"
+              alt="down arrow"
+            />
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };

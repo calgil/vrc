@@ -1,0 +1,53 @@
+@use "abstracts" as a;
+
+.newsletter {
+  h4 {
+    font-size: 1.689rem;
+  }
+  p {
+    font-family: "Rockford Extra Light";
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 25px;
+  }
+}
+
+.formContainer {
+  .inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+
+    input {
+      padding: 15px 17px;
+      color: #716e6a;
+      width: 100%;
+      max-width: 190px;
+      border: 1px solid #cccccc;
+    }
+    @include a.media(tablet) {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+
+      input {
+        max-width: 270px;
+      }
+    }
+  }
+  .submitBtn {
+    background: #ffffff;
+    border-radius: 26px;
+    border: 2px solid #ffffff;
+    padding: 10px 30px;
+    color: a.$blue;
+    font-family: "Rockford Extra Light";
+    font-weight: 400;
+    font-size: 1.01rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+}

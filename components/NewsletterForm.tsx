@@ -1,4 +1,4 @@
-import { Button, Grid, Input, Spacer, Text } from "@nextui-org/react";
+import s from "../styles/NewsletterForm.module.scss";
 
 type NewsletterFormProps = {
   heading: string;
@@ -10,58 +10,22 @@ export const NewsletterForm = ({
   description,
 }: NewsletterFormProps) => {
   return (
-    <>
-      <Text
-        h4
-        css={{
-          color: "$primarySolidContrast",
-          fontWeight: "$semibold",
-          fontSize: "$3xl",
+    <div className={s.newsletter}>
+      <h4>{heading}</h4>
+      <p>{description}</p>
+      <form
+        className={s.formContainer}
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log("subscribe to newsletter");
         }}
       >
-        {heading}
-      </Text>
-      <Text
-        css={{
-          color: "$primarySolidContrast",
-          fontWeight: "$semibold",
-          fontSize: "$lg",
-        }}
-      >
-        {description}
-      </Text>
-      <Grid.Container css={{ marginTop: "$14" }}>
-        <Grid>
-          <Input
-            size="lg"
-            labelPlaceholder="Your Name"
-            css={{ $$inputColor: "#ffffff" }}
-          />
-        </Grid>
-        <Spacer x={1} />
-        <Grid>
-          <Input
-            size="lg"
-            type={"email"}
-            labelPlaceholder="Email Address"
-            css={{ $$inputColor: "#ffffff" }}
-          />
-        </Grid>
-      </Grid.Container>
-      <Spacer y={1} />
-      <Button
-        rounded
-        size={"sm"}
-        css={{
-          color: "$myColor",
-          backgroundColor: "$primarySolidContrast",
-          textTransform: "uppercase",
-          padding: "25px 0",
-          fontSize: "1.1rem",
-        }}
-      >
-        Submit
-      </Button>
-    </>
+        <div className={s.inputContainer}>
+          <input placeholder="Your Name" />
+          <input placeholder="Email Address" />
+        </div>
+        <input className={s.submitBtn} type="submit" value="Submit" />
+      </form>
+    </div>
   );
 };
