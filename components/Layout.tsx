@@ -7,7 +7,7 @@ type LayoutProps = {
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <div>
-      <Hero />
+      {/* Future navbar */}
       {children}
     </div>
   );

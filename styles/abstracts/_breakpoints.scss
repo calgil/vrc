@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$breakpoints: (
+  "phone": 360px,
+  "lgPhone": 420px,
+  "tablet": 750px,
+  "desktop": 1366px,
+  "lgDesktop": 1920px,
+) !default;
+
+@mixin media($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media (max-width: $size) {
+    @content;
+  }
+}

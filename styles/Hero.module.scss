@@ -1,0 +1,83 @@
+@use "./abstracts" as a;
+
+.heroBg {
+  position: relative;
+  padding-bottom: 12px;
+  padding-top: 37px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logoContainer {
+  margin-left: 30px;
+
+  @include a.media(lgPhone) {
+    max-width: 200px;
+
+    > div {
+      position: unset !important;
+    }
+
+    .logo {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+    }
+  }
+}
+
+.heroText {
+  max-width: 67%;
+  // TODO: add media query @phone to handle text
+  margin-top: 77px;
+  margin-bottom: 60px;
+  padding-left: 15px;
+  text-align: left;
+  color: a.$textHighContrast;
+
+  h3 {
+    font-size: 2.14rem;
+    line-height: 1.25em;
+  }
+
+  h1 {
+    font-size: 3.15rem;
+    font-weight: 500;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+}
+
+.social {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.connect {
+  margin-right: 10px;
+  font-family: "Rockford Extra Light";
+  font-size: 1.13rem;
+  display: inline-block;
+}
+
+.socialIcon {
+  margin-right: 20px;
+}
+
+.down {
+  position: absolute;
+  left: 45%;
+  bottom: 10px;
+
+  @include a.media(tablet) {
+    display: none;
+  }
+}
