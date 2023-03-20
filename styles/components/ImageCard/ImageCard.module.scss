@@ -1,0 +1,17 @@
+@use "../../abstracts" as a;
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.imgCard {
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+
+  @include a.media(tablet) {
+    flex-direction: column;
+  }
+}

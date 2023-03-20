@@ -1,0 +1,37 @@
+@use "../../abstracts" as a;
+
+.cardText {
+  flex: 1;
+  text-align: center;
+  padding: 30px;
+
+  .cardTitle {
+    font-size: 1.9em;
+    margin-bottom: 40px;
+  }
+
+  .cardDescription {
+    font-family: "Rockford Extra Light";
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .cardBtn {
+    font-family: "Rockford Extra Light";
+    text-transform: uppercase;
+    background: a.$blue;
+    color: a.$textHighContrast;
+    border: 2px solid a.$textHighContrast;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 36px;
+  }
+
+  @include a.media(tablet) {
+    order: 2;
+  }
+}
