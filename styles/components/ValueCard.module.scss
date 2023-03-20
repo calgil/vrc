@@ -1,0 +1,64 @@
+@use "../abstracts" as a;
+
+.cardBody {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: a.$grey;
+  padding: 60px;
+  text-align: center;
+
+  @include a.media(smDesktop) {
+    width: 100%;
+  }
+}
+
+.cardText {
+  .cardTitle {
+    font-size: 1.9em;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .cardDetails {
+    font-family: "Rockford Extra Light";
+    line-height: 1.4em;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  @include a.media(smDesktop) {
+  }
+}
+
+.lightGrey {
+  background-color: a.$lightGrey;
+}
+
+.titleCard {
+  height: 600px;
+  background-color: a.$purple;
+  color: a.$textHighContrast;
+
+  .cardTitle {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+  }
+
+  .cardDetails {
+    font-size: 20px;
+    // max-width: 270px;
+  }
+
+  @include a.media(smDesktop) {
+    height: 300px;
+
+    .cardDetails {
+      max-width: 75ch;
+      margin: 0 auto;
+    }
+  }
+}
