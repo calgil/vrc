@@ -1,7 +1,16 @@
+@use "../abstracts" as a;
+
 .cardContainer {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: 400px 400px 400px;
+  display: flex;
+
+  @include a.media(smDesktop) {
+    flex-direction: column;
+    width: 100%;
+
+    .centerCol {
+      order: -1;
+    }
+  }
 }

@@ -8,6 +8,10 @@
   justify-content: center;
   background: a.$grey;
   text-align: center;
+
+  @include a.media(smDesktop) {
+    width: 100%;
+  }
 }
 
 .cardText {
@@ -36,6 +40,10 @@
   height: 600px;
   background-color: a.$purple;
   color: a.$textHighContrast;
+
+  @include a.media(smDesktop) {
+    height: 300px;
+  }
 
   .cardTitle {
     font-size: 2.5rem;
