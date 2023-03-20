@@ -19,6 +19,11 @@
   display: flex;
   gap: 30px;
   padding-bottom: 90px;
+
+  @include a.media(tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .storyText {
   padding: 25px 30px;

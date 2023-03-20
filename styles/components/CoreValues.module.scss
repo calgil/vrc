@@ -4,6 +4,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  margin-bottom: 90px;
 
   @include a.media(smDesktop) {
     flex-direction: column;
