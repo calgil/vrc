@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   background: a.$grey;
+  padding: 60px;
   text-align: center;
 
   @include a.media(smDesktop) {
@@ -15,9 +16,6 @@
 }
 
 .cardText {
-  max-width: 270px;
-  margin: 0 auto;
-
   .cardTitle {
     font-size: 1.9em;
     font-weight: 500;
@@ -30,6 +28,9 @@
     font-size: 18px;
     margin-bottom: 1rem;
   }
+
+  @include a.media(smDesktop) {
+  }
 }
 
 .lightGrey {
@@ -41,10 +42,6 @@
   background-color: a.$purple;
   color: a.$textHighContrast;
 
-  @include a.media(smDesktop) {
-    height: 300px;
-  }
-
   .cardTitle {
     font-size: 2.5rem;
     margin-bottom: 25px;
@@ -53,5 +50,15 @@
 
   .cardDetails {
     font-size: 20px;
+    // max-width: 270px;
+  }
+
+  @include a.media(smDesktop) {
+    height: 300px;
+
+    .cardDetails {
+      max-width: 75ch;
+      margin: 0 auto;
+    }
   }
 }
