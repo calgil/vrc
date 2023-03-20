@@ -9,7 +9,6 @@
   @include a.media(smDesktop) {
     flex-direction: column;
     width: 100%;
-    padding: 0 15px;
 
     .centerCol {
       order: -1;

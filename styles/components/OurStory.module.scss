@@ -4,15 +4,19 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
-.header {
+.headerText {
   margin-top: 50px;
   margin-bottom: 60px;
   color: a.$blue;
   text-align: center;
   font-size: 2.15rem;
+
+  @include a.media(tablet) {
+    font-size: 1.9em;
+  }
 }
 
 .ourStory {
@@ -22,7 +26,20 @@
 
   @include a.media(tablet) {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0;
+    padding-bottom: 60px;
+  }
+
+  .imgContainer {
+    max-width: 470px;
+    min-width: 290px;
+
+    @include a.media(tablet) {
+      max-width: 580px;
+      min-width: none;
+    }
   }
 }
 .storyText {
@@ -31,8 +48,9 @@
   line-height: 1.2;
   color: a.$primaryText;
 
-  h6 {
-    font-size: 1.45em;
+  h5 {
+    // font-size: 1.3em;
+    font-size: 1.9em;
     font-weight: 600;
     margin-bottom: 30px;
   }
@@ -43,5 +61,19 @@
     font-weight: 400;
     margin-bottom: 1rem;
     line-height: 1.4em;
+  }
+
+  @include a.media(tablet) {
+    padding: 30px;
+    padding-right: 0;
+
+    h5 {
+      font-size: 1.3rem;
+      padding-bottom: 15px;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 16px;
+    }
   }
 }

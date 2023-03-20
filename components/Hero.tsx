@@ -27,6 +27,7 @@ export const Hero = () => {
           <h3>through empathy and transparency</h3>
           <h1>Opening Summer 2023!</h1>
           <NewsletterForm
+            inHero={true}
             heading="Stay in the Know!"
             description="Subscribe to our newsletter to receive the latest information and news
         about our Grand Opening!"

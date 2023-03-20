@@ -20,23 +20,35 @@ export const ImageCard = ({ imgPosition, image, cardText }: ImageCardProps) => {
     <div className={s.container}>
       {imgPosition === "left" ? (
         <div className={s.imgCard}>
-          <Image
-            width={570}
-            height={405}
-            src={image}
-            alt="veterinarian healing animal"
-          />
+          <div className={s.imgContainer}>
+            <Image
+              src={image}
+              alt="veterinarian healing animal"
+              width={733}
+              height={520}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
           <CardText header={header} description={description} button={button} />
         </div>
       ) : (
         <div className={s.imgCard}>
           <CardText header={header} description={description} button={button} />
-          <Image
-            width={570}
-            height={405}
-            src={image}
-            alt="veterinarian healing animal"
-          />
+          <div className={s.imgContainer}>
+            <Image
+              src={image}
+              alt="veterinarian healing animal"
+              width={733}
+              height={520}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
         </div>
       )}
     </div>

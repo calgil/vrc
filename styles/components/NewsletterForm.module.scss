@@ -1,39 +1,63 @@
 @use "../abstracts" as a;
 
 .newsletter {
-  h4 {
+  background-color: a.$blue;
+  color: a.$textHighContrast;
+  text-align: center;
+  padding-top: 5rem;
+
+  .newsletterTitle {
     font-size: 1.689rem;
   }
-  p {
+  .description {
     font-family: "Rockford Extra Light";
     font-size: 18px;
     line-height: 1.4;
     font-weight: 400;
+    max-width: 50ch;
+    margin: 0 auto;
     margin-top: 4px;
     margin-bottom: 25px;
   }
 }
 
+.newsletter.inHero {
+  background: none;
+  text-align: left;
+  padding-top: 0;
+
+  .newsletterTitle {
+    margin-top: 0;
+  }
+
+  .description {
+    max-width: fit-content;
+  }
+}
+
 .formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
   .inputContainer {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
 
-    input {
+    .input {
       padding: 15px 17px;
-      color: #716e6a;
-      width: 100%;
-      max-width: 190px;
-      border: 1px solid #cccccc;
+      color: a.$inputColor;
+      border: 1px solid a.$inputBorder;
     }
     @include a.media(tablet) {
       width: 100%;
       flex-direction: column;
       align-items: flex-start;
 
-      input {
+      .input {
         max-width: 270px;
       }
     }

@@ -5,6 +5,7 @@ import { Hero } from "@/components/Hero";
 import { OurStory } from "@/components/OurStory";
 import { CoreValues } from "@/components/CoreValues";
 import { ImageCard } from "@/components/ImageCard/ImageCard";
+import { NewsletterForm } from "@/components/NewsletterForm";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -44,6 +45,12 @@ export default function Home() {
               "Join a company that prioritizes your work/life balance and supports opportunities for growth. We are looking to hire ER Vets, Client Service Reps, Technicians, Assistants, and Specialists!",
             button: { text: "click for job opportunities", link: "/" },
           }}
+        />
+        <NewsletterForm
+          inHero={false}
+          heading="Stay in the Know!"
+          description="Stay up to date and receive the the latest information and news about our
+                Grand Opening, added services, specialties, new hires, events and more!"
         />
       </main>
     </>

@@ -4,14 +4,25 @@ import Image from "next/image";
 export const OurStory = () => {
   return (
     <section className={s.container}>
-      <h3 className={s.header}>Our Story</h3>
+      <h3 className={s.headerText}>Our Story</h3>
       <div className={s.ourStory}>
-        <Image src="/about-us.jpg" alt="about us" width={470} height={700} />
+        <div className={s.imgContainer}>
+          <Image
+            src="/about-us.jpg"
+            alt="about us"
+            width={580}
+            height={870}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
+          />
+        </div>
         <div className={s.storyText}>
-          <h6>
+          <h5>
             North Springs Veterinary Referral Center is a locally owned 24-hour
             emergency and specialty center located in Colorado Springs.
-          </h6>
+          </h5>
           <p>
             Our goal is to provide top-quality, innovative emergency and
             specialty veterinary care services to pet owners with empathy and
