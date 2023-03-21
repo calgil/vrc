@@ -6,8 +6,7 @@ import { OurStory } from "@/components/OurStory";
 import { CoreValues } from "@/components/CoreValues";
 import { ImageCard } from "@/components/ImageCard/ImageCard";
 import { NewsletterForm } from "@/components/NewsletterForm";
-
-// const inter = Inter({ subsets: ["latin"] });
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -53,6 +52,7 @@ export default function Home() {
                 Grand Opening, added services, specialties, new hires, events and more!"
         />
       </main>
+      <Footer />
     </>
   );
 }

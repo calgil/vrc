@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import s from "../styles/components/Hero.module.scss";
 import { NewsletterForm } from "./NewsletterForm";
+import { SocialLinks } from "./SocialLinks";
 
 type HeroProps = {
   addNewsletter: boolean;
@@ -27,8 +28,10 @@ export const Hero = ({ addNewsletter }: HeroProps) => {
           />
         </div>
         <div className={s.heroText}>
-          <h3>Transforming the veterinary experience</h3>
-          <h3>through empathy and transparency</h3>
+          <h3>
+            Transforming the veterinary experience through empathy and
+            transparency
+          </h3>
           <h1>Opening Summer 2023!</h1>
           {addNewsletter && (
             <NewsletterForm
@@ -42,7 +45,8 @@ export const Hero = ({ addNewsletter }: HeroProps) => {
             <h6 className={s.connect}>
               <strong>Connect with us</strong>
             </h6>
-            <Image
+            <SocialLinks />
+            {/* <Image
               className={s.socialIcon}
               height={30}
               width={30}
@@ -69,7 +73,7 @@ export const Hero = ({ addNewsletter }: HeroProps) => {
               width={30}
               src="/ig.png"
               alt="instagram"
-            />
+            /> */}
           </div>
         </div>
         <div className={s.down}>

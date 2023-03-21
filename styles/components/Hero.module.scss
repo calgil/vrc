@@ -35,13 +35,13 @@
 }
 
 .heroText {
-  max-width: 67%;
-  // TODO: add media query @phone to handle text
+  max-width: 60%;
   margin-top: 77px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding-left: 15px;
   text-align: left;
   color: a.$textHighContrast;
+  padding-bottom: 10px;
 
   h3 {
     font-size: 2.14rem;
@@ -57,7 +57,7 @@
 }
 
 .social {
-  margin-top: 100px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
 }
