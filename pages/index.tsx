@@ -22,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={s.main}>
-        <Hero />
+        <Hero addNewsletter={true} />
         <OurStory />
         <CoreValues />
         <h2 className={s.sectionHeader}>Join the North Springs VRC Family!</h2>

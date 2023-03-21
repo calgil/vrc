@@ -3,7 +3,11 @@ import Link from "next/link";
 import s from "../styles/components/Hero.module.scss";
 import { NewsletterForm } from "./NewsletterForm";
 
-export const Hero = () => {
+type HeroProps = {
+  addNewsletter: boolean;
+};
+
+export const Hero = ({ addNewsletter }: HeroProps) => {
   return (
     <div
       style={{
@@ -26,12 +30,14 @@ export const Hero = () => {
           <h3>Transforming the veterinary experience</h3>
           <h3>through empathy and transparency</h3>
           <h1>Opening Summer 2023!</h1>
-          <NewsletterForm
-            inHero={true}
-            heading="Stay in the Know!"
-            description="Subscribe to our newsletter to receive the latest information and news
+          {addNewsletter && (
+            <NewsletterForm
+              inHero={true}
+              heading="Stay in the Know!"
+              description="Subscribe to our newsletter to receive the latest information and news
         about our Grand Opening!"
-          />
+            />
+          )}
           <div className={s.social}>
             <h6 className={s.connect}>
               <strong>Connect with us</strong>
