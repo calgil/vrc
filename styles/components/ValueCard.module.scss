@@ -34,6 +34,14 @@
   }
 
   @include a.media(smDesktop) {
+    .cardTitle {
+      font-size: 1.7em;
+      font-weight: 600;
+    }
+
+    .cardDetails {
+      font-size: 16px;
+    }
   }
 }
 
@@ -54,11 +62,14 @@
 
   .cardDetails {
     font-size: 20px;
-    // max-width: 270px;
   }
 
   @include a.media(smDesktop) {
     height: 300px;
+
+    .cardTitle {
+      font-size: 2rem;
+    }
 
     .cardDetails {
       max-width: 75ch;
