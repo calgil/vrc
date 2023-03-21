@@ -13,7 +13,7 @@ export const Hero = ({ addNewsletter }: HeroProps) => {
     <div
       style={{
         backgroundImage:
-          "linear-gradient(108deg, rgb(0, 105, 117, 0.89) 64.91%, transparent 65%), url(/home-header.jpg)",
+          "linear-gradient(108deg, rgb(0, 105, 117, 0.89) 64.95%, transparent 65%), url(/home-header.jpg)",
       }}
       className={s.heroBg}
     >
@@ -25,6 +25,10 @@ export const Hero = ({ addNewsletter }: HeroProps) => {
             alt="logo"
             width={350}
             height={117}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
           />
         </div>
         <div className={s.heroText}>

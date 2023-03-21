@@ -29,6 +29,13 @@
     font-weight: 600;
     font-size: 18px;
     margin-top: 36px;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      background: a.$buttonWhiteBg;
+      color: a.$buttonHover;
+      border: 2px solid a.$buttonHover;
+    }
   }
 
   @include a.media(smDesktop) {

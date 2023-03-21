@@ -17,40 +17,66 @@ type ImageCardProps = {
 export const ImageCard = ({ imgPosition, image, cardText }: ImageCardProps) => {
   const { header, description, button } = cardText;
   return (
-    <div className={s.container}>
+    <>
       {imgPosition === "left" ? (
-        <div className={s.imgCard}>
-          <div className={s.imgContainer}>
-            <Image
-              src={image}
-              alt="veterinarian healing animal"
-              width={733}
-              height={520}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
-            />
+        <div className={s.spacer}>
+          <div
+            className={s.imgCard}
+            style={{
+              backgroundImage: "url(/left-bg.webp)",
+            }}
+          >
+            <div className={s.container}>
+              <div className={s.imgContainer}>
+                <Image
+                  src={image}
+                  alt="veterinarian healing animal"
+                  width={733}
+                  height={520}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
+                />
+              </div>
+              <CardText
+                header={header}
+                description={description}
+                button={button}
+              />
+            </div>
           </div>
-          <CardText header={header} description={description} button={button} />
         </div>
       ) : (
-        <div className={s.imgCard}>
-          <CardText header={header} description={description} button={button} />
-          <div className={s.imgContainer}>
-            <Image
-              src={image}
-              alt="veterinarian healing animal"
-              width={733}
-              height={520}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
-            />
+        <div className={s.spacer}>
+          <div
+            className={s.imgCard}
+            style={{
+              backgroundImage: "url(/right-bg.webp)",
+            }}
+          >
+            <div className={s.container}>
+              <CardText
+                header={header}
+                description={description}
+                button={button}
+              />
+              <div className={s.imgContainer}>
+                <Image
+                  src={image}
+                  alt="veterinarian healing animal"
+                  width={733}
+                  height={520}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };

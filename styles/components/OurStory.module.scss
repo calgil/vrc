@@ -24,21 +24,27 @@
   gap: 30px;
   padding-bottom: 90px;
 
+  .imgContainer {
+    max-width: 470px;
+    min-width: 290px;
+  }
+
   @include a.media(tablet) {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     gap: 0;
     padding-bottom: 60px;
-  }
 
-  .imgContainer {
-    max-width: 470px;
-    min-width: 290px;
-
-    @include a.media(tablet) {
+    .imgContainer {
       max-width: 580px;
       min-width: none;
+    }
+  }
+
+  @include a.media(lgPhone) {
+    .imgContainer {
+      max-width: 420px;
     }
   }
 }
