@@ -5,8 +5,8 @@ import { Hero } from "@/components/Hero";
 import { OurStory } from "@/components/OurStory";
 import { CoreValues } from "@/components/CoreValues";
 import { ImageCard } from "@/components/ImageCard/ImageCard";
-
-// const inter = Inter({ subsets: ["latin"] });
+import { NewsletterForm } from "@/components/NewsletterForm";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={s.main}>
-        <Hero />
+        <Hero addNewsletter={true} />
         <OurStory />
         <CoreValues />
         <h2 className={s.sectionHeader}>Join the North Springs VRC Family!</h2>
@@ -45,7 +45,14 @@ export default function Home() {
             button: { text: "click for job opportunities", link: "/" },
           }}
         />
+        <NewsletterForm
+          inHero={false}
+          heading="Stay in the Know!"
+          description="Stay up to date and receive the the latest information and news about our
+                Grand Opening, added services, specialties, new hires, events and more!"
+        />
       </main>
+      <Footer />
     </>
   );
 }

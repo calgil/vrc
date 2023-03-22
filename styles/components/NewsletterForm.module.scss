@@ -1,43 +1,103 @@
 @use "../abstracts" as a;
 
 .newsletter {
-  h4 {
+  background-color: a.$blue;
+  color: a.$textHighContrast;
+  text-align: center;
+  padding: 0 20px;
+  padding-top: 90px;
+  padding-bottom: 120px;
+
+  .newsletterTitle {
     font-size: 1.689rem;
   }
-  p {
+  .description {
     font-family: "Rockford Extra Light";
     font-size: 18px;
     line-height: 1.4;
     font-weight: 400;
+    max-width: 50ch;
+    margin: 0 auto;
     margin-top: 4px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
+  }
+
+  @include a.media(lgPhone) {
+    padding: 8vw;
+
+    .description {
+      font-size: 16px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.newsletter.inHero {
+  background: none;
+  text-align: left;
+  padding: 0;
+  padding-right: 8rem;
+  padding-bottom: 60px;
+
+  .newsletterTitle {
+    margin-top: 0;
+  }
+
+  .description {
+    max-width: fit-content;
+  }
+
+  .formContainer {
+    max-width: 700px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+  }
+
+  @include a.media(smTablet) {
+    padding-right: 4rem;
+  }
+
+  @include a.media(phone) {
+    padding-right: 1rem;
   }
 }
 
 .formContainer {
+  display: flex;
+  align-items: center;
+  max-width: 750px;
+  margin: 0 auto;
+  gap: 15px;
+  padding-left: 15px;
+
   .inputContainer {
     display: flex;
     align-items: center;
+    width: 100%;
     gap: 15px;
-    margin-bottom: 30px;
 
-    input {
+    .input {
+      width: 100%;
       padding: 15px 17px;
-      color: #716e6a;
-      width: 100%;
-      max-width: 190px;
-      border: 1px solid #cccccc;
-    }
-    @include a.media(tablet) {
-      width: 100%;
-      flex-direction: column;
-      align-items: flex-start;
+      color: a.$inputColor;
+      border: 1px solid a.$inputBorder;
+      font-size: 1rem;
+      font-weight: 400;
+      transition: all 200ms ease-in-out;
 
-      input {
-        max-width: 270px;
+      &:focus {
+        box-shadow: a.$inputFocusOutline;
+        outline: none;
       }
     }
+    .input.error {
+      border: 2px solid red;
+    }
   }
+
   .submitBtn {
     background: #ffffff;
     border-radius: 26px;
@@ -49,5 +109,46 @@
     font-size: 1.01rem;
     line-height: 1.5;
     text-transform: uppercase;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: a.$textHighContrast;
+      background: a.$buttonHoverBg;
+    }
+
+    &:active {
+      background: a.$buttonActiveBg;
+      color: a.$textHighContrast;
+      border: 1px solid a.$buttonActiveBorder;
+    }
+
+    &:focus {
+      box-shadow: a.$buttonFocusOutline;
+      outline: none;
+    }
+  }
+
+  .errorMsg {
+    border: 1px solid yellow;
+    padding: 10px;
+  }
+
+  @include a.media(tablet) {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+  }
+
+  @include a.media(tablet) {
+    .inputContainer {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .input {
+        max-width: 500px;
+        font-size: 14px;
+      }
+    }
   }
 }

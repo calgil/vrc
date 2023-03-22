@@ -19,29 +19,29 @@
   margin-left: 30px;
 
   @include a.media(lgPhone) {
-    max-width: 200px;
+    // max-width: 300px;
 
-    > div {
-      position: unset !important;
-    }
+    //   > div {
+    //     position: unset !important;
+    //   }
 
-    .logo {
-      object-fit: contain;
-      width: 100% !important;
-      position: relative !important;
-      height: unset !important;
-    }
+    //   .logo {
+    //     object-fit: contain;
+    //     width: 100% !important;
+    //     position: relative !important;
+    //     height: unset !important;
+    //   }
   }
 }
 
 .heroText {
-  max-width: 67%;
-  // TODO: add media query @phone to handle text
+  max-width: 60%;
   margin-top: 77px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding-left: 15px;
   text-align: left;
   color: a.$textHighContrast;
+  padding-bottom: 10px;
 
   h3 {
     font-size: 2.14rem;
@@ -54,10 +54,43 @@
     margin-top: 25px;
     margin-bottom: 20px;
   }
+
+  @include a.media("1100") {
+    max-width: 75%;
+    h3 {
+      font-size: 1.9em;
+    }
+    h1 {
+      font-size: 2.8em;
+    }
+  }
+
+  @include a.media(tablet) {
+    margin-top: 35px;
+    max-width: 79%;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+    }
+  }
+
+  @include a.media(smTablet) {
+    max-width: 95%;
+  }
+
+  @include a.media(lgPhone) {
+    h1 {
+      font-size: 10vw;
+    }
+  }
 }
 
 .social {
-  margin-top: 100px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
 }

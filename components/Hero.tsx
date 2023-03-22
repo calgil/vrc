@@ -2,13 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import s from "../styles/components/Hero.module.scss";
 import { NewsletterForm } from "./NewsletterForm";
+import { SocialLinks } from "./SocialLinks";
 
-export const Hero = () => {
+type HeroProps = {
+  addNewsletter: boolean;
+};
+
+export const Hero = ({ addNewsletter }: HeroProps) => {
   return (
     <div
       style={{
         backgroundImage:
-          "linear-gradient(108deg, rgb(0, 105, 117, 0.89) 64.91%, transparent 65%), url(/home-header.jpg)",
+          "linear-gradient(108deg, rgb(0, 105, 117, 0.89) 64.95%, transparent 65%), url(/home-header.jpg)",
       }}
       className={s.heroBg}
     >
@@ -20,22 +25,32 @@ export const Hero = () => {
             alt="logo"
             width={350}
             height={117}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
           />
         </div>
         <div className={s.heroText}>
-          <h3>Transforming the veterinary experience</h3>
-          <h3>through empathy and transparency</h3>
+          <h3>
+            Transforming the veterinary experience through empathy and
+            transparency
+          </h3>
           <h1>Opening Summer 2023!</h1>
-          <NewsletterForm
-            heading="Stay in the Know!"
-            description="Subscribe to our newsletter to receive the latest information and news
+          {addNewsletter && (
+            <NewsletterForm
+              inHero={true}
+              heading="Stay in the Know!"
+              description="Subscribe to our newsletter to receive the latest information and news
         about our Grand Opening!"
-          />
+            />
+          )}
           <div className={s.social}>
             <h6 className={s.connect}>
               <strong>Connect with us</strong>
             </h6>
-            <Image
+            <SocialLinks />
+            {/* <Image
               className={s.socialIcon}
               height={30}
               width={30}
@@ -62,7 +77,7 @@ export const Hero = () => {
               width={30}
               src="/ig.png"
               alt="instagram"
-            />
+            /> */}
           </div>
         </div>
         <div className={s.down}>

@@ -1,0 +1,40 @@
+@use "../abstracts" as a;
+
+.footer {
+  background-color: a.$footerBg;
+  color: a.$textHighContrast;
+  padding: 50px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 13px;
+    font-family: "Rockford Extra Light";
+    font-weight: 400;
+
+    .copyright {
+      padding-left: 15px;
+      padding-right: 25px;
+    }
+  }
+
+  @include a.media(tablet) {
+    .footerContent {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+
+      .copyright {
+        padding: 0;
+      }
+    }
+  }
+}
