@@ -1,95 +1,87 @@
 import Image from "next/image";
 import Link from "next/link";
 import s from "../styles/components/Hero.module.scss";
+import classNames from "classnames/bind";
 import { NewsletterForm } from "./NewsletterForm";
 import { SocialLinks } from "./SocialLinks";
 
+let cx = classNames.bind(s);
+
 type HeroProps = {
-  addNewsletter: boolean;
+  homepage: boolean;
+  // addNewsletter: boolean;
+  heading?: string;
+  subHeading?: string;
+  imageURL: string;
 };
 
-export const Hero = ({ addNewsletter }: HeroProps) => {
+export const Hero = ({
+  homepage,
+  heading,
+  subHeading,
+  imageURL,
+}: HeroProps) => {
+  let bgClass = cx({
+    heroBg: true,
+    homepage,
+  });
+
   return (
     <div
       style={{
-        backgroundImage:
-          "linear-gradient(108deg, rgb(0, 105, 117, 0.89) 64.95%, transparent 65%), url(/home-header.jpg)",
+        backgroundImage: `url(${imageURL})`,
+        // "linear-gradient(108deg, rgb(0, 105, 117, 0.89) 64.95%, transparent 65%), url(/home-header.jpg)",
       }}
-      className={s.heroBg}
+      className={bgClass}
     >
       <div className={s.container}>
-        <div className={s.logoContainer}>
-          <Image
-            className={s.logo}
-            src="/vrc-logo.png"
-            alt="logo"
-            width={350}
-            height={117}
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-            }}
-          />
-        </div>
-        <div className={s.heroText}>
-          <h3>
-            Transforming the veterinary experience through empathy and
-            transparency
-          </h3>
-          <h1>Opening Summer 2023!</h1>
-          {addNewsletter && (
-            <NewsletterForm
-              inHero={true}
-              heading="Stay in the Know!"
-              description="Subscribe to our newsletter to receive the latest information and news
-        about our Grand Opening!"
-            />
-          )}
-          <div className={s.social}>
-            <h6 className={s.connect}>
-              <strong>Connect with us</strong>
-            </h6>
-            <SocialLinks />
-            {/* <Image
-              className={s.socialIcon}
-              height={30}
-              width={30}
-              src="/fb.png"
-              alt="facebook"
-            />
+        <Link href="/">
+          <div className={s.logoContainer}>
             <Image
-              className={s.socialIcon}
-              height={30}
-              width={30}
-              src="/li.png"
-              alt="linkedIn"
+              className={s.logo}
+              src="/vrc-logo.png"
+              alt="logo"
+              width={350}
+              height={117}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
             />
-            <Image
-              className={s.socialIcon}
-              height={30}
-              width={30}
-              src="/twitter.png"
-              alt="twitter"
-            />
-            <Image
-              className={s.socialIcon}
-              height={30}
-              width={30}
-              src="/ig.png"
-              alt="instagram"
-            /> */}
           </div>
+        </Link>
+        <div className={s.heroText}>
+          <h3>{subHeading}</h3>
+          <h1> {heading}</h1>
+          {homepage && (
+            <>
+              <NewsletterForm
+                inHero={true}
+                heading="Stay in the Know!"
+                description="Subscribe to our newsletter to receive the latest information and news
+        about our Grand Opening!"
+              />
+              <div className={s.social}>
+                <h6 className={s.connect}>
+                  <strong>Connect with us</strong>
+                </h6>
+                <SocialLinks />
+              </div>
+            </>
+          )}
         </div>
-        <div className={s.down}>
-          <Link href="#">
-            <Image
-              width={130}
-              height={120}
-              src="/downArrow.png"
-              alt="down arrow"
-            />
-          </Link>
-        </div>
+        {homepage && (
+          <div className={s.down}>
+            <Link href="#">
+              <Image
+                width={130}
+                height={120}
+                src="/downArrow.png"
+                alt="down arrow"
+              />
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

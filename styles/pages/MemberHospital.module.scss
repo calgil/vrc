@@ -1,0 +1,112 @@
+@use "../abstracts" as a;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.1rem;
+  color: #6234bd;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.textContainer {
+  text-align: center;
+  margin-top: 100px;
+
+  .info {
+    margin-bottom: 0.5rem;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+}
+
+.join {
+  display: flex;
+  gap: 15px;
+  padding-top: 8vw;
+  margin-bottom: 100px;
+
+  .joinText {
+    margin-left: 20px;
+  }
+
+  .joinTitle {
+    color: a.$blue;
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+
+  .benefits {
+    padding-bottom: 30px;
+  }
+
+  .joinList {
+    font-family: "Rockford Extra Light";
+    line-height: 1.4em;
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  .joinForm {
+    background-color: #e1e1e1;
+    padding: 50px;
+
+    .formTitle {
+      color: a.$redText;
+      font-size: 1.7rem;
+      line-height: 1.2;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .formDetails {
+      font-family: "Rockford Extra Light";
+      line-height: 1.4em;
+      font-weight: 400;
+      font-size: 18px;
+      margin-bottom: 1rem;
+    }
+
+    .link {
+      color: a.$blue;
+    }
+
+    .inputContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .input {
+        background-color: a.$inputBg;
+        color: a.$inputColor;
+        padding: 20px 17px;
+        border-radius: 0;
+        width: 93%;
+        border: 1px solid a.$inputBorder;
+        margin-bottom: 20px;
+      }
+
+      .submitBtn {
+        border-radius: 26px;
+        padding: 10px 30px;
+        font-size: 1rem;
+        color: white;
+        background-color: #186975;
+        border: none;
+        font-weight: 300;
+        text-transform: uppercase;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.pricing {
+  display: flex;
+  gap: 25px;
+}
