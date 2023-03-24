@@ -21,7 +21,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={s.main}>
-        <Hero addNewsletter={true} />
+        <Hero
+          homepage={true}
+          heading="Opening Summer 2023!"
+          subHeading="Transforming the veterinary experience through empathy and
+            transparency"
+          imageURL="/home-banner.jpeg"
+        />
         <OurStory />
         <CoreValues />
         <h2 className={s.sectionHeader}>Join the North Springs VRC Family!</h2>
@@ -32,7 +38,10 @@ export default function Home() {
             header: "Member Hospital Network",
             description:
               "North Springs VRC is excited to be partnering with local veterinarians to bring top quality care to their patients, as well as provide educational resources to their teams.",
-            button: { text: "join our network today", link: "/" },
+            button: {
+              text: "join our network today",
+              link: "/member-hospital",
+            },
           }}
         />
         <ImageCard
@@ -42,7 +51,7 @@ export default function Home() {
             header: "People Make the Difference",
             description:
               "Join a company that prioritizes your work/life balance and supports opportunities for growth. We are looking to hire ER Vets, Client Service Reps, Technicians, Assistants, and Specialists!",
-            button: { text: "click for job opportunities", link: "/" },
+            button: { text: "click for job opportunities", link: "/careers" },
           }}
         />
         <NewsletterForm
@@ -52,7 +61,6 @@ export default function Home() {
                 Grand Opening, added services, specialties, new hires, events and more!"
         />
       </main>
-      <Footer />
     </>
   );
 }

@@ -1,4 +1,5 @@
 @use "../../abstracts" as a;
+@use "../../utilities";
 
 .spacer {
   padding-top: 80px;
@@ -17,9 +18,7 @@
 }
 
 .container {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+  @extend .container;
   display: flex;
   align-items: center;
 

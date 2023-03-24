@@ -1,3 +1,4 @@
+import { Footer } from "./Footer";
 import { Hero } from "./Hero";
 
 type LayoutProps = {
@@ -9,6 +10,7 @@ export const Layout = ({ children }: LayoutProps) => {
     <div>
       {/* Future navbar */}
       {children}
+      <Footer />
     </div>
   );
 };

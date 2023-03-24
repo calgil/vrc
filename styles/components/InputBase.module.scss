@@ -1,0 +1,6 @@
+@use "../abstracts" as a;
+@use "../components";
+
+.input {
+  @extend .inputBase;
+}
