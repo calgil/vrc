@@ -1,4 +1,10 @@
 @use "../abstracts" as a;
+@use "../components";
+@use "../utilities";
+
+.container {
+  @extend .container;
+}
 
 .careers {
   display: flex;
@@ -22,5 +28,74 @@
   .link {
     display: block;
     color: a.$blue;
+  }
+
+  .careersText,
+  .careersForm {
+    flex: 1;
+  }
+
+  .careersForm {
+    .inputContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .messageLabel {
+        max-width: none;
+        width: 100%;
+      }
+
+      .message {
+        height: 15rem;
+      }
+
+      .resume {
+        display: block;
+        margin-top: 20px;
+      }
+    }
+
+    .label {
+      display: block;
+      max-width: 250px;
+      font-family: "Rockford Extra Light";
+      font-size: 18px;
+    }
+
+    .input {
+      @extend .inputBase;
+      width: 100%;
+      margin-bottom: 5px;
+      padding: 10px 15px;
+      margin-top: 10px;
+    }
+
+    .resume {
+      border: none;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+
+    .note {
+      font-family: "Rockford Extra Light", sans-serif;
+      line-height: 1.4em;
+      font-size: 18px;
+      margin-bottom: 1rem;
+    }
+
+    .submitBtn {
+      @extend .submitBtnBase;
+      color: a.$textHighContrast;
+      background-color: a.$blue;
+      border: 1px solid a.$blue;
+
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: white;
+        color: a.$blue;
+      }
+    }
   }
 }

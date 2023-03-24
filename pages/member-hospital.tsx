@@ -4,8 +4,30 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { Input, SubmitBtn, TextArea } from "@/types/input.type";
+import { Form } from "@/components/Form";
 
 export default function MemberHospital() {
+  const inputs: Input[] = [
+    { name: "name", placeholder: "Full Name*", type: "text", required: true },
+    { name: "email", placeholder: "Email*", type: "email", required: true },
+    { name: "phone", placeholder: "Phone*", type: "phone", required: true },
+    { name: "zip", placeholder: "Zip", type: "number" },
+    {
+      name: "hospital",
+      placeholder: "Hospital Name",
+      type: "text",
+      required: true,
+    },
+  ];
+
+  const textArea: TextArea = {
+    placeholder: "Message",
+  };
+
+  const submitBtn: SubmitBtn = {
+    value: "Send",
+  };
   return (
     <>
       <Head>
@@ -102,7 +124,7 @@ export default function MemberHospital() {
                 </li>
               </ul>
             </div>
-            <div className={s.joinForm}>
+            <Form inputs={inputs} textarea={textArea} submitBtn={submitBtn}>
               <h4 className={s.formTitle}>Join the Member Hospital Network</h4>
               <p className={s.formDetails}>
                 While North Springs VRC will accept any patient to provide
@@ -121,36 +143,25 @@ export default function MemberHospital() {
                   memberhospital@northspringsvrc.com
                 </Link>
               </p>
-              <form className={s.inputContainer}>
-                <input
-                  className={s.input}
-                  placeholder="Full Name*"
-                  type="text"
-                />
-                <input className={s.input} placeholder="Email*" type="email" />
-                <input className={s.input} placeholder="Phone" type="phone" />
-                <input className={s.input} placeholder="Zip" type="number" />
-                <input
-                  className={s.input}
-                  placeholder="Hospital Name*"
-                  type="text"
-                />
-                <textarea className={s.input} placeholder="Message"></textarea>
-                <input className={s.submitBtn} type="submit" value="Send" />
-              </form>
-            </div>
+            </Form>
           </div>
         </div>
         <div className={s.container}>
-          <h3 className={s.title}>Member Hospital Network Pricing Guide</h3>
+          <h3 className={`${s.title} ${s.memberTitle}`}>
+            Member Hospital Network Pricing Guide
+          </h3>
 
           <div className={s.pricing}>
             <div className={s.imgContainer}>
               <Image
                 src="/dog-member-hospital-network.jpg"
                 alt="dog"
-                width={330}
-                height={500}
+                width={348}
+                height={533}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
             <div className={s.pricingText}>
