@@ -20,11 +20,6 @@ const socialIcons: SocialIcon[] = [
     link: "https://www.linkedin.com/company/north-springs-veterinary-referral-center/",
   },
   {
-    image: "/twitter.png",
-    desc: "twitter",
-    link: "https://twitter.com/NorthSpringsVRC",
-  },
-  {
     image: "/ig.png",
     desc: "instagram",
     link: "https://www.instagram.com/northsprings.vrc/",
