@@ -21,13 +21,14 @@
 
 .cardText {
   .cardTitle {
-    font-size: 1.9em;
+    font-size: 1.9rem;
+    // em to rem
     font-weight: 500;
     margin-bottom: 0.5rem;
   }
   .cardDetails {
     font-family: "Rockford Extra Light";
-    line-height: 1.4em;
+    line-height: 1.4;
     font-weight: 400;
     font-size: 18px;
     margin-bottom: 1rem;
@@ -35,7 +36,8 @@
 
   @include a.media(smDesktop) {
     .cardTitle {
-      font-size: 1.7em;
+      font-size: 1.7rem;
+      // em to rem
       font-weight: 600;
     }
 
