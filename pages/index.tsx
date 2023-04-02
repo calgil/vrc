@@ -1,12 +1,10 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import s from "../styles/pages/Home.module.scss";
 import { Hero } from "@/components/Hero";
 import { OurStory } from "@/components/OurStory";
 import { CoreValues } from "@/components/CoreValues";
 import { ImageCard } from "@/components/ImageCard/ImageCard";
 import { NewsletterForm } from "@/components/NewsletterForm";
-import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
