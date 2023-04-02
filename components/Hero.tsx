@@ -72,7 +72,7 @@ export const Hero = ({
         </div>
         {homepage && (
           <div className={s.down}>
-            <Link href="#">
+            <Link href="#our-story" passHref>
               <Image
                 width={130}
                 height={120}
