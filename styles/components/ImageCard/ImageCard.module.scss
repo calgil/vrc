@@ -5,14 +5,32 @@
   padding-top: 80px;
 }
 
-.imgCard {
+.imgCard.right {
+  background-image: url("/right-bg.png");
+  background-position: bottom right;
+  background-size: 45%;
   padding-bottom: 80px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+}
 
-  @include a.media(lgPhone) {
+.imgCard.left {
+  background-image: url("/left-bg.png");
+  background-position: top left;
+  background-size: 110%;
+  padding-top: 80px;
+  margin-bottom: 100px;
+}
+
+.imgCard.left,
+.imgCard.right {
+  background-repeat: no-repeat;
+
+  @include a.media(smDesktop) {
     background-image: none;
+  }
+}
+
+.imgCard {
+  @include a.media(lgPhone) {
     padding-bottom: 20px;
   }
 }
@@ -24,14 +42,15 @@
 
   @include a.media(smDesktop) {
     flex-direction: column;
-    align-items: flex-start;
   }
 }
 
 .imgContainer {
   max-width: 570px;
+  max-height: 404.7px;
 
   @include a.media(smDesktop) {
     max-width: 734px;
+    max-height: fit-content;
   }
 }

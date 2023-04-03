@@ -20,13 +20,9 @@ export const ImageCard = ({ imgPosition, image, cardText }: ImageCardProps) => {
     <>
       {imgPosition === "left" ? (
         <div className={s.spacer}>
-          <div
-            className={s.imgCard}
-            style={{
-              backgroundImage: "url(/left-bg.webp)",
-            }}
-          >
+          <div className={`${s.left} ${s.imgCard}`}>
             <div className={s.container}>
+              {/* <div className={`${s.cardBg} ${s.left}`}> */}
               <div className={s.imgContainer}>
                 <Image
                   src={image}
@@ -39,22 +35,19 @@ export const ImageCard = ({ imgPosition, image, cardText }: ImageCardProps) => {
                   }}
                 />
               </div>
+
               <CardText
                 header={header}
                 description={description}
                 button={button}
               />
+              {/* </div> */}
             </div>
           </div>
         </div>
       ) : (
         <div className={s.spacer}>
-          <div
-            className={s.imgCard}
-            style={{
-              backgroundImage: "url(/right-bg.webp)",
-            }}
-          >
+          <div className={`${s.imgCard} ${s.right}`}>
             <div className={s.container}>
               <CardText
                 header={header}
