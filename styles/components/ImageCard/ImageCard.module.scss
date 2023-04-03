@@ -22,16 +22,19 @@
 
 .imgCard.left,
 .imgCard.right {
-  background-repeat: no-repeat;
-
   @include a.media(smDesktop) {
     background-image: none;
+    padding: 0;
   }
 }
 
 .imgCard {
+  margin-bottom: 80px;
+  background-repeat: no-repeat;
+
   @include a.media(lgPhone) {
     padding-bottom: 20px;
+    margin-bottom: 0;
   }
 }
 

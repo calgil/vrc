@@ -19,53 +19,49 @@ export const ImageCard = ({ imgPosition, image, cardText }: ImageCardProps) => {
   return (
     <>
       {imgPosition === "left" ? (
-        <div className={s.spacer}>
-          <div className={`${s.left} ${s.imgCard}`}>
-            <div className={s.container}>
-              {/* <div className={`${s.cardBg} ${s.left}`}> */}
-              <div className={s.imgContainer}>
-                <Image
-                  src={image}
-                  alt="veterinarian healing animal"
-                  width={733}
-                  height={520}
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
-                />
-              </div>
-
-              <CardText
-                header={header}
-                description={description}
-                button={button}
+        <div className={`${s.left} ${s.imgCard}`}>
+          <div className={s.container}>
+            {/* <div className={`${s.cardBg} ${s.left}`}> */}
+            <div className={s.imgContainer}>
+              <Image
+                src={image}
+                alt="veterinarian healing animal"
+                width={733}
+                height={520}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
-              {/* </div> */}
             </div>
+
+            <CardText
+              header={header}
+              description={description}
+              button={button}
+            />
+            {/* </div> */}
           </div>
         </div>
       ) : (
-        <div className={s.spacer}>
-          <div className={`${s.imgCard} ${s.right}`}>
-            <div className={s.container}>
-              <CardText
-                header={header}
-                description={description}
-                button={button}
+        <div className={`${s.imgCard} ${s.right}`}>
+          <div className={s.container}>
+            <CardText
+              header={header}
+              description={description}
+              button={button}
+            />
+            <div className={s.imgContainer}>
+              <Image
+                src={image}
+                alt="veterinarian healing animal"
+                width={733}
+                height={520}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
-              <div className={s.imgContainer}>
-                <Image
-                  src={image}
-                  alt="veterinarian healing animal"
-                  width={733}
-                  height={520}
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
-                />
-              </div>
             </div>
           </div>
         </div>
