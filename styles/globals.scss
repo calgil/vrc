@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   font-family: "Rockford Regular";
   background-color: rgba(255, 254, 255, 100%);
