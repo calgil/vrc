@@ -6,23 +6,22 @@ let cx = classNames.bind(s);
 type CardProps = {
   title: string;
   details: string;
-  titleCard?: boolean;
   lightGrey?: boolean;
+  customClass: string;
 };
 
 export const ValueCard = ({
   title,
   details,
-  titleCard,
   lightGrey,
+  customClass,
 }: CardProps) => {
   let cardClass = cx({
     cardBody: true,
-    titleCard,
     lightGrey,
   });
   return (
-    <div className={cardClass}>
+    <div className={cx(cardClass, customClass)}>
       <div className={s.cardText}>
         <h6 className={s.cardTitle}>{title}</h6>
         <p className={s.cardDetails}>{details}</p>
