@@ -24,6 +24,7 @@
 .imgCard.right {
   @include a.media(smDesktop) {
     background-image: none;
+    padding: 0;
   }
 }
 
