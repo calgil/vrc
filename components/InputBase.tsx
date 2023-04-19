@@ -6,7 +6,7 @@ type InputBaseProps = {
 };
 
 export const InputBase = ({ input }: InputBaseProps) => {
-  const { type, name, placeholder, required } = input;
+  const { type, name, placeholder, required, onChange } = input;
   return (
     <input
       className={s.input}
@@ -14,6 +14,7 @@ export const InputBase = ({ input }: InputBaseProps) => {
       name={name}
       placeholder={placeholder}
       required={required}
+      onChange={onChange}
     />
   );
 };
