@@ -6,27 +6,106 @@ import Image from "next/image";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { Input, SubmitBtn, TextArea } from "@/types/input.type";
 import { Form } from "@/components/Form";
+import { useState } from "react";
 
 export default function MemberHospital() {
+  const [nameInput, setNameInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [phoneInput, setPhoneInput] = useState("");
+  const [zipInput, setZipInput] = useState("");
+  const [hospitalName, setHospitalName] = useState("");
+  const [message, setMessage] = useState("");
   const inputs: Input[] = [
-    { name: "name", placeholder: "Full Name*", type: "text", required: true },
-    { name: "email", placeholder: "Email*", type: "email", required: true },
-    { name: "phone", placeholder: "Phone*", type: "phone", required: true },
-    { name: "zip", placeholder: "Zip", type: "number" },
+    {
+      name: "name",
+      placeholder: "Full Name*",
+      type: "text",
+      required: true,
+      onChange: (e) => setNameInput(e.target.value),
+    },
+    {
+      name: "email",
+      placeholder: "Email*",
+      type: "email",
+      required: true,
+      onChange: (e) => setEmailInput(e.target.value),
+    },
+    {
+      name: "phone",
+      placeholder: "Phone*",
+      type: "phone",
+      required: true,
+      onChange: (e) => setPhoneInput(e.target.value),
+    },
+    {
+      name: "zip",
+      placeholder: "Zip",
+      type: "number",
+      onChange: (e) => setZipInput(e.target.value),
+    },
     {
       name: "hospital",
       placeholder: "Hospital Name",
       type: "text",
       required: true,
+      onChange: (e) => setHospitalName(e.target.value),
     },
   ];
 
   const textArea: TextArea = {
     placeholder: "Message",
+    onChange: (e) => setMessage(e.target.value),
   };
 
   const submitBtn: SubmitBtn = {
     value: "Send",
+  };
+
+  const handleSendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log({
+      nameInput,
+      emailInput,
+      phoneInput,
+      zipInput,
+      hospitalName,
+      message,
+    });
+    if (
+      !nameInput ||
+      !emailInput ||
+      !phoneInput ||
+      !zipInput ||
+      !hospitalName ||
+      !message
+    ) {
+      return console.log("missing data");
+    }
+
+    fetch("/api/mail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullName: nameInput,
+        email: emailInput,
+        phone: phoneInput,
+        zip: zipInput,
+        hospitalName: hospitalName,
+        message: message,
+      }),
+    })
+      .then((res) => {
+        console.log("email res", res);
+        if (!res.ok) {
+          return console.log("something went wrong");
+        }
+        console.log("success");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
   return (
     <>
@@ -124,7 +203,12 @@ export default function MemberHospital() {
                 </li>
               </ul>
             </div>
-            <Form inputs={inputs} textarea={textArea} submitBtn={submitBtn}>
+            <Form
+              inputs={inputs}
+              onSubmit={handleSendEmail}
+              textarea={textArea}
+              submitBtn={submitBtn}
+            >
               <h4 className={s.formTitle}>Join the Member Hospital Network</h4>
               <p className={s.formDetails}>
                 While North Springs VRC will accept any patient to provide

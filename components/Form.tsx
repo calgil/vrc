@@ -5,22 +5,30 @@ import { InputBase } from "./InputBase";
 
 type FormProps = {
   children?: React.ReactNode;
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   inputs: Input[];
   textarea: TextArea;
   submitBtn: SubmitBtn;
 };
 
-export const Form = ({ children, inputs, textarea, submitBtn }: FormProps) => {
+export const Form = ({
+  children,
+  onSubmit,
+  inputs,
+  textarea,
+  submitBtn,
+}: FormProps) => {
   return (
     <div className={s.formContainer}>
       {children}
-      <form className={s.form}>
+      <form className={s.form} onSubmit={onSubmit}>
         <div className={s.inputContainer}>
           {inputs.map((input) => (
             <InputBase key={input.name} input={input} />
           ))}
           <textarea
             className={`${s.input} ${s.message}`}
+            onChange={textarea.onChange}
             placeholder={textarea.placeholder}
           ></textarea>
         </div>
