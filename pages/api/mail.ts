@@ -1,5 +1,3 @@
-// const nodemailer = require("nodemailer");
-import nodemailer, { Transporter } from "nodemailer";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export type NewEmail = {
@@ -15,20 +13,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const transporter: Transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.SMTP_EMAIL_MEMBER_EMAIL,
-      pass: process.env.SMTP_PASS_MEMBER_HOSPITAL,
-    },
-  });
-
   const { fullName, email, phone, zip, hospitalName, message }: NewEmail =
     req.body;
-
-  console.log({ fullName, email, phone, zip, hospitalName, message });
 
   if (!message || !fullName || !message) {
     return res
@@ -36,27 +22,37 @@ export default async function handler(
       .json({ message: "Please fill out the necessary fields" });
   }
 
-  const mailOptions = {
-    from: email,
-    to: process.env.SMTP_EMAIL_MEMBER_EMAIL,
-    subject: `Message from ${fullName}`,
-    text: `${message} | Sent from: ${email}`,
-    html: `<div>Hospital Name: ${hospitalName}</div><div>${message}</div><div>Phone: ${phone} <br /> Email: ${email} <br /> Zip: ${zip}</div>`,
+  if (!process.env.POSTMARK_API_KEY) {
+    return;
+  }
+
+  const data = {
+    From: "memberhospital@northspringsvrc.com",
+    To: "memberhospital@northspringsvrc.com",
+    Subject: `${hospitalName} would like to join your member hospital network`,
+    TextBody: "Hello",
+    HtmlBody: `<html><body><div>New message from ${fullName}</div>
+      <div>${message}</div>
+      <div>Hospital Name: ${hospitalName}</div>
+      <div>Email: ${email}</div>
+      <div>Phone: ${phone}</div>
+      <div>Zip: ${zip}</div>
+      </body></html>`,
+    MessageStream: "outbound",
   };
 
-  await new Promise((resolve, reject) => {
-    transporter.sendMail(mailOptions, (err: Error | null, info) => {
-      if (err) {
-        reject(err);
-        return res
-          .status(500)
-          .json({ error: err.message || "Something went wrong" });
-      } else {
-        resolve(info.accepted);
-        res.status(200).json({ message: "Message sent!" });
-      }
-    });
-  });
+  const headers: Record<string, string> = {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+    "X-Postmark-Server-Token": process.env.POSTMARK_API_KEY,
+  };
 
-  return;
+  fetch("https://api.postmarkapp.com/email", {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify(data),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
 }
