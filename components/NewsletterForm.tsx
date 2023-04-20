@@ -78,7 +78,7 @@ export const NewsletterForm = ({
     // if (name && email) {
     //   setMessage("");
     // }
-    console.log("subscribe", { name, email });
+    // console.log("subscribe", { name, email });
 
     fetch(
       `${process.env.CONVERTKIT_BASE_URL}/${process.env.CONVERTKIT_FORM_ID}/subscribe`,

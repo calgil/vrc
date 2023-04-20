@@ -32,12 +32,12 @@ export default function Careers() {
     e.preventDefault();
 
     if (!nameInput || !emailInput || !phoneInput || !position || !message) {
-      return console.log("please fill out all fields");
+      // return console.log("please fill out all fields");
     }
 
-    if (!resume) {
-      return console.log("no resume");
-    }
+    // if (!resume) {
+    //   return console.log("no resume");
+    // }
 
     try {
       const res = await fetch("/api/career", {
@@ -57,7 +57,7 @@ export default function Careers() {
       if (data.error) {
         throw new Error(data.error);
       }
-      console.log("sent successfully");
+      // console.log("sent successfully");
     } catch (error) {
       console.error(error);
     }

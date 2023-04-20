@@ -80,7 +80,8 @@ export default function MemberHospital() {
       !hospitalName ||
       !message
     ) {
-      return console.log("missing data");
+      return;
+      // return console.log("missing data");
     }
 
     fetch("/api/mail", {
@@ -98,9 +99,8 @@ export default function MemberHospital() {
       }),
     })
       .then((res) => {
-        console.log("email res", res);
         if (!res.ok) {
-          return console.log("something went wrong");
+          return setError(true);
         }
         setNameInput("");
         setEmailInput("");
