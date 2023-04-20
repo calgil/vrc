@@ -72,14 +72,6 @@ export default function MemberHospital() {
 
   const handleSendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log({
-      nameInput,
-      emailInput,
-      phoneInput,
-      zipInput,
-      hospitalName,
-      message,
-    });
     if (
       !nameInput ||
       !emailInput ||
@@ -117,6 +109,9 @@ export default function MemberHospital() {
         setHospitalName("");
         setMessage("");
         setSuccess(true);
+        setTimeout(() => {
+          setSuccess(false);
+        }, 1000);
       })
       .catch((err) => {
         console.error(err);
