@@ -3,8 +3,74 @@ import { Hero } from "@/components/Hero";
 import Head from "next/head";
 import Link from "next/link";
 import { Input, SubmitBtn, TextArea } from "@/types/input.type";
+import { ChangeEvent, useState } from "react";
 
 export default function Careers() {
+  const [nameInput, setNameInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [phoneInput, setPhoneInput] = useState("");
+  const [position, setPosition] = useState("");
+  const [message, setMessage] = useState("");
+  const [resume, setResume] = useState<File | null>(null);
+
+  const handleResumeInput = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (
+      file &&
+      (file.type === "application/pdf" ||
+        file.type === "application/msword" ||
+        file.type ===
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    ) {
+      setResume(file);
+    } else {
+      setResume(null);
+    }
+  };
+
+  const handleSendApplication = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!nameInput || !emailInput || !phoneInput || !position || !message) {
+      return console.log("please fill out all fields");
+    }
+
+    if (!resume) {
+      return console.log("no resume");
+    }
+
+    try {
+      const res = await fetch("/api/career", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName: nameInput,
+          email: emailInput,
+          phone: phoneInput,
+          position: position,
+          message: message,
+        }),
+      });
+      const data = await res.json();
+      if (data.error) {
+        throw new Error(data.error);
+      }
+      console.log("sent successfully");
+    } catch (error) {
+      console.error(error);
+    }
+
+    console.log({
+      nameInput,
+      emailInput,
+      phoneInput,
+      position,
+      message,
+      resume,
+    });
+  };
   return (
     <>
       <Head>
@@ -47,7 +113,7 @@ export default function Careers() {
               </p>
             </div>
             <div className={s.careersForm}>
-              <form className={s.form}>
+              <form className={s.form} onSubmit={handleSendApplication}>
                 <div className={s.inputContainer}>
                   <label htmlFor="name" className={s.label}>
                     Full Name: *
@@ -57,6 +123,8 @@ export default function Careers() {
                       name="name"
                       type="text"
                       required
+                      value={nameInput}
+                      onChange={(e) => setNameInput(e.target.value)}
                     />
                   </label>
                   <label htmlFor="email" className={s.label}>
@@ -67,6 +135,8 @@ export default function Careers() {
                       name="email"
                       type="email"
                       required
+                      value={emailInput}
+                      onChange={(e) => setEmailInput(e.target.value)}
                     />
                   </label>
                   <label htmlFor="phone" className={s.label}>
@@ -77,11 +147,19 @@ export default function Careers() {
                       name="phone"
                       type="phone"
                       required
+                      value={phoneInput}
+                      onChange={(e) => setPhoneInput(e.target.value)}
                     />
                   </label>
                   <label htmlFor="position" className={s.label}>
                     Position: *
-                    <select className={s.input} id="position" required>
+                    <select
+                      className={s.input}
+                      id="position"
+                      required
+                      value={position}
+                      onChange={(e) => setPosition(e.target.value)}
+                    >
                       <option value="">-Please choose an option-</option>
                       <option value="ER Veterinarian">ER Veterinarian</option>
                       <option value="Client Service Rep">
@@ -101,10 +179,12 @@ export default function Careers() {
                     <textarea
                       className={`${s.input} ${s.message}`}
                       id="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     />
                   </label>
                 </div>
-                <div>
+                {/* <div>
                   <label htmlFor="resume" className={s.label}>
                     Attach your resume:
                   </label>
@@ -114,12 +194,13 @@ export default function Careers() {
                     type="file"
                     accept=".pdf,.doc,.docx"
                     size={4194304}
+                    onChange={handleResumeInput}
                   />
                   <p className={s.note}>
                     Note: Acceptable files type are PDF, .doc, or .docx only and
                     file size must be under 4MB.
                   </p>
-                </div>
+                </div> */}
                 <input className={s.submitBtn} type="submit" value="Send" />
               </form>
             </div>

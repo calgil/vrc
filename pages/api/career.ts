@@ -5,8 +5,7 @@ export type NewEmail = {
   fullName: string;
   email: string;
   phone: number;
-  zip: number;
-  hospitalName: string;
+  position: string;
   message: string;
 };
 
@@ -14,10 +13,12 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { fullName, email, phone, zip, hospitalName, message }: NewEmail =
-    req.body;
+  const { fullName, email, phone, position, message }: NewEmail = req.body;
 
-  if (!email || !fullName || !message) {
+  // //   console.log({ fullName, email, phone, position, message });
+  console.log({ fullName, email, phone, position, message });
+
+  if (!message || !fullName || !email) {
     return res
       .status(400)
       .json({ message: "Please fill out the necessary fields" });
@@ -28,18 +29,30 @@ export default async function handler(
   }
   sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
+  // if (!req.body.file) {
+  //   return console.log("no file");
+  // }
+  // const { file } = req.body;
+
+  // const attachment = {
+  //   content: file.buffer.toString("base64"),
+  //   filename: file.originalname,
+  //   type: file.mimetype,
+  //   disposition: "attachment",
+  // };
+
   const msg = {
     to: process.env.SMTP_EMAIL,
     from: "memberhospital@northspringsvrc.com",
-    subject: `${hospitalName} would like to join your member hospital network`,
+    subject: `${fullName} would like to join your team`,
     html: `<html><body>
             <div>New message from ${fullName}</div>
             <div>${message}</div>
-            <div>Hospital Name: ${hospitalName}</div>
+            <div>Position: ${position}</div>
             <div>Email: ${email}</div>
             <div>Phone: ${phone}</div>
-            <div>Zip: ${zip}</div>
             </body></html>`,
+    // attachments: [attachment],
   };
 
   try {

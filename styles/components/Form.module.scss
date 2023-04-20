@@ -42,6 +42,17 @@
       height: 10rem;
     }
   }
+  .success,
+  .error {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  .success {
+    color: green;
+  }
+  .error {
+    color: red;
+  }
   .submitBtn {
     @extend .submitBtnBase;
     background-color: a.$blue;
