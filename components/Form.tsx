@@ -9,6 +9,8 @@ type FormProps = {
   inputs: Input[];
   textarea: TextArea;
   submitBtn: SubmitBtn;
+  success: boolean;
+  error: boolean;
 };
 
 export const Form = ({
@@ -17,6 +19,8 @@ export const Form = ({
   inputs,
   textarea,
   submitBtn,
+  success,
+  error,
 }: FormProps) => {
   return (
     <div className={s.formContainer}>
@@ -30,8 +34,11 @@ export const Form = ({
             className={`${s.input} ${s.message}`}
             onChange={textarea.onChange}
             placeholder={textarea.placeholder}
+            value={textarea.value}
           ></textarea>
         </div>
+        {success && <div className={s.success}>Message sent successfully!</div>}
+        {error && <div className={s.error}>Message failed to send</div>}
         <input className={s.submitBtn} type="submit" value={submitBtn.value} />
       </form>
     </div>

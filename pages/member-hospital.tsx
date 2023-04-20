@@ -15,12 +15,16 @@ export default function MemberHospital() {
   const [zipInput, setZipInput] = useState("");
   const [hospitalName, setHospitalName] = useState("");
   const [message, setMessage] = useState("");
+
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
   const inputs: Input[] = [
     {
       name: "name",
       placeholder: "Full Name*",
       type: "text",
       required: true,
+      value: nameInput,
       onChange: (e) => setNameInput(e.target.value),
     },
     {
@@ -28,6 +32,7 @@ export default function MemberHospital() {
       placeholder: "Email*",
       type: "email",
       required: true,
+      value: emailInput,
       onChange: (e) => setEmailInput(e.target.value),
     },
     {
@@ -35,12 +40,14 @@ export default function MemberHospital() {
       placeholder: "Phone*",
       type: "phone",
       required: true,
+      value: phoneInput,
       onChange: (e) => setPhoneInput(e.target.value),
     },
     {
       name: "zip",
       placeholder: "Zip",
       type: "number",
+      value: zipInput,
       onChange: (e) => setZipInput(e.target.value),
     },
     {
@@ -48,6 +55,7 @@ export default function MemberHospital() {
       placeholder: "Hospital Name",
       type: "text",
       required: true,
+      value: hospitalName,
       onChange: (e) => setHospitalName(e.target.value),
     },
   ];
@@ -55,6 +63,7 @@ export default function MemberHospital() {
   const textArea: TextArea = {
     placeholder: "Message",
     onChange: (e) => setMessage(e.target.value),
+    value: message,
   };
 
   const submitBtn: SubmitBtn = {
@@ -101,10 +110,17 @@ export default function MemberHospital() {
         if (!res.ok) {
           return console.log("something went wrong");
         }
-        console.log("success");
+        setNameInput("");
+        setEmailInput("");
+        setPhoneInput("");
+        setZipInput("");
+        setHospitalName("");
+        setMessage("");
+        setSuccess(true);
       })
       .catch((err) => {
         console.error(err);
+        setError(true);
       });
   };
   return (
@@ -208,6 +224,8 @@ export default function MemberHospital() {
               onSubmit={handleSendEmail}
               textarea={textArea}
               submitBtn={submitBtn}
+              success={success}
+              error={error}
             >
               <h4 className={s.formTitle}>Join the Member Hospital Network</h4>
               <p className={s.formDetails}>
