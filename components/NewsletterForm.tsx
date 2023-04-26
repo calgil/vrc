@@ -22,9 +22,7 @@ export const NewsletterForm = ({
   inHero,
 }: NewsletterFormProps) => {
   const [name, setName] = useState<string>("");
-  const [nameError, setNameError] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
-  const [emailError, setEmailError] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
 
   let newsletterClass = cx({
@@ -39,12 +37,12 @@ export const NewsletterForm = ({
 
   let nameInputClass = cx({
     input: true,
-    error: nameError,
+    // error: nameError,
   });
 
   let emailInputClass = cx({
     input: true,
-    error: emailError,
+    // error: emailError,
   });
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,9 +50,6 @@ export const NewsletterForm = ({
   };
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!isEmailValid(e.target.value)) {
-      return;
-    }
     setEmail(e.target.value);
   };
 
@@ -98,9 +93,7 @@ export const NewsletterForm = ({
       .then((data) => console.log(data))
       .catch((error) => console.error(error));
     setName("");
-    setNameError(false);
     setEmail("");
-    setEmailError(false);
   };
   return (
     <div className={newsletterClass}>
@@ -113,7 +106,6 @@ export const NewsletterForm = ({
             name="name"
             type="text"
             value={name}
-            // required
             placeholder="Your Name"
             onChange={handleNameChange}
           />
@@ -122,7 +114,6 @@ export const NewsletterForm = ({
             name="email"
             type="email"
             value={email}
-            // required
             placeholder="Email Address"
             onChange={handleEmailChange}
           />
