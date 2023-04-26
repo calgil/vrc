@@ -230,9 +230,11 @@ export default function MemberHospital() {
                 staff.
               </p>
               <p className={s.formDetails}>
-                Fill out our contact form to learn more about how to join our
+                {/* Fill out our contact form to learn more about how to join our
                 Network and the benefits that Member Hospitals can receive, or
-                email our team at{" "}
+                email our team at */}
+                To learn more about how to join our Network and the benefits
+                that Member Hospitals can receive, please email our team at
                 <Link
                   className={s.link}
                   href="mailto:memberhospital@northspringsvrc.com"
@@ -248,7 +250,7 @@ export default function MemberHospital() {
             Member Hospital Network Pricing Guide
           </h3>
 
-          <div className={s.pricing}>
+          {/* <div className={s.pricing}>
             <div className={s.imgContainer}>
               <Image
                 src="/dog-member-hospital-network.jpg"
@@ -321,7 +323,7 @@ export default function MemberHospital() {
                 $650(radiographs, CBC, chem, lytes, UA)
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
         <NewsletterForm
           inHero={false}
