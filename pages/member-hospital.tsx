@@ -235,6 +235,7 @@ export default function MemberHospital() {
                 email our team at */}
                 To learn more about how to join our Network and the benefits
                 that Member Hospitals can receive, please email our team at
+                <br />
                 <Link
                   className={s.link}
                   href="mailto:memberhospital@northspringsvrc.com"
