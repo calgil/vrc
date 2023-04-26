@@ -102,8 +102,8 @@ export default function Careers() {
                 Representatives, Technicians, Assistants, and Specialists!
               </p>
               <p className={s.details}>
-                Fill out our contact form to learn more and apply to our open
-                positions, or email your resume to
+                To learn more and apply to our open positions, email your resume
+                to
                 <Link
                   className={s.link}
                   href="mailto:careers@northspringsvrc.com"
