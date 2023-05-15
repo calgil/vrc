@@ -246,12 +246,12 @@ export default function MemberHospital() {
             </Form>
           </div>
         </div>
-        <div className={s.container}>
-          <h3 className={`${s.title} ${s.memberTitle}`}>
+        {/* <div className={s.container}> */}
+        {/* <h3 className={`${s.title} ${s.memberTitle}`}>
             Member Hospital Network Pricing Guide
-          </h3>
+          </h3> */}
 
-          {/* <div className={s.pricing}>
+        {/* <div className={s.pricing}>
             <div className={s.imgContainer}>
               <Image
                 src="/dog-member-hospital-network.jpg"
@@ -325,7 +325,7 @@ export default function MemberHospital() {
               </p>
             </div>
           </div> */}
-        </div>
+        {/* </div> */}
         <NewsletterForm
           inHero={false}
           heading="Stay in the Know!"
