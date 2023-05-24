@@ -6,6 +6,7 @@ import { InputBase } from "./InputBase";
 type FormProps = {
   children?: React.ReactNode;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  // action: string;
   inputs: Input[];
   textarea: TextArea;
   submitBtn: SubmitBtn;
@@ -16,6 +17,7 @@ type FormProps = {
 export const Form = ({
   children,
   onSubmit,
+  // action,
   inputs,
   textarea,
   submitBtn,
@@ -25,7 +27,7 @@ export const Form = ({
   return (
     <div className={s.formContainer}>
       {children}
-      {/* <form className={s.form} onSubmit={onSubmit}>
+      <form className={s.form} onSubmit={onSubmit}>
         <div className={s.inputContainer}>
           {inputs.map((input) => (
             <InputBase key={input.name} input={input} />
@@ -40,7 +42,7 @@ export const Form = ({
         {success && <div className={s.success}>Message sent successfully!</div>}
         {error && <div className={s.error}>Message failed to send</div>}
         <input className={s.submitBtn} type="submit" value={submitBtn.value} />
-      </form> */}
+      </form>
     </div>
   );
 };

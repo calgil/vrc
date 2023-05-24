@@ -8,6 +8,7 @@ export type Input = {
 };
 
 export type TextArea = {
+  name: string;
   placeholder: string;
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   value: string;

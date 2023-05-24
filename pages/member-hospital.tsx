@@ -20,7 +20,7 @@ export default function MemberHospital() {
   const [error, setError] = useState(false);
   const inputs: Input[] = [
     {
-      name: "name",
+      name: "Name",
       placeholder: "Full Name*",
       type: "text",
       required: true,
@@ -28,7 +28,7 @@ export default function MemberHospital() {
       onChange: (e) => setNameInput(e.target.value),
     },
     {
-      name: "email",
+      name: "Email",
       placeholder: "Email*",
       type: "email",
       required: true,
@@ -36,7 +36,7 @@ export default function MemberHospital() {
       onChange: (e) => setEmailInput(e.target.value),
     },
     {
-      name: "phone",
+      name: "Phone",
       placeholder: "Phone*",
       type: "phone",
       required: true,
@@ -44,15 +44,15 @@ export default function MemberHospital() {
       onChange: (e) => setPhoneInput(e.target.value),
     },
     {
-      name: "zip",
+      name: "Zip",
       placeholder: "Zip",
       type: "number",
       value: zipInput,
       onChange: (e) => setZipInput(e.target.value),
     },
     {
-      name: "hospital",
-      placeholder: "Hospital Name",
+      name: "Hospital",
+      placeholder: "Hospital Name*",
       type: "text",
       required: true,
       value: hospitalName,
@@ -61,6 +61,7 @@ export default function MemberHospital() {
   ];
 
   const textArea: TextArea = {
+    name: "Message",
     placeholder: "Message",
     onChange: (e) => setMessage(e.target.value),
     value: message,
@@ -70,34 +71,25 @@ export default function MemberHospital() {
     value: "Send",
   };
 
-  const handleSendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (
-      !nameInput ||
-      !emailInput ||
-      !phoneInput ||
-      !zipInput ||
-      !hospitalName ||
-      !message
-    ) {
+    if (!nameInput || !emailInput || !phoneInput || !hospitalName) {
+      console.log("no data");
+
       return;
-      // return console.log("missing data");
     }
 
-    fetch("/api/mail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        fullName: nameInput,
-        email: emailInput,
-        phone: phoneInput,
-        zip: zipInput,
-        hospitalName: hospitalName,
-        message: message,
-      }),
-    })
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
+    formData.append("Message", message);
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyre4LRv3WWHIWk8_L_2qyrQ2V6FN0NyVpSPr_IQAPBlUGaAWGm2fb2RWX4flX3CsTm9A/exec",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
       .then((res) => {
         if (!res.ok) {
           return setError(true);
@@ -109,13 +101,10 @@ export default function MemberHospital() {
         setHospitalName("");
         setMessage("");
         setSuccess(true);
-        setTimeout(() => {
-          setSuccess(false);
-        }, 1000);
       })
       .catch((err) => {
-        console.error(err);
         setError(true);
+        console.error(err);
       });
   };
   return (
@@ -216,7 +205,7 @@ export default function MemberHospital() {
             </div>
             <Form
               inputs={inputs}
-              onSubmit={handleSendEmail}
+              onSubmit={handleSubmit}
               textarea={textArea}
               submitBtn={submitBtn}
               success={success}
@@ -230,11 +219,11 @@ export default function MemberHospital() {
                 staff.
               </p>
               <p className={s.formDetails}>
-                {/* Fill out our contact form to learn more about how to join our
+                Fill out our contact form to learn more about how to join our
                 Network and the benefits that Member Hospitals can receive, or
-                email our team at */}
-                To learn more about how to join our Network and the benefits
-                that Member Hospitals can receive, please email our team at
+                email our team at
+                {/* To learn more about how to join our Network and the benefits
+                that Member Hospitals can receive, please email our team at */}
                 <br />
                 <Link
                   className={s.link}
