@@ -112,7 +112,6 @@ export default function Careers() {
                 </Link>
               </p>
             </div>
-            <div className={s.careersForm}></div>
           </div>
         </div>
       </main>
