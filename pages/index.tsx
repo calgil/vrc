@@ -26,7 +26,6 @@ export default function Home() {
             transparency"
           imageURL="/home-banner.jpeg"
         />
-        <h2>Dev</h2>
         <OurStory />
         <CoreValues />
         <h2 className={s.sectionHeader}>Join the North Springs VRC Family!</h2>
