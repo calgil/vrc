@@ -14,7 +14,7 @@
   }
 
   .link {
-    color: a.$blue;
+    color: a.$primaryTeal;
   }
 
   .form {
@@ -47,15 +47,15 @@
   }
   .submitBtn {
     @extend .submitBtnBase;
-    background-color: a.$blue;
+    background-color: a.$primaryTeal;
     color: a.$textHighContrast;
-    border: 1px solid a.$blue;
+    border: 1px solid a.$primaryTeal;
 
     &:focus,
     &:hover,
     &:active {
       background-color: white;
-      color: a.$blue;
+      color: a.$primaryTeal;
     }
   }
 }

@@ -1,5 +1,5 @@
-@use "../abstracts" as a;
-@use "../utilities";
+@use "../../abstracts" as a;
+@use "../../utilities";
 
 .footer {
   background-color: a.$footerBg;

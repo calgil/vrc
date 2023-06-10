@@ -1,0 +1,7 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.navbar {
+  background-color: a.$footerBg;
+  padding: 14px 40px;
+}

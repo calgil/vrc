@@ -1,6 +1,6 @@
 // Hero
 $textHighContrast: white;
-$blue: rgb(0, 105, 117);
+$primaryTeal: #016d76;
 
 // Default Text
 $primaryText: #252525;
@@ -35,7 +35,7 @@ $inputBg: #ffffff;
 $inputFocusOutline: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 
 // input active
-$inputActiveOutline: 0 0 0 0.1rem $blue;
+$inputActiveOutline: 0 0 0 0.1rem $primaryTeal;
 
 // footer
-$footerBg: #1f1615;
+$footerBg: #252525;

@@ -1,5 +1,5 @@
-import { Footer } from "./Footer";
-import { Hero } from "./Hero";
+import { Footer } from "./layout/Footer";
+import { Navbar } from "./layout/Navbar";
 
 type LayoutProps = {
   children: JSX.Element | JSX.Element[];
@@ -8,7 +8,7 @@ type LayoutProps = {
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <div>
-      {/* Future navbar */}
+      <Navbar />
       {children}
       <Footer />
     </div>

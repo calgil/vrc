@@ -12,7 +12,7 @@
   padding: 8vw 20px;
 
   .title {
-    color: a.$blue;
+    color: a.$primaryTeal;
     font-size: 1.9rem;
     margin-bottom: 0.5rem;
   }
@@ -27,7 +27,7 @@
 
   .link {
     display: block;
-    color: a.$blue;
+    color: a.$primaryTeal;
   }
 
   .careersText,
@@ -87,14 +87,14 @@
     .submitBtn {
       @extend .submitBtnBase;
       color: a.$textHighContrast;
-      background-color: a.$blue;
-      border: 1px solid a.$blue;
+      background-color: a.$primaryTeal;
+      border: 1px solid a.$primaryTeal;
 
       &:focus,
       &:hover,
       &:active {
         background-color: white;
-        color: a.$blue;
+        color: a.$primaryTeal;
       }
     }
   }
