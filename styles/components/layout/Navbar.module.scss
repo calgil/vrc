@@ -3,5 +3,98 @@
 
 .navbar {
   background-color: a.$footerBg;
-  padding: 14px 40px;
+
+  .mainNavbar {
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btnContainer {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      .btn {
+        @extend .btnBase;
+        display: flex;
+        align-items: center;
+        transition: all 200ms ease-in-out;
+
+        .icon {
+          width: 16px;
+        }
+      }
+
+      .callLink {
+        color: a.$textHighContrast;
+        background-color: a.$red;
+        border: 1px solid a.$inputBg;
+        text-decoration: none;
+
+        &:visited {
+          color: a.$textHighContrast;
+        }
+
+        &:hover {
+          background-color: a.$darkerRed;
+        }
+
+        .callText {
+          color: a.$textHighContrast;
+          margin-left: 8px;
+          text-transform: uppercase;
+
+          .addedText {
+            @include a.media("tablet") {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .findBtn {
+        background-color: a.$buttonWhiteBg;
+        color: a.$red;
+        border: 1px solid transparent;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          background-color: a.$red;
+          color: a.$textHighContrast;
+          border: 1px solid a.$textHighContrast;
+        }
+
+        .text {
+          margin-left: 8px;
+          text-transform: uppercase;
+
+          .tabletText {
+            display: inline;
+
+            @include a.media("tablet") {
+              display: none;
+            }
+          }
+
+          .mobileText {
+            display: none;
+
+            @include a.media("tablet") {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: a.$buttonWhiteBg;
+    padding: 8px 40px;
+    list-style: none;
+  }
 }
