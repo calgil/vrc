@@ -6,7 +6,7 @@ export const Navbar = () => {
     <div className={s.navbar}>
       <Image src="/navbarLogo.webp" alt="logo" width={118} height={41} />
 
-      <a href="tel:+7199204430">Call!</a>
+      <a href="tel:+1(719)920-4430">Call!</a>
     </div>
   );
 };
