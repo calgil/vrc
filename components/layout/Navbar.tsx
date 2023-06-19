@@ -2,11 +2,15 @@ import Image from "next/image";
 import s from "../../styles/components/layout/Navbar.module.scss";
 import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavLinks } from "./NavLinks";
+import Link from "next/link";
 
 export const Navbar = () => (
   <div className={s.navbar}>
     <div className={s.mainNavbar}>
-      <Image src="/navbarLogo.webp" alt="logo" width={118} height={41} />
+      <Link href="/">
+        <Image src="/navbarLogo.webp" alt="logo" width={118} height={41} />
+      </Link>
 
       <div className={s.btnContainer}>
         <a className={`${s.btn} ${s.callLink}`} href="tel:+1(719)920-4430">
@@ -25,12 +29,6 @@ export const Navbar = () => (
         </div>
       </div>
     </div>
-    <ul className={s.links}>
-      <li className={s.link}>Emergency</li>
-      <li className={s.link}>Specialty</li>
-      <li className={s.link}>For Veterinarians</li>
-      <li className={s.link}>For Pet Owners</li>
-      <li className={s.link}>About Us</li>
-    </ul>
+    <NavLinks />
   </div>
 );
