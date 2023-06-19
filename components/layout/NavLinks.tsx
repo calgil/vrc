@@ -10,9 +10,8 @@ let cx = classNames.bind(s);
 export const NavLinks = () => {
   const currentRoute = usePathname();
 
-  const linkStyle = "nav-link";
-  const activeStyle = linkStyle + " text-black bg-amber-300";
-  const nonActiveStyle = linkStyle + " text-green";
+  const linkStyle = cx("nav-link", s.navLink); // Combine "nav-link" with s.navLink
+  const activeStyle = cx(linkStyle, s.active);
 
   useEffect(() => {
     import("bootstrap");
@@ -38,7 +37,9 @@ export const NavLinks = () => {
               <Link
                 href="/services#emergency"
                 className={
-                  currentRoute === "/emergency" ? activeStyle : nonActiveStyle
+                  currentRoute === "/services#emergency"
+                    ? activeStyle
+                    : linkStyle
                 }
               >
                 Emergency
@@ -46,7 +47,9 @@ export const NavLinks = () => {
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className={`dropdown-toggle ${
+                  currentRoute.includes("/services") ? activeStyle : linkStyle
+                }`}
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -107,9 +110,7 @@ export const NavLinks = () => {
               <Link
                 href="/veterinarians"
                 className={
-                  currentRoute === "/veterinarians"
-                    ? activeStyle
-                    : nonActiveStyle
+                  currentRoute === "/veterinarians" ? activeStyle : linkStyle
                 }
               >
                 For Veterinarians
@@ -118,9 +119,7 @@ export const NavLinks = () => {
             <li className="nav-item">
               <Link
                 href="/owners"
-                className={
-                  currentRoute === "/owners" ? activeStyle : nonActiveStyle
-                }
+                className={currentRoute === "/owners" ? activeStyle : linkStyle}
               >
                 For Pet Owners
               </Link>
@@ -128,9 +127,7 @@ export const NavLinks = () => {
             <li className="nav-item">
               <Link
                 href="/about"
-                className={
-                  currentRoute === "/about" ? activeStyle : nonActiveStyle
-                }
+                className={currentRoute === "/about" ? activeStyle : linkStyle}
               >
                 About Us
               </Link>

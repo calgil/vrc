@@ -1,1 +1,12 @@
 @use "../../abstracts" as a;
+
+.navLink {
+  &:hover,
+  &.active {
+    color: a.$redAccent;
+  }
+
+  &.active {
+    text-decoration: underline;
+  }
+}
