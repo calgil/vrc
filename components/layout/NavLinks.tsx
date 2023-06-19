@@ -1,8 +1,11 @@
 "use client";
 import "bootstrap/dist/css/bootstrap.min.css";
+import s from "../../styles/components/layout/NavLinks.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import classNames from "classnames/bind";
+let cx = classNames.bind(s);
 
 export const NavLinks = () => {
   const currentRoute = usePathname();
@@ -14,6 +17,7 @@ export const NavLinks = () => {
   useEffect(() => {
     import("bootstrap");
   }, []);
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">

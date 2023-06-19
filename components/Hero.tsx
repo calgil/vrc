@@ -9,7 +9,6 @@ let cx = classNames.bind(s);
 
 type HeroProps = {
   homepage: boolean;
-  // addNewsletter: boolean;
   heading?: string;
   subHeading?: string;
   imageURL: string;
