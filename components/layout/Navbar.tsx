@@ -25,13 +25,18 @@ export const Navbar = () => (
             call <span className={s.addedText}>for emergency</span>
           </span>
         </a>
-        <div className={`${s.btn} ${s.findBtn}`}>
+        <a
+          className={`${s.btn} ${s.findBtn}`}
+          href="https://www.google.com/maps/place/10520+White+Diamond+Pt,+Colorado+Springs,+CO+80908/@38.9838331,-104.7985129,17z/data=!3m1!4b1!4m6!3m5!1s0x87134c52f7f498d5:0xadc8e3a53ba07389!8m2!3d38.983829!4d-104.795938!16s%2Fg%2F11ssq6ysqz?entry=ttu"
+          target="_blank"
+          rel="noopener"
+        >
           <FontAwesomeIcon className={s.icon} icon={faLocationDot} />
           <div className={s.text}>
             <span className={s.tabletText}>Find Us</span>
             <span className={s.mobileText}>Map</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
     <NavLinks />

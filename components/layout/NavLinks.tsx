@@ -34,14 +34,7 @@ export const NavLinks = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link
-                href="/services#emergency"
-                className={
-                  currentRoute === "/services#emergency"
-                    ? activeStyle
-                    : linkStyle
-                }
-              >
+              <Link href="/services#emergency" className={linkStyle}>
                 Emergency
               </Link>
             </li>
