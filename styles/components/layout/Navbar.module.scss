@@ -10,6 +10,24 @@
     align-items: center;
     justify-content: space-between;
 
+    @include a.media("lgPhone") {
+      padding: 10px 8px;
+    }
+
+    .longLogo {
+      display: block;
+      @include a.media("tablet") {
+        display: none;
+      }
+    }
+
+    .shortLogo {
+      display: none;
+      @include a.media("tablet") {
+        display: block;
+      }
+    }
+
     .btnContainer {
       display: flex;
       align-items: center;
@@ -84,6 +102,13 @@
               display: inline;
             }
           }
+        }
+      }
+      @include a.media("lgPhone") {
+        gap: 10px;
+
+        .btn {
+          padding: 5px 15px;
         }
       }
     }
