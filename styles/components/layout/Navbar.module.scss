@@ -10,6 +10,24 @@
     align-items: center;
     justify-content: space-between;
 
+    @include a.media("lgPhone") {
+      padding: 10px 8px;
+    }
+
+    .longLogo {
+      display: block;
+      @include a.media("tablet") {
+        display: none;
+      }
+    }
+
+    .shortLogo {
+      display: none;
+      @include a.media("tablet") {
+        display: block;
+      }
+    }
+
     .btnContainer {
       display: flex;
       align-items: center;
@@ -28,7 +46,7 @@
 
       .callLink {
         color: a.$textHighContrast;
-        background-color: a.$red;
+        background-color: a.$redAccent;
         border: 1px solid a.$inputBg;
         text-decoration: none;
 
@@ -55,12 +73,12 @@
 
       .findBtn {
         background-color: a.$buttonWhiteBg;
-        color: a.$red;
+        color: a.$redAccent;
         border: 1px solid transparent;
         transition: all 200ms ease-in-out;
 
         &:hover {
-          background-color: a.$red;
+          background-color: a.$redAccent;
           color: a.$textHighContrast;
           border: 1px solid a.$textHighContrast;
         }
@@ -84,6 +102,13 @@
               display: inline;
             }
           }
+        }
+      }
+      @include a.media("lgPhone") {
+        gap: 10px;
+
+        .btn {
+          padding: 5px 15px;
         }
       }
     }

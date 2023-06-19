@@ -9,7 +9,12 @@ export const Navbar = () => (
   <div className={s.navbar}>
     <div className={s.mainNavbar}>
       <Link href="/">
-        <Image src="/navbarLogo.webp" alt="logo" width={118} height={41} />
+        <div className={s.longLogo}>
+          <Image src="/navbarLogo.webp" alt="logo" width={118} height={41} />
+        </div>
+        <div className={s.shortLogo}>
+          <Image src="/short.webp" alt="short logo" width={55} height={61} />
+        </div>
       </Link>
 
       <div className={s.btnContainer}>
