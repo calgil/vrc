@@ -8,42 +8,99 @@
 
   .container {
     @extend .container;
+    padding-top: 42px;
+    padding-left: 76px;
+    padding-bottom: 82px;
+    padding-right: 51px;
   }
 
   .footerContent {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 13px;
-    font-family: "Rockford Extra Light";
-    font-weight: 400;
+    .contact {
+      color: white;
 
-    .copyright {
-      padding-left: 15px;
-      padding-right: 25px;
+      .contactHeader {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.856875rem;
+      }
+
+      .contactInfo {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 24px;
+
+        .item {
+          color: inherit;
+          text-decoration: none;
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+
+          &:visited {
+            color: inherit;
+          }
+
+          .text {
+            font-size: 0.761875rem;
+
+            .address {
+              margin: 0;
+            }
+          }
+        }
+        .icon {
+          width: 19px;
+        }
+      }
+    }
+
+    .linkColumn {
+      margin: 20px 0;
+
+      .columnTitle {
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        font-size: 0.856875rem;
+        line-height: 1.143125rem;
+        font-weight: 500;
+      }
 
       .link {
-        color: white;
-        text-decoration: underline;
-        transition: all 200ms ease-in-out;
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 0.761875rem;
 
-        &:hover {
-          text-decoration: none;
+        &:visited {
+          color: inherit;
         }
       }
     }
   }
 
-  @include a.media(tablet) {
-    .footerContent {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      text-align: center;
+  // .contact {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-around;
+  //   font-size: 13px;
+  //   font-family: "Rockford Extra Light";
+  //   font-weight: 400;
 
-      .copyright {
-        padding: 0;
-      }
-    }
-  }
+  //   .copyright {
+  //     padding-left: 15px;
+  //     padding-right: 25px;
+
+  //     .link {
+  //       color: white;
+  //       text-decoration: underline;
+  //       transition: all 200ms ease-in-out;
+
+  //       &:hover {
+  //         text-decoration: none;
+  //       }
+  //     }
+  //   }
+  // }
 }

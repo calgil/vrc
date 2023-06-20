@@ -1,17 +1,79 @@
 import Image from "next/image";
-import Link from "next/link";
 import s from "../../styles/components/layout/Footer.module.scss";
+import {
+  faPhone,
+  faLocationDot,
+  faEnvelope,
+  faFax,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import { SocialLinks } from "../SocialLinks";
+import { footerLinks } from "@/data/footerLinks";
 
 export const Footer = () => {
   return (
     <div className={s.footer}>
       <div className={s.container}>
         <div className={s.footerContent}>
-          <div className={s.logoContainer}>
-            <Image src="/logo-white.webp" alt="logo" width={146} height={59} />
+          <div className={s.contact}>
+            <h3 className={s.contactHeader}>contact us</h3>
+            <ul className={s.contactInfo}>
+              <li>
+                <a
+                  className={s.item}
+                  href="https://www.google.com/maps/place/10520+White+Diamond+Pt,+Colorado+Springs,+CO+80908/@38.9838331,-104.7985129,17z/data=!3m1!4b1!4m6!3m5!1s0x87134c52f7f498d5:0xadc8e3a53ba07389!8m2!3d38.983829!4d-104.795938!16s%2Fg%2F11ssq6ysqz?entry=ttu"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <FontAwesomeIcon className={s.icon} icon={faLocationDot} />
+                  <div className={s.text}>
+                    <p className={s.address}>10520 White Diamond Pt</p>
+                    <p className={s.address}>Colorado Springs, CO 80908</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a className={s.item} href="tel:+1(719)920-4430">
+                  <FontAwesomeIcon className={s.icon} icon={faPhone} />
+                  <div className={s.text}>(719)920-4430</div>
+                </a>
+              </li>
+              <li>
+                <a className={s.item} href="mailto:info@northspringsvrc.com">
+                  <FontAwesomeIcon className={s.icon} icon={faEnvelope} />
+                  <div className={s.text}>info@northspringsvrc.com</div>
+                </a>
+              </li>
+              <li>
+                <a className={s.item}>
+                  <FontAwesomeIcon className={s.icon} icon={faFax} />
+                  <div className={s.text}>(719)920-4431</div>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div className={s.copyright}>
+          <div className={s.links}>
+            {footerLinks.map((column) => (
+              <div key={column.columnName} className={s.linkColumn}>
+                <h5 className={s.columnTitle}>{column.columnName}</h5>
+                {column.links.map((link) => (
+                  <Link key={link.label} className={s.link} href={link.url}>
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </div>
+          <Image src="/logo-white.webp" alt="logo" width={120} height={49} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+{
+  /* <div className={s.copyright}>
             © 2023 North Springs Veterinary Referral Center. All Rights
             Reserved. |
             <Link
@@ -29,10 +91,8 @@ export const Footer = () => {
             >
               Privacy Policy
             </Link>
-          </div>
-          <SocialLinks />
-        </div>
-      </div>
-    </div>
-  );
-};
+          </div> */
+}
+{
+  /* <SocialLinks /> */
+}
