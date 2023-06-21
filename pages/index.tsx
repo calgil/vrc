@@ -21,10 +21,10 @@ export default function Home() {
       <main className={s.main}>
         <Hero
           homepage={true}
-          heading="Opening Summer 2023!"
-          subHeading="Transforming the veterinary experience through empathy and
-            transparency"
-          imageURL="/home-banner.jpeg"
+          logoUrl="/logos/home.webp"
+          subHeading="Transforming the veterinary experience through 
+          empathy and transparency"
+          bgUrl="/heroBg/homeBg.webp"
         />
         <OurStory />
         <CoreValues />

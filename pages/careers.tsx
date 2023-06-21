@@ -83,11 +83,11 @@ export default function Careers() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero
+        {/* <Hero
           homepage={false}
           heading="Careers"
           imageURL="/member-network-banner.jpeg"
-        />
+        /> */}
         <div className={s.container}>
           <div className={s.careers}>
             <div className={s.careersText}>
