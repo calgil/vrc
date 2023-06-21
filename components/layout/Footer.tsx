@@ -16,8 +16,10 @@ export const Footer = () => {
     <div className={s.footer}>
       <div className={s.container}>
         <div className={s.footerContent}>
-          <div className={s.contact}>
-            <h3 className={s.contactHeader}>contact us</h3>
+          <div className={s.linkColumn}>
+            <Link className={s.columnTitle} href="/contact">
+              contact us
+            </Link>
             <ul className={s.contactInfo}>
               <li>
                 <a
@@ -53,27 +55,24 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className={s.links}>
-            {footerLinks.map((column) => (
-              <div key={column.columnName} className={s.linkColumn}>
-                <h5 className={s.columnTitle}>{column.columnName}</h5>
-                {column.links.map((link) => (
-                  <Link key={link.label} className={s.link} href={link.url}>
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            ))}
-          </div>
-          <Image src="/logo-white.webp" alt="logo" width={120} height={49} />
+          {footerLinks.map((column) => (
+            <div key={column.columnName} className={s.linkColumn}>
+              <Link className={s.columnTitle} href={column.mainLink}>
+                {column.columnName}
+              </Link>
+              {column.links.map((link) => (
+                <Link key={link.label} className={s.link} href={link.url}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          ))}
         </div>
-      </div>
-    </div>
-  );
-};
-
-{
-  /* <div className={s.copyright}>
+        <div className={s.branding}>
+          <Link className={s.logo} href="/">
+            <Image src="/logo-white.webp" alt="logo" width={120} height={49} />
+          </Link>
+          <p className={s.copyright}>
             © 2023 North Springs Veterinary Referral Center. All Rights
             Reserved. |
             <Link
@@ -91,8 +90,10 @@ export const Footer = () => {
             >
               Privacy Policy
             </Link>
-          </div> */
-}
-{
-  /* <SocialLinks /> */
-}
+          </p>
+          <SocialLinks />
+        </div>
+      </div>
+    </div>
+  );
+};

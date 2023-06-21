@@ -19,8 +19,16 @@ $breakpoints: (
   }
 }
 
-@mixin maxWidth($max) {
-  @media (max-width: $size) {
+@mixin minWidth($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media (min-width: $size) {
     @content;
   }
 }
+
+// @mixin maxWidth($max) {
+//   @media (max-width: $size) {
+//     @content;
+//   }
+// }
