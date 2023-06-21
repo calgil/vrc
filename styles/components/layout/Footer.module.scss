@@ -15,14 +15,12 @@
   }
 
   .footerContent {
-    .contact {
-      color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
 
-      .contactHeader {
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 0.856875rem;
-      }
+    .linkColumn {
+      color: white;
 
       .contactInfo {
         list-style: none;
@@ -55,16 +53,27 @@
       }
     }
 
-    .linkColumn {
-      margin: 20px 0;
+    .columnTitle {
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      font-size: 0.856875rem;
+      line-height: 1.143125rem;
+      font-weight: 500;
+      color: inherit;
+      text-decoration: none;
 
-      .columnTitle {
-        text-transform: uppercase;
-        margin-bottom: 16px;
-        font-size: 0.856875rem;
-        line-height: 1.143125rem;
-        font-weight: 500;
+      &:visited {
+        color: inherit;
       }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .linkColumn {
+      max-width: 200px;
 
       .link {
         display: block;
@@ -72,6 +81,38 @@
         text-decoration: none;
         font-weight: 400;
         font-size: 0.761875rem;
+
+        &:visited {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  .branding {
+    margin-top: 10px;
+
+    @include a.minWidth("tablet") {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: block;
+      margin: 15px 0;
+    }
+    .copyright {
+      margin-top: 15px;
+      font-size: 0.761875rem;
+
+      @include a.minWidth("tablet") {
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .link {
+        color: inherit;
 
         &:visited {
           color: inherit;

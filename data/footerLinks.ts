@@ -5,12 +5,14 @@ export type FooterLink = {
 
 export type FooterLinkColumn = {
   columnName: string;
+  mainLink: string;
   links: FooterLink[];
 };
 
 export const footerLinks: FooterLinkColumn[] = [
   {
     columnName: "Services",
+    mainLink: "/services",
     links: [
       { label: "Anesthesiology", url: "/services#anesthesiology" },
       { label: "Cardiology", url: "/services#cardiology" },
@@ -30,6 +32,7 @@ export const footerLinks: FooterLinkColumn[] = [
   },
   {
     columnName: "For Veterinarians",
+    mainLink: "/veterinarians",
     links: [
       { label: "Join Our Network", url: "/veterinarians" },
       { label: "Education Center", url: "/veterinarians" },
@@ -38,6 +41,7 @@ export const footerLinks: FooterLinkColumn[] = [
   },
   {
     columnName: "For Pet Owners",
+    mainLink: "/owners",
     links: [
       { label: "Frequently Asked Questions", url: "/owners" },
       { label: "Education Center", url: "/owners" },
@@ -47,6 +51,7 @@ export const footerLinks: FooterLinkColumn[] = [
   },
   {
     columnName: "About Us",
+    mainLink: "/about",
     links: [
       { label: "Our Story", url: "/about" },
       { label: "Our Team", url: "/about" },
