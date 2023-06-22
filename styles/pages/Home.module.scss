@@ -1,79 +1,32 @@
 @use "../abstracts" as a;
 @use "../utilities";
 
-// .sectionHeader {
-//   font-size: 2.5rem;
-//   line-height: 1.2;
-//   color: a.$redAccent;
-//   text-align: center;
-//   margin: 80px 0;
+.linkCards {
+  @extend .container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 3rem;
 
-//   @include a.media(tablet) {
-//     font-size: 2.2rem;
-//     padding: 0 10px;
-//   }
-// }
+  .link {
+    color: a.$textHighContrast;
+    text-decoration: none;
 
-.main {
-  .container {
-    @extend .container;
+    &.visited {
+      color: a.$textHighContrast;
+    }
 
-    .emergencyInfo {
-      padding: 48px 10px;
-      text-align: center;
+    .linkCard {
+      width: 250px;
+      height: 250px;
+      display: flex;
+      align-items: flex-end;
 
-      .header {
-        color: a.$redAccent;
-        font-size: 1.7rem;
+      .cardText {
+        font-size: 2rem;
         font-weight: 700;
-        max-width: 540px;
-        margin: 0 auto;
-
-        @include a.media("smTablet") {
-          font-size: 1.35781rem;
-        }
-      }
-
-      .emergencyContact {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        gap: 24px;
-
-        @include a.minWidth("tablet") {
-          flex-direction: row;
-          width: fit-content;
-          margin: 0 auto;
-          margin-top: 20px;
-          margin-bottom: 40px;
-        }
-
-        .contactInfo {
-          display: flex;
-          align-items: center;
-          color: inherit;
-          text-decoration: none;
-
-          &:visited {
-            color: inherit;
-          }
-
-          .icon {
-            margin-right: 0.25rem;
-            width: 1rem;
-          }
-
-          .info {
-            padding-right: 10px;
-          }
-        }
-      }
-      .prepared {
-        font-size: 1.25rem;
-        max-width: 540px;
-        margin: 0 auto;
+        line-height: 2.5rem;
+        padding: 1rem;
       }
     }
   }
