@@ -1,33 +1,40 @@
 @use "../abstracts" as a;
 @use "../utilities";
 
-// .linkCards {
-//   @extend .container;
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   padding-bottom: 3rem;
+.homeInfo {
+  @extend .container;
+  display: flex;
+  gap: 3.75rem;
+  padding: 0rem 2.5rem 2.5rem 2.5rem;
 
-//   .link {
-//     color: a.$textHighContrast;
-//     text-decoration: none;
+  .infoImg {
+    @include a.media("1100") {
+      display: none;
+    }
+  }
 
-//     &.visited {
-//       color: a.$textHighContrast;
-//     }
+  .homeText {
+    padding-top: 1.91rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.62rem;
 
-//     .linkCard {
-//       width: 250px;
-//       height: 250px;
-//       display: flex;
-//       align-items: flex-end;
+    .textBlock {
+      .title {
+        @extend .title;
+      }
+      .text {
+        font-size: 1.25rem;
+        margin: 1.5rem 0;
+      }
+      .btnContainer {
+        text-align: center;
 
-//       .cardText {
-//         font-size: 2rem;
-//         font-weight: 700;
-//         line-height: 2.5rem;
-//         padding: 1rem;
-//       }
-//     }
-//   }
-// }
+        .btn {
+          @extend .btnBase;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
