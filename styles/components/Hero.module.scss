@@ -2,16 +2,17 @@
 @use "../utilities";
 
 .heroBg {
-  position: relative;
+  margin-top: 126px;
   padding-bottom: 12px;
   padding-top: 37px;
-  background-position: center top;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
 
-.heroBg.homepage {
-  height: fit-content;
+  @include a.media("smTablet") {
+    background-color: a.$primaryTeal;
+    background-image: none !important;
+  }
 }
 
 .container {
@@ -20,87 +21,61 @@
 
 .logoContainer {
   margin-left: 30px;
+
+  .logo {
+    @include a.media("lgPhone") {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .heroText {
-  max-width: 60%;
+  max-width: 52%;
   margin-top: 77px;
-  margin-bottom: 30px;
+
   padding-left: 15px;
   text-align: left;
   color: a.$textHighContrast;
   padding-bottom: 10px;
 
-  h3 {
-    font-size: 2.14rem;
-    line-height: 1.25;
-  }
-
-  h1 {
-    font-size: 3.15rem;
+  .subheading {
+    font-size: 1.5625rem;
     font-weight: 500;
-    margin-top: 25px;
-    margin-bottom: 20px;
   }
 
-  @include a.media("1100") {
-    max-width: 75%;
-    h3 {
-      font-size: 1.9rem;
-    }
-    h1 {
-      font-size: 2.8rem;
-    }
-  }
+  @include a.media("smTablet") {
+    max-width: none;
 
-  @include a.media(tablet) {
-    margin-top: 35px;
-    max-width: 79%;
-
-    h3 {
-      font-size: 24px;
-    }
-
-    h1 {
-      font-size: 2.8rem;
-      // em to rem
-    }
-  }
-
-  @include a.media(smTablet) {
-    max-width: 95%;
-  }
-
-  @include a.media(lgPhone) {
-    h1 {
-      font-size: 10vw;
+    .subheading {
+      font-size: 1.35781rem;
     }
   }
 }
 
-.social {
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-}
+// .social {
+//   margin-top: 30px;
+//   display: flex;
+//   align-items: center;
+// }
 
-.connect {
-  margin-right: 10px;
-  // font-family: "Rockford Extra Light";
-  font-size: 1.13rem;
-  display: inline-block;
-}
+// .connect {
+//   margin-right: 10px;
+//   // font-family: "Rockford Extra Light";
+//   font-size: 1.13rem;
+//   display: inline-block;
+// }
 
-.socialIcon {
-  margin-right: 20px;
-}
+// .socialIcon {
+//   margin-right: 20px;
+// }
 
-.down {
-  position: absolute;
-  left: 45%;
-  bottom: 10px;
+// .down {
+//   position: absolute;
+//   left: 45%;
+//   bottom: 10px;
 
-  @include a.media(tablet) {
-    display: none;
-  }
-}
+//   @include a.media(tablet) {
+//     display: none;
+//   }
+// }

@@ -1,86 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
 import s from "../styles/components/Hero.module.scss";
-import classNames from "classnames/bind";
-import { NewsletterForm } from "./NewsletterForm";
-import { SocialLinks } from "./SocialLinks";
-
-let cx = classNames.bind(s);
 
 type HeroProps = {
   homepage: boolean;
+  logoUrl: string;
   heading?: string;
   subHeading?: string;
-  imageURL: string;
+  bgUrl: string;
 };
 
-export const Hero = ({
-  homepage,
-  heading,
-  subHeading,
-  imageURL,
-}: HeroProps) => {
-  let bgClass = cx({
-    heroBg: true,
-    homepage,
-  });
-
+export const Hero = ({ logoUrl, heading, subHeading, bgUrl }: HeroProps) => {
   return (
     <div
       style={{
-        backgroundImage: `url(${imageURL})`,
-        // "linear-gradient(108deg, rgb(0, 105, 117, 0.89) 64.95%, transparent 65%), url(/home-header.jpg)",
+        backgroundImage: `linear-gradient(108deg, rgba(0, 105, 117, 1) 0%, rgba(0, 105, 117, 1) 55%, rgba(0, 105, 117, 0.89) 55%, rgba(0, 105, 117, 0.89) 65%, transparent 65%, transparent 100%), url(${bgUrl})`,
       }}
-      className={bgClass}
+      className={s.heroBg}
     >
       <div className={s.container}>
         <Link href="/">
           <div className={s.logoContainer}>
             <Image
               className={s.logo}
-              src="/vrc-logo.png"
+              src={logoUrl}
               alt="logo"
-              width={350}
-              height={117}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
+              width={354}
+              height={122}
             />
           </div>
         </Link>
         <div className={s.heroText}>
-          <h3>{subHeading}</h3>
+          <h3 className={s.subheading}>{subHeading}</h3>
           <h1> {heading}</h1>
-          {homepage && (
-            <>
-              <NewsletterForm
-                inHero={true}
-                heading="Stay in the Know!"
-                description="Subscribe to our newsletter to receive the latest information and news
-        about our Grand Opening!"
-              />
-              <div className={s.social}>
-                <h6 className={s.connect}>
-                  <strong>Connect with us</strong>
-                </h6>
-                <SocialLinks />
-              </div>
-            </>
-          )}
         </div>
-        {homepage && (
-          <div className={s.down}>
-            <Link href="#our-story" passHref>
-              <Image
-                width={130}
-                height={120}
-                src="/downArrow.png"
-                alt="down arrow"
-              />
-            </Link>
-          </div>
-        )}
       </div>
     </div>
   );

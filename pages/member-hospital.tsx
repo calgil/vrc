@@ -121,11 +121,11 @@ export default function MemberHospital() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero
+        {/* <Hero
           homepage={false}
           heading="Member Hospital Network"
           imageURL="/member-network-banner.jpeg"
-        />
+        /> */}
         <div className={s.container}>
           <div className={s.textContainer}>
             <h3 className={s.title}>How it Works</h3>

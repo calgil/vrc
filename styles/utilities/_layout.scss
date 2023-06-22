@@ -1,3 +1,5 @@
+@use "../abstracts" as a;
+
 .container {
   max-width: 1200px;
   padding: 0 15px;
@@ -7,4 +9,13 @@
 .btnBase {
   padding: 8px 30px;
   border-radius: 25px;
+  border: 1px solid transparent;
+  background-color: a.$primaryTeal;
+  color: a.$textHighContrast;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: a.$primaryTeal;
 }
