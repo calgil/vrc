@@ -1,0 +1,33 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.linkCards {
+  @extend .container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 3rem;
+
+  .link {
+    color: a.$textHighContrast;
+    text-decoration: none;
+
+    &.visited {
+      color: a.$textHighContrast;
+    }
+
+    .linkCard {
+      width: 250px;
+      height: 250px;
+      display: flex;
+      align-items: flex-end;
+
+      .cardText {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
