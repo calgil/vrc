@@ -4,13 +4,12 @@ import s from "../styles/components/Hero.module.scss";
 
 type HeroProps = {
   homepage: boolean;
-  logoUrl: string;
   heading?: string;
   subHeading?: string;
   bgUrl: string;
 };
 
-export const Hero = ({ logoUrl, heading, subHeading, bgUrl }: HeroProps) => {
+export const Hero = ({ homepage, heading, subHeading, bgUrl }: HeroProps) => {
   return (
     <div
       style={{
@@ -19,20 +18,31 @@ export const Hero = ({ logoUrl, heading, subHeading, bgUrl }: HeroProps) => {
       className={s.heroBg}
     >
       <div className={s.container}>
-        <Link href="/">
-          <div className={s.logoContainer}>
+        <div className={s.logoContainer}>
+          {homepage && (
             <Image
               className={s.logo}
-              src={logoUrl}
+              src="/logos/home.webp"
               alt="logo"
               width={354}
               height={122}
             />
-          </div>
-        </Link>
+          )}
+          {!homepage && (
+            <div className={s.pageHeader}>
+              <Image
+                className={s.logo}
+                src="/logos/smLogo.webp"
+                alt="logo"
+                width={110}
+                height={122}
+              />
+              <h1 className={s.heading}>{heading}</h1>
+            </div>
+          )}
+        </div>
         <div className={s.heroText}>
           <h3 className={s.subheading}>{subHeading}</h3>
-          <h1> {heading}</h1>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { Hero } from "@/components/Hero";
 import Head from "next/head";
 
 export default function Services() {
@@ -13,6 +14,12 @@ export default function Services() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Hero
+          homepage={false}
+          bgUrl="/heroBg/services.webp"
+          heading="Services"
+          subHeading="Our highly trained doctors and staff are available to diagnose and treat a variety of conditions"
+        />
         <section id="anesthesiology">
           <h2>Anesthesiology</h2>
           <p>
