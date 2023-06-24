@@ -8,7 +8,6 @@ let cx = classNames.bind(s);
 type NewsletterFormProps = {
   heading: string;
   description: string;
-  inHero: boolean;
 };
 
 export type FormData = {
@@ -19,7 +18,6 @@ export type FormData = {
 export const NewsletterForm = ({
   heading,
   description,
-  inHero,
 }: NewsletterFormProps) => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -27,12 +25,10 @@ export const NewsletterForm = ({
 
   let newsletterClass = cx({
     newsletter: true,
-    inHero,
   });
 
   let formClass = cx({
     formContainer: true,
-    inHero,
   });
 
   let nameInputClass = cx({
@@ -55,25 +51,6 @@ export const NewsletterForm = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // this sucks figure it out!!
-    // if (!name) {
-    //   setMessage("Name is required");
-    //   return setNameError(true);
-    // }
-    // if (!email) {
-    //   setMessage("Email is required");
-    //   return setEmailError(true);
-    // }
-    // if (name) {
-    //   setNameError(false);
-    // }
-    // if (email) {
-    //   setEmailError(false);
-    // }
-    // if (name && email) {
-    //   setMessage("");
-    // }
-    // console.log("subscribe", { name, email });
 
     fetch(
       `${process.env.CONVERTKIT_BASE_URL}/${process.env.CONVERTKIT_FORM_ID}/subscribe`,
@@ -90,7 +67,6 @@ export const NewsletterForm = ({
       }
     )
       .then((response) => response.json())
-      .then((data) => console.log(data))
       .catch((error) => console.error(error));
     setName("");
     setEmail("");
@@ -114,7 +90,7 @@ export const NewsletterForm = ({
             name="email"
             type="email"
             value={email}
-            placeholder="Email Address"
+            placeholder="Your Email Address"
             onChange={handleEmailChange}
           />
         </div>

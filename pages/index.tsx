@@ -101,10 +101,9 @@ export default function Home() {
           }}
         /> */}
         <NewsletterForm
-          inHero={false}
-          heading="Stay in the Know!"
+          heading="Sign up for the North Springs VRC Newsletter!"
           description="Stay up to date and receive the the latest information and news about our
-                Grand Opening, added services, specialties, new hires, events and more!"
+          Grand Opening, added services, specialties, new hires, events and more!"
         />
       </main>
     </>
