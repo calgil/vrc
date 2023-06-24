@@ -315,12 +315,12 @@ export default function MemberHospital() {
             </div>
           </div> */}
         {/* </div> */}
-        <NewsletterForm
+        {/* <NewsletterForm
           inHero={false}
           heading="Stay in the Know!"
           description="Stay up to date and receive the the latest information and news about our
                 Grand Opening, added services, specialties, new hires, events and more!"
-        />
+        /> */}
       </main>
     </>
   );
