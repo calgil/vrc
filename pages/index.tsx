@@ -27,7 +27,6 @@ export default function Home() {
       <main className={s.main}>
         <Hero
           homepage={true}
-          logoUrl="/logos/home.webp"
           subHeading="Transforming the veterinary experience through 
           empathy and transparency"
           bgUrl="/heroBg/homeBg.webp"

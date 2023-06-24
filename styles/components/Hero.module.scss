@@ -20,20 +20,30 @@
 }
 
 .logoContainer {
-  margin-left: 30px;
-
   .logo {
     @include a.media("lgPhone") {
       width: 100%;
       height: auto;
     }
   }
+
+  .pageHeader {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    color: a.$textHighContrast;
+
+    .heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 2.5rem;
+    }
+  }
 }
 
 .heroText {
   max-width: 52%;
-  margin-top: 77px;
-
+  padding-top: 20px;
   padding-left: 15px;
   text-align: left;
   color: a.$textHighContrast;
@@ -52,30 +62,3 @@
     }
   }
 }
-
-// .social {
-//   margin-top: 30px;
-//   display: flex;
-//   align-items: center;
-// }
-
-// .connect {
-//   margin-right: 10px;
-//   // font-family: "Rockford Extra Light";
-//   font-size: 1.13rem;
-//   display: inline-block;
-// }
-
-// .socialIcon {
-//   margin-right: 20px;
-// }
-
-// .down {
-//   position: absolute;
-//   left: 45%;
-//   bottom: 10px;
-
-//   @include a.media(tablet) {
-//     display: none;
-//   }
-// }
