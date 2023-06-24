@@ -9,7 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @include a.media("smTablet") {
+  @include a.media("tablet") {
     background-color: a.$primaryTeal;
     background-image: none !important;
   }
