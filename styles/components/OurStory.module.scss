@@ -25,15 +25,16 @@
     gap: 0;
     padding-bottom: 60px;
 
-    .imgContainer {
-      max-width: 580px;
-      min-width: none;
-    }
+    // .imgContainer {
+    //   max-width: 580px;
+    //   min-width: none;
+    // }
   }
 
   @include a.media(lgPhone) {
     .imgContainer {
-      max-width: 420px;
+      // max-width: 420px;
+      width: 100%;
     }
   }
 }
