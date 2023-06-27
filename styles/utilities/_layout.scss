@@ -13,6 +13,12 @@
   background-color: a.$primaryTeal;
   color: a.$textHighContrast;
   text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: rgba($color: a.$primaryTeal, $alpha: 0.85);
+    color: a.$textHighContrast;
+  }
 }
 
 .title {
