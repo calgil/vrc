@@ -1,0 +1,75 @@
+@use "../abstracts" as a;
+@use "../components";
+@use "../utilities";
+
+.contactBg {
+  background-color: a.$contactFormBg;
+  padding: 2.5rem 0;
+  .container {
+    @extend .container;
+    padding: 1rem 2.5rem;
+
+    .contactHeader {
+      font-size: 1.5625rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .subheader {
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin: 1.81rem 0;
+    }
+
+    .contactForm {
+      .inputContainer {
+        display: flex;
+        gap: 1.81rem;
+
+        @include a.media(tablet) {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        .senderInfo {
+          width: 100%;
+          max-width: 350px;
+
+          @include a.media(tablet) {
+            max-width: none;
+          }
+        }
+
+        .input {
+          @extend .inputBase;
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .btnContainer {
+        display: flex;
+        justify-content: flex-end;
+
+        .submitBtn {
+          @extend .btnBase;
+          background-color: a.$textHighContrast;
+          color: a.$primaryTeal;
+          border: 2px solid a.$primaryTeal;
+
+          &:hover {
+            background-color: a.$primaryTeal;
+            color: a.$textHighContrast;
+          }
+        }
+      }
+    }
+
+    .data {
+      margin: 1.63rem 0;
+      font-size: 0.9375rem;
+      color: #1f1615;
+    }
+  }
+}
