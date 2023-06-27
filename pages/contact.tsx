@@ -3,6 +3,7 @@ import Head from "next/head";
 import s from "../styles/pages/Contact.module.scss";
 import { EmergencyContact } from "@/components/EmergencyContact";
 import { ContactInfo } from "@/components/ContactInfo";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function Contact() {
   return (
@@ -20,9 +21,7 @@ export default function Contact() {
         <Hero homepage={false} bgUrl="" heading="Contact Us" />
         <ContactInfo />
         <EmergencyContact />
-        <section>
-          <h3 className={s.formTitle}></h3>
-        </section>
+        <ContactForm />
       </main>
     </>
   );

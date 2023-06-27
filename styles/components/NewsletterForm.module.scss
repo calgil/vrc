@@ -103,6 +103,7 @@
     @extend .btnBase;
     background-color: white;
     color: a.$primaryTeal;
+    border: 2px solid a.$primaryTeal;
   }
 
   .errorMsg {
