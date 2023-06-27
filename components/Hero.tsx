@@ -12,10 +12,10 @@ type HeroProps = {
 export const Hero = ({ homepage, heading, subHeading, bgUrl }: HeroProps) => {
   return (
     <div
+      className={s.heroBg}
       style={{
         backgroundImage: `linear-gradient(108deg, rgba(0, 105, 117, 1) 0%, rgba(0, 105, 117, 1) 55%, rgba(0, 105, 117, 0.89) 55%, rgba(0, 105, 117, 0.89) 65%, transparent 65%, transparent 100%), url(${bgUrl})`,
       }}
-      className={s.heroBg}
     >
       <div className={s.container}>
         <div className={s.logoContainer}>

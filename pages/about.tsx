@@ -1,3 +1,5 @@
+import { Hero } from "@/components/Hero";
+import s from "../styles/pages/About.module.scss";
 import Head from "next/head";
 
 export default function About() {
@@ -13,7 +15,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h2>About</h2>
+        <Hero homepage={false} bgUrl="" heading="About Us" />
       </main>
     </>
   );

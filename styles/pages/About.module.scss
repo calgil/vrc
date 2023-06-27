@@ -1,0 +1,7 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.title {
+  padding-top: 500px;
+  @extend .title;
+}
