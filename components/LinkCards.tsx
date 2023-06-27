@@ -12,25 +12,25 @@ export const LinkCards = () => {
   const linkCards: LinkCard[] = [
     {
       url: "/services#emergency",
-      bgUrl: "/cardBg/emergencyBg.webp",
+      bgUrl: "/home/cardBg/emergencyBg.webp",
       bgColor: "rgba(154, 48, 64, 0.85)",
       text: "Emergency Services",
     },
     {
       url: "/services",
-      bgUrl: "/cardBg/specialtyBg.webp",
+      bgUrl: "/home/cardBg/specialtyBg.webp",
       bgColor: "rgba(111, 113, 168, 0.85)",
       text: "Specialty Service",
     },
     {
       url: "/veterinarians",
-      bgUrl: "/cardBg/vets.webp",
+      bgUrl: "/home/cardBg/vets.webp",
       bgColor: "rgba(37, 37, 37, 0.85)",
       text: "For Referring Veterinarians",
     },
     {
       url: "/veterinarians",
-      bgUrl: "/cardBg/owners.webp",
+      bgUrl: "/home/cardBg/owners.webp",
       bgColor: "rgba(1, 109, 118, 0.85)",
       text: "For Pet Owners",
     },

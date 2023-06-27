@@ -1,3 +1,4 @@
+import { Hero } from "@/components/Hero";
 import Head from "next/head";
 
 export default function Owners() {
@@ -13,6 +14,7 @@ export default function Owners() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Hero homepage={false} bgUrl="/heroBg/ownersBg.webp" />
         <h2>Pet Owners</h2>
       </main>
     </>

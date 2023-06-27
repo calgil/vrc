@@ -5,20 +5,12 @@ import { isEmailValid } from "@/utils/isEmailValid";
 
 let cx = classNames.bind(s);
 
-type NewsletterFormProps = {
-  heading: string;
-  description: string;
-};
-
 export type FormData = {
   name: string;
   email: string;
 };
 
-export const NewsletterForm = ({
-  heading,
-  description,
-}: NewsletterFormProps) => {
+export const NewsletterForm = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -73,8 +65,14 @@ export const NewsletterForm = ({
   };
   return (
     <div className={newsletterClass}>
-      <h4 className={s.newsletterTitle}>{heading}</h4>
-      <p className={s.description}>{description}</p>
+      <h4 className={s.newsletterTitle}>
+        Sign up for the North Springs VRC Newsletter!
+      </h4>
+      <p className={s.description}>
+        Stay up to date and receive the the latest information and news about
+        our Grand Opening, added services, specialties, new hires, events and
+        more!
+      </p>
       <form className={formClass} onSubmit={handleSubmit}>
         <div className={s.inputContainer}>
           <input

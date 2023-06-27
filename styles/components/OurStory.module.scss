@@ -6,27 +6,16 @@
   @extend .container;
 }
 
-.headerText {
-  margin-top: 50px;
-  margin-bottom: 60px;
-  color: a.$primaryTeal;
-  text-align: center;
-  font-size: 2.15rem;
-
-  @include a.media(tablet) {
-    font-size: 1.9rem;
-    // em to rem
-  }
-}
-
 .ourStory {
   display: flex;
+  align-items: center;
   gap: 30px;
   padding-bottom: 90px;
 
   .imgContainer {
     max-width: 470px;
     min-width: 290px;
+    margin-top: 2rem;
   }
 
   @include a.media(tablet) {
@@ -54,18 +43,15 @@
   line-height: 1.2;
   color: a.$primaryText;
 
-  h5 {
-    font-size: 1.9rem;
-    // em to rem
-    font-weight: 600;
-    margin-bottom: 30px;
+  .storyTitle {
+    @extend .title;
+    margin-bottom: 1rem;
   }
 
-  p {
-    // font-family: a.$lightFontFamily;
-    font-size: 18px;
+  .story {
+    font-size: 1.25rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     line-height: 1.4;
   }
 
@@ -73,12 +59,12 @@
     padding: 30px;
     padding-right: 0;
 
-    h5 {
+    .storyTitle {
       font-size: 1.3rem;
       padding-bottom: 15px;
       margin-bottom: 0.5rem;
     }
-    p {
+    .story {
       font-size: 16px;
     }
   }
