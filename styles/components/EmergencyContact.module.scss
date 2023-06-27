@@ -10,9 +10,9 @@
 
     .header {
       color: a.$redAccent;
-      font-size: 1.7rem;
+      font-size: 2.0625rem;
       font-weight: 700;
-      max-width: 540px;
+      max-width: 685px;
       margin: 0 auto;
 
       @include a.media("smTablet") {
@@ -24,7 +24,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 0.66rem;
       margin-bottom: 40px;
       gap: 24px;
 
@@ -52,7 +52,7 @@
         }
 
         .info {
-          padding-right: 10px;
+          padding: 0 15px;
         }
       }
     }
@@ -60,6 +60,18 @@
       font-size: 1.25rem;
       max-width: 540px;
       margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .poison {
+      margin-top: 4.75rem;
+      font-size: 1.5625rem;
+      font-weight: 500;
+
+      .call {
+        color: a.$redAccent;
+        text-decoration: none;
+      }
     }
   }
 }
