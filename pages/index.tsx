@@ -1,14 +1,8 @@
 import Head from "next/head";
 import s from "../styles/pages/Home.module.scss";
 import { Hero } from "@/components/Hero";
-import { OurStory } from "@/components/OurStory";
-import { CoreValues } from "@/components/CoreValues";
-import { ImageCard } from "@/components/ImageCard/ImageCard";
 import { NewsletterForm } from "@/components/NewsletterForm";
-import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { EmergencyContact } from "@/components/EmergencyContact";
-import Link from "next/link";
 import { LinkCards } from "@/components/LinkCards";
 import Image from "next/image";
 
@@ -73,37 +67,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* <OurStory /> */}
-        {/* <CoreValues /> */}
-        {/* <h2 className={s.sectionHeader}>Join the North Springs VRC Family!</h2>
-        <ImageCard
-          imgPosition="right"
-          image="/join-us-2.jpg"
-          cardText={{
-            header: "Member Hospital Network",
-            description:
-              "North Springs VRC is excited to be partnering with local veterinarians to bring top quality care to their patients, as well as provide educational resources to their teams.",
-            button: {
-              text: "join our network today",
-              link: "/member-hospital",
-            },
-          }}
-        />
-        <ImageCard
-          imgPosition="left"
-          image="/join-us-1.jpg"
-          cardText={{
-            header: "People Make the Difference",
-            description:
-              "Join a company that prioritizes your work/life balance and supports opportunities for growth. We are looking to hire ER Vets, Client Service Reps, Technicians, Assistants, and Specialists!",
-            button: { text: "click for job opportunities", link: "/careers" },
-          }}
-        /> */}
-        <NewsletterForm
-          heading="Sign up for the North Springs VRC Newsletter!"
-          description="Stay up to date and receive the the latest information and news about our
-          Grand Opening, added services, specialties, new hires, events and more!"
-        />
       </main>
     </>
   );
