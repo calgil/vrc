@@ -4,7 +4,8 @@
 
 .owners {
   text-align: center;
-  padding: 2.5rem 0;
+  padding: 2.5rem 1rem;
+  @extend .container;
 
   .title {
     @extend .title;
@@ -21,7 +22,7 @@
       rgba(211, 211, 211, 0.5),
       rgba(211, 211, 211, 0.5)
     ),
-    url("/serviceCardsBg.webp");
+    url("/owners/serviceCardsBg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -80,6 +81,9 @@
     padding: 2rem;
     color: a.$textHighContrast;
     text-decoration: none;
-    background-color: grey;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
   }
 }

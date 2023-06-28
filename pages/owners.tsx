@@ -9,15 +9,28 @@ export default function Owners() {
     title: string;
     textBlocks: string[];
     linkUrl: string;
+    bgUrl: string;
+    bgColor: string;
   };
-  const linkData: linkCard[] = [
+  const linkCards: linkCard[] = [
     {
       title: "Education Center",
       textBlocks: [
         "We plan to compile a library of resources, both video and print, to share our knowledge and help educate others.",
-        "Check back soon as we expand this knowledge libary!",
+        "Check back soon as we expand this knowledge library!",
       ],
-      linkUrl: "",
+      linkUrl: "/",
+      bgUrl: "/owners/educationCenter.webp",
+      bgColor: "rgba(154, 48, 64, 0.85)",
+    },
+    {
+      title: "Clinic Camera",
+      textBlocks: [
+        "If your pet is being treated with us, click here to view their clinic camera and check in with them",
+      ],
+      linkUrl: "/",
+      bgUrl: "/owners/clinicCamera.webp",
+      bgColor: "rgba(1, 109, 118, 0.85)",
     },
   ];
   return (
@@ -84,7 +97,22 @@ export default function Owners() {
         </section>
         <EmergencyContact />
         <section className={s.linkCards}>
-          <Link href="wwww.google.com" className={s.linkCard}>
+          {linkCards.map((card) => (
+            <Link
+              href={card.linkUrl}
+              key={card.title}
+              className={s.linkCard}
+              style={{
+                backgroundImage: `linear-gradient(${card.bgColor} 0%, ${card.bgColor} 100%), url(${card.bgUrl})`,
+              }}
+            >
+              <h5 className={s.linkTitle}>Education Center</h5>
+              {card.textBlocks.map((text, i) => (
+                <p key={i}>{text}</p>
+              ))}
+            </Link>
+          ))}
+          {/* <Link href="wwww.google.com" className={s.linkCard}>
             <h5 className={s.linkTitle}>Education Center</h5>
             <p className={s.linkText}>
               We plan to compile a library of resources, both video and print,
@@ -100,7 +128,7 @@ export default function Owners() {
               If your pet is being treated with us, click here to view their
               clinic camera and check in with them
             </p>
-          </div>
+          </div> */}
         </section>
       </main>
     </>
