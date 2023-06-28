@@ -41,7 +41,7 @@ export const NavLinks = () => {
             <li className="nav-item dropdown">
               <a
                 className={`dropdown-toggle ${
-                  currentRoute.includes("/services") ? activeStyle : linkStyle
+                  currentRoute === "/services" ? activeStyle : linkStyle
                 }`}
                 href="#"
                 role="button"
