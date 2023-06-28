@@ -1,3 +1,4 @@
+import { Hero } from "@/components/Hero";
 import Head from "next/head";
 
 export default function Veterinarians() {
@@ -13,7 +14,11 @@ export default function Veterinarians() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h2>For Veterinarians</h2>
+        <Hero
+          homepage={false}
+          bgUrl=""
+          heading="Information for Veterinarians"
+        />
       </main>
     </>
   );
