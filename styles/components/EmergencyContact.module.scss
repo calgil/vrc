@@ -68,6 +68,10 @@
       font-size: 1.5625rem;
       font-weight: 500;
 
+      @include a.media("tablet") {
+        font-size: 1.35781rem;
+      }
+
       .call {
         color: a.$redAccent;
         text-decoration: none;
