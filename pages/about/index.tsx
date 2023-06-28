@@ -1,5 +1,5 @@
 import { Hero } from "@/components/Hero";
-import s from "../styles/pages/About.module.scss";
+import s from "../../styles/pages/About.module.scss";
 import Head from "next/head";
 import { OurStory } from "@/components/OurStory";
 import { CoreValues } from "@/components/CoreValues";
@@ -22,7 +22,7 @@ export default function About() {
         <OurStory />
         <CoreValues />
         <div className={s.btnContainer}>
-          <Link href="/contact" className={s.contactBtn}>
+          <Link href="/about/contact" className={s.contactBtn}>
             contact us
           </Link>
         </div>

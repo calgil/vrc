@@ -20,7 +20,7 @@ export const Footer = () => {
         <div className={s.container}>
           <div className={s.footerContent}>
             <div className={s.linkColumn}>
-              <Link className={s.columnTitle} href="/contact">
+              <Link className={s.columnTitle} href="/about/contact">
                 contact us
               </Link>
               <ul className={s.contactInfo}>
