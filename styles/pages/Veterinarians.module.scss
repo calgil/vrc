@@ -19,6 +19,7 @@
 
 .member {
   @extend .container;
+  margin-bottom: 2.5rem;
 
   .content {
     display: flex;
@@ -27,6 +28,13 @@
 
     @include a.media("1100") {
       flex-direction: column;
+    }
+
+    .memberImg {
+      @include a.media("1100") {
+        max-width: 100%;
+        height: auto;
+      }
     }
 
     .info {

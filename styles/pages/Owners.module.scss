@@ -4,8 +4,8 @@
 
 .owners {
   text-align: center;
-  padding: 2.5rem 1rem;
   @extend .container;
+  padding: 2.5rem 1rem;
 
   .title {
     @extend .title;
@@ -16,63 +16,60 @@
   }
 }
 
-.serviceCardBg {
-  padding: 4.75rem 3rem;
-  background-image: linear-gradient(
-      rgba(211, 211, 211, 0.5),
-      rgba(211, 211, 211, 0.5)
-    ),
-    url("/owners/serviceCardsBg.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+// .serviceCardBg {
+//   padding: 4.75rem 3rem;
+//   background-image: linear-gradient(
+//       rgba(211, 211, 211, 0.5),
+//       rgba(211, 211, 211, 0.5)
+//     ),
+//     url("/owners/serviceCardsBg.webp");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
 
-  .cardContainer {
-    @extend .container;
-    display: flex;
-    align-items: center;
-    gap: 8.75rem;
+//   .cardContainer {
+//     @extend .container;
+//     display: flex;
+//     align-items: center;
+//     gap: 8.75rem;
 
-    @include a.media("1100") {
-      flex-direction: column;
-    }
+//     @include a.media("1100") {
+//       flex-direction: column;
+//     }
 
-    .card {
-      max-width: 520px;
-      padding: 24px;
-      background-color: a.$buttonWhiteBg;
-      border-radius: 16px;
-      border: 1px solid a.$grey;
+//     .card {
+//       padding: 24px;
+//       background-color: a.$buttonWhiteBg;
+//       border-radius: 16px;
+//       border: 1px solid a.$grey;
 
-      @include a.media(smTablet) {
-        max-width: none;
-      }
+//       @include a.media(smTablet) {
+//         max-width: none;
+//       }
 
-      .cardTitle {
-        font-size: 1.875rem;
-        font-weight: 700;
-        color: a.$primaryTeal;
-        text-align: center;
-      }
+//       .cardTitle {
+//         font-size: 1.875rem;
+//         font-weight: 700;
+//         color: a.$primaryTeal;
+//         text-align: center;
+//       }
 
-      .cardText {
-        font-size: 1.25rem;
-        margin: 1rem 0;
-      }
+//       .cardText {
+//         font-size: 1.25rem;
+//         font-weight: 700;
+//         margin: 1rem 0;
+//       }
 
-      .cardLink {
-        @extend .btnBase;
-        text-decoration: none;
-        background-color: a.$textHighContrast;
-        color: a.$primaryTeal;
-        border: 2px solid a.$primaryTeal;
-        display: block;
-        width: max-content;
-        margin: 0 auto;
-      }
-    }
-  }
-}
+//       .cardLink {
+//         @extend .btnSecondary;
+//         text-decoration: none;
+//         display: block;
+//         width: max-content;
+//         margin: 0 auto;
+//       }
+//     }
+//   }
+// }
 
 .linkCards {
   display: flex;

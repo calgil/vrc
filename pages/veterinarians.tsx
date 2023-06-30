@@ -3,8 +3,28 @@ import Head from "next/head";
 import s from "../styles/pages/Veterinarians.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { PhotoCardSection, PhotoCardType } from "@/components/PhotoCardSection";
 
 export default function Veterinarians() {
+  const photoCards: PhotoCardType[] = [
+    {
+      title: "About Us",
+      textBlocks: [
+        "North Springs VRC was founded with a passion to improve the veterinary world for both staff and clients.",
+        "Read about our story, our vision, and our values to learn what drives us.",
+      ],
+      linkUrl: "/about",
+      btnText: "about us",
+    },
+    {
+      title: "Join Our Team",
+      textBlocks: [
+        `If you are passionate about animal care and are looking to work at a place where you can make a positive impact in others' lives, then check out our latest job opportunities.`,
+      ],
+      linkUrl: "/about/careers",
+      btnText: "view careers",
+    },
+  ];
   return (
     <>
       <Head>
@@ -40,14 +60,11 @@ export default function Veterinarians() {
         <section className={s.member}>
           <div className={s.content}>
             <Image
+              className={s.memberImg}
               src="/veterinarians/lindsey.webp"
               alt="veterinarian cares for animal"
               width={580}
               height={583}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
             />
             <div className={s.info}>
               <h4 className={s.memberTitle}>The Member Hospital Network</h4>
@@ -64,6 +81,7 @@ export default function Veterinarians() {
             </div>
           </div>
         </section>
+        <PhotoCardSection cards={photoCards} />
       </main>
     </>
   );
