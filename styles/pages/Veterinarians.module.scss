@@ -1,0 +1,54 @@
+@use "../utilities";
+@use "../abstracts" as a;
+
+.vets {
+  @extend .container;
+  padding: 2.5rem 15px;
+  text-align: center;
+
+  .title {
+    @extend .title;
+    margin-bottom: 0.5rem;
+  }
+
+  .text {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+
+.member {
+  @extend .container;
+
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+
+    @include a.media("1100") {
+      flex-direction: column;
+    }
+
+    .info {
+      .memberTitle {
+        @extend .title;
+        margin-bottom: 1rem;
+      }
+
+      .memberText {
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+
+      .btnContainer {
+        text-align: center;
+        margin-top: 1rem;
+
+        .memberBtn {
+          @extend .btnBase;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
