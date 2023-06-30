@@ -4,14 +4,7 @@ import s from "../styles/pages/Owners.module.scss";
 import Link from "next/link";
 import { EmergencyContact } from "@/components/EmergencyContact";
 import { PhotoCardSection, PhotoCardType } from "@/components/PhotoCardSection";
-
-export type linkCard = {
-  title: string;
-  textBlocks: string[];
-  linkUrl: string;
-  bgUrl: string;
-  bgColor: string;
-};
+import { LinkCardSection, LinkCardType } from "@/components/LinkCardSection";
 
 export default function Owners() {
   const photoCards: PhotoCardType[] = [
@@ -34,7 +27,7 @@ export default function Owners() {
       btnText: "about us",
     },
   ];
-  const linkCards: linkCard[] = [
+  const linkCards: LinkCardType[] = [
     {
       title: "Education Center",
       textBlocks: [
@@ -87,23 +80,7 @@ export default function Owners() {
         </section>
         <PhotoCardSection cards={photoCards} />
         <EmergencyContact />
-        <section className={s.linkCards}>
-          {linkCards.map((card) => (
-            <Link
-              href={card.linkUrl}
-              key={card.title}
-              className={s.linkCard}
-              style={{
-                backgroundImage: `linear-gradient(${card.bgColor} 0%, ${card.bgColor} 100%), url(${card.bgUrl})`,
-              }}
-            >
-              <h5 className={s.linkTitle}>Education Center</h5>
-              {card.textBlocks.map((text, i) => (
-                <p key={i}>{text}</p>
-              ))}
-            </Link>
-          ))}
-        </section>
+        <LinkCardSection cards={linkCards} />
       </main>
     </>
   );

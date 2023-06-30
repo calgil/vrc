@@ -1,0 +1,17 @@
+@use "../abstracts" as a;
+@use "../utilities";
+@use "../components";
+
+.linkCards {
+  display: flex;
+
+  .linkCard {
+    padding: 2rem;
+    color: a.$textHighContrast;
+    text-decoration: none;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+  }
+}

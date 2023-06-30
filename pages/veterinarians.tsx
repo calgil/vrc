@@ -4,6 +4,7 @@ import s from "../styles/pages/Veterinarians.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { PhotoCardSection, PhotoCardType } from "@/components/PhotoCardSection";
+import { LinkCardSection, LinkCardType } from "@/components/LinkCardSection";
 
 export default function Veterinarians() {
   const photoCards: PhotoCardType[] = [
@@ -23,6 +24,27 @@ export default function Veterinarians() {
       ],
       linkUrl: "/about/careers",
       btnText: "view careers",
+    },
+  ];
+  const linkCards: LinkCardType[] = [
+    {
+      title: "Education Center",
+      textBlocks: [
+        "We plan to compile a library of resources, both video and print, to share our knowledge and help educate others.",
+        "Check back soon as we expand this knowledge library!",
+      ],
+      linkUrl: "/",
+      bgUrl: "/owners/educationCenter.webp",
+      bgColor: "rgba(154, 48, 64, 0.85)",
+    },
+    {
+      title: "Clinic Camera",
+      textBlocks: [
+        "If your pet is being treated with us, click here to view their clinic camera and check in with them",
+      ],
+      linkUrl: "/",
+      bgUrl: "/owners/clinicCamera.webp",
+      bgColor: "rgba(1, 109, 118, 0.85)",
     },
   ];
   return (
@@ -82,6 +104,7 @@ export default function Veterinarians() {
           </div>
         </section>
         <PhotoCardSection cards={photoCards} />
+        <LinkCardSection cards={linkCards} />
       </main>
     </>
   );
