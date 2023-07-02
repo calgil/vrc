@@ -27,7 +27,9 @@ export const LinkCardSection = ({ cards }: LinkCardSectionProps) => {
         >
           <h5 className={s.linkTitle}>{card.title}</h5>
           {card.textBlocks.map((text, i) => (
-            <p key={i}>{text}</p>
+            <p key={i} className={s.text}>
+              {text}
+            </p>
           ))}
         </Link>
       ))}

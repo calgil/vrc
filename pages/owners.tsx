@@ -1,53 +1,13 @@
 import { Hero } from "@/components/Hero";
 import Head from "next/head";
 import s from "../styles/pages/Owners.module.scss";
-import Link from "next/link";
 import { EmergencyContact } from "@/components/EmergencyContact";
 import { PhotoCardSection, PhotoCardType } from "@/components/PhotoCardSection";
 import { LinkCardSection, LinkCardType } from "@/components/LinkCardSection";
+import { ownerLinkCards } from "@/data/owners/linkCards";
+import { ownerPhotoCards } from "@/data/owners/photoCards";
 
 export default function Owners() {
-  const photoCards: PhotoCardType[] = [
-    {
-      title: "Our Services",
-      textBlocks: [
-        "Our specialty teams are available for appointments to diagnose and treat a variety of conditions.",
-        "View our services page to learn more about how we can help you and your pet.",
-      ],
-      linkUrl: "/services/#emergency",
-      btnText: "view services",
-    },
-    {
-      title: "About Us",
-      textBlocks: [
-        "North Springs VRC was founded with a passion to improve the veterinary world for both staff and clients.",
-        "Read about our story, our vision, and our values to learn what drives us.",
-      ],
-      linkUrl: "/about",
-      btnText: "about us",
-    },
-  ];
-  const linkCards: LinkCardType[] = [
-    {
-      title: "Education Center",
-      textBlocks: [
-        "We plan to compile a library of resources, both video and print, to share our knowledge and help educate others.",
-        "Check back soon as we expand this knowledge library!",
-      ],
-      linkUrl: "/",
-      bgUrl: "/owners/educationCenter.webp",
-      bgColor: "rgba(154, 48, 64, 0.85)",
-    },
-    {
-      title: "Clinic Camera",
-      textBlocks: [
-        "If your pet is being treated with us, click here to view their clinic camera and check in with them",
-      ],
-      linkUrl: "/",
-      bgUrl: "/owners/clinicCamera.webp",
-      bgColor: "rgba(1, 109, 118, 0.85)",
-    },
-  ];
   return (
     <>
       <Head>
@@ -78,9 +38,9 @@ export default function Owners() {
             how we work to uphold our values.
           </p>
         </section>
-        <PhotoCardSection cards={photoCards} />
+        <PhotoCardSection cards={ownerPhotoCards} />
         <EmergencyContact />
-        <LinkCardSection cards={linkCards} />
+        <LinkCardSection cards={ownerLinkCards} />
       </main>
     </>
   );
