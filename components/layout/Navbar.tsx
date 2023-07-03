@@ -10,10 +10,20 @@ export const Navbar = () => (
     <div className={s.mainNavbar}>
       <Link href="/">
         <div className={s.longLogo}>
-          <Image src="/navbarLogo.webp" alt="logo" width={118} height={41} />
+          <Image
+            src="/logos/navbarLogo.webp"
+            alt="logo"
+            width={118}
+            height={41}
+          />
         </div>
         <div className={s.shortLogo}>
-          <Image src="/short.webp" alt="short logo" width={55} height={61} />
+          <Image
+            src="/logos/short.webp"
+            alt="short logo"
+            width={55}
+            height={61}
+          />
         </div>
       </Link>
 
