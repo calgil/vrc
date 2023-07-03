@@ -23,14 +23,14 @@ export default function Home() {
           homepage={true}
           subHeading="Transforming the veterinary experience through 
           empathy and transparency"
-          bgUrl="/home/homeHero.webp"
+          bgUrl="/pages/home/homeHero.webp"
         />
         <EmergencyContact />
         <LinkCards />
         <section className={s.homeInfo}>
           <Image
             className={s.infoImg}
-            src="/home/doggoCuddles.webp"
+            src="/pages/home/doggoCuddles.webp"
             alt="dog"
             width={477.498}
             height={765}
