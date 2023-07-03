@@ -23,7 +23,7 @@ export default function Veterinarians() {
       <main>
         <Hero
           homepage={false}
-          bgUrl="/header1.jpg"
+          bgUrl="/vetsHeader.png"
           heading="Information for Veterinarians"
         />
         <section className={s.vets}>
