@@ -24,7 +24,7 @@
   .content {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
 
     @include a.media("1100") {
       flex-direction: column;
@@ -38,6 +38,7 @@
     }
 
     .info {
+      padding: 10px;
       .memberTitle {
         @extend .title;
         margin-bottom: 1rem;
@@ -45,17 +46,18 @@
 
       .memberText {
         font-size: 1.25rem;
-        font-weight: 400;
+        font-weight: 700;
       }
 
-      .btnContainer {
-        text-align: center;
-        margin-top: 1rem;
-
-        .memberBtn {
-          @extend .btnBase;
-          text-decoration: none;
-        }
+      .memberBtn {
+        @extend .btnBase;
+        text-decoration: none;
+        display: block;
+        width: fit-content;
+        margin: 1rem auto;
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: 1rem 3.75rem;
       }
     }
   }
