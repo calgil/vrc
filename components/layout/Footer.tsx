@@ -74,7 +74,7 @@ export const Footer = () => {
           <div className={s.branding}>
             <Link className={s.logo} href="/">
               <Image
-                src="/logo-white.webp"
+                src="/logos/logo-white.webp"
                 alt="logo"
                 width={120}
                 height={49}
