@@ -23,7 +23,7 @@ export default function Veterinarians() {
       <main>
         <Hero
           homepage={false}
-          bgUrl="/vetsHeader.png"
+          bgUrl="/pages/veterinarians/hero.jpg"
           heading="Information for Veterinarians"
         />
         <section className={s.vets}>
@@ -45,7 +45,7 @@ export default function Veterinarians() {
           <div className={s.content}>
             <Image
               className={s.memberImg}
-              src="/veterinarians/lindsey.webp"
+              src="/pages/veterinarians/lindsey.webp"
               alt="veterinarian cares for animal"
               width={580}
               height={583}
