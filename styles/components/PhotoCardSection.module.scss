@@ -1,0 +1,59 @@
+@use "../abstracts" as a;
+@use "../utilities";
+@use "../components";
+
+.serviceCardBg {
+  padding: 4.75rem 3rem;
+  background-image: linear-gradient(
+      rgba(211, 211, 211, 0.5),
+      rgba(211, 211, 211, 0.5)
+    ),
+    url("/owners/serviceCardsBg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .cardContainer {
+    @extend .container;
+    display: flex;
+    align-items: center;
+    gap: 8.75rem;
+
+    @include a.media("1100") {
+      flex-direction: column;
+    }
+
+    .card {
+      padding: 24px;
+      background-color: a.$buttonWhiteBg;
+      border-radius: 16px;
+      border: 1px solid a.$grey;
+      flex: 1;
+
+      @include a.media(smTablet) {
+        max-width: none;
+      }
+
+      .cardTitle {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: a.$primaryTeal;
+        text-align: center;
+      }
+
+      .cardText {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 1rem 0;
+      }
+
+      .cardLink {
+        @extend .btnSecondary;
+        text-decoration: none;
+        display: block;
+        width: max-content;
+        margin: 0 auto;
+      }
+    }
+  }
+}

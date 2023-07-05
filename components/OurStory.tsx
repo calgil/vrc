@@ -7,7 +7,7 @@ export const OurStory = () => {
       <div className={s.ourStory}>
         <div className={s.imgContainer}>
           <Image
-            src="/about-us.jpg"
+            src="/pages/about/about-us.webp"
             alt="about us"
             width={580}
             height={870}
@@ -30,7 +30,7 @@ export const OurStory = () => {
           <p className={s.story}>
             In 2021, our founding team realized that the existing emergency
             veterinary practices in the Colorado Springs area consistently had
-            wait times of 3 – 6+ hours, even turning clients away. In addition,
+            wait times of 3 - 6+ hours, even turning clients away. In addition,
             these high patient loads were overwhelming the veterinary staff and
             causing high rates of burn-out. Given that most clients visit the
             emergency room on their worst days, both pets and owners experience

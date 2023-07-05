@@ -41,7 +41,7 @@ export const NavLinks = () => {
             <li className="nav-item dropdown">
               <a
                 className={`dropdown-toggle ${
-                  currentRoute.includes("/services") ? activeStyle : linkStyle
+                  currentRoute === "/services" ? activeStyle : linkStyle
                 }`}
                 href="#"
                 role="button"
@@ -117,13 +117,43 @@ export const NavLinks = () => {
                 For Pet Owners
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 href="/about"
                 className={currentRoute === "/about" ? activeStyle : linkStyle}
               >
                 About Us
               </Link>
+            </li> */}
+            <li className="nav-item dropdown">
+              <a
+                className={`dropdown-toggle ${
+                  currentRoute === "/about" ? activeStyle : linkStyle
+                }`}
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About Us
+              </a>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link href="/about" className="dropdown-item">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about/careers" className="dropdown-item">
+                    Careers
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about/contact" className="dropdown-item">
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

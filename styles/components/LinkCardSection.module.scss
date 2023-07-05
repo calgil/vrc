@@ -1,0 +1,31 @@
+@use "../abstracts" as a;
+@use "../utilities";
+@use "../components";
+
+.linkCards {
+  display: flex;
+  // margin-bottom: 40px;
+
+  .linkCard {
+    padding: 2rem;
+    color: a.$textHighContrast;
+    text-decoration: none;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+
+    .linkTitle {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .text {
+      font-size: 1.125rem;
+      font-weight: 700;
+      max-width: 410px;
+      line-height: normal;
+    }
+  }
+}

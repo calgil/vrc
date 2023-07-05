@@ -1,15 +1,15 @@
 import { Hero } from "@/components/Hero";
-import s from "../styles/pages/About.module.scss";
 import Head from "next/head";
-import { OurStory } from "@/components/OurStory";
-import { CoreValues } from "@/components/CoreValues";
-import Link from "next/link";
+import s from "../styles/pages/Contact.module.scss";
+import { EmergencyContact } from "@/components/EmergencyContact";
+import { ContactInfo } from "@/components/ContactInfo";
+import { ContactForm } from "@/components/ContactForm";
 
-export default function About() {
+export default function Contact() {
   return (
     <>
       <Head>
-        <title>About Us | North Springs Veterinary Referral Center</title>
+        <title>Contact | North Springs Veterinary Referral Center</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
@@ -18,14 +18,14 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero homepage={false} bgUrl="" heading="About Us" />
-        <OurStory />
-        <CoreValues />
-        <div className={s.btnContainer}>
-          <Link href="/contact" className={s.contactBtn}>
-            contact us
-          </Link>
-        </div>
+        <Hero
+          homepage={false}
+          bgUrl="/pages/about/contact/contactBanner.webp"
+          heading="Contact Us"
+        />
+        <ContactInfo />
+        <EmergencyContact />
+        <ContactForm />
       </main>
     </>
   );

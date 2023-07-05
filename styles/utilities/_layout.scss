@@ -21,6 +21,25 @@
   }
 }
 
+.btnSecondary {
+  padding: 8px 30px;
+  border-radius: 25px;
+  border: 2px solid a.$primaryTeal;
+  background-color: a.$buttonWhiteBg;
+  color: a.$primaryTeal;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(153, 153, 153, 0.5) 0%,
+        rgba(153, 153, 153, 0.5) 100%
+      ),
+      #fff;
+  }
+}
+
 .title {
   font-size: 1.875rem;
   font-weight: 700;

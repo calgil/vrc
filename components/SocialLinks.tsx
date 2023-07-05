@@ -10,17 +10,17 @@ type SocialIcon = {
 
 const socialIcons: SocialIcon[] = [
   {
-    image: "/fb.png",
+    image: "/socials/fb.png",
     desc: "facebook",
     link: "https://www.facebook.com/North-Springs-Veterinary-Referral-Center-105037382132822",
   },
   {
-    image: "/ig.webp",
+    image: "/socials/ig.webp",
     desc: "instagram",
     link: "https://www.instagram.com/northsprings.vrc/",
   },
   {
-    image: "/li.webp",
+    image: "/socials/li.webp",
     desc: "linkedIn",
     link: "https://www.linkedin.com/company/north-springs-veterinary-referral-center/",
   },

@@ -17,62 +17,83 @@
 
 .container {
   @extend .container;
-}
+  // display: flex;
+  // padding-bottom: 12px;
+  // padding-top: 37px;
+  // background: linear-gradient(
+  //   108deg,
+  //   rgb(0, 105, 117) 0%,
+  //   rgb(0, 105, 117) 55%,
+  //   rgba(0, 105, 117, 0.89) 55%,
+  //   rgba(0, 105, 117, 0.89) 65%,
+  //   transparent 65%,
+  //   transparent 100%
+  // );
 
-.logoContainer {
-  .logo {
-    @include a.media("lgPhone") {
-      width: 100%;
-      height: auto;
-      max-width: 100px;
+  .logoContainer {
+    .logo {
+      @include a.media("lgPhone") {
+        width: 100%;
+        height: auto;
+        max-width: 100px;
+      }
+    }
+
+    .pageHeader {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      color: a.$textHighContrast;
+      max-width: 60%;
+
+      @include a.media("tablet") {
+        max-width: none;
+      }
+
+      .heading {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+
+        @include a.media("lgPhone") {
+          font-size: 1.75rem;
+        }
+      }
     }
   }
 
-  .pageHeader {
-    display: flex;
-    align-items: center;
-    gap: 32px;
+  .heroText {
+    max-width: 52%;
+    padding-top: 20px;
+    padding-left: 15px;
+    text-align: left;
     color: a.$textHighContrast;
-    max-width: 60%;
+    padding-bottom: 10px;
 
     @include a.media("tablet") {
       max-width: none;
     }
 
-    .heading {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 2.5rem;
+    .subheading {
+      font-size: 1.5625rem;
+      font-weight: 500;
+    }
 
-      @include a.media("lgPhone") {
-        font-size: 1.75rem;
+    @include a.media("smTablet") {
+      max-width: none;
+
+      .subheading {
+        font-size: 1.35781rem;
       }
     }
   }
-}
 
-.heroText {
-  max-width: 52%;
-  padding-top: 20px;
-  padding-left: 15px;
-  text-align: left;
-  color: a.$textHighContrast;
-  padding-bottom: 10px;
-
-  @include a.media("tablet") {
-    max-width: none;
-  }
-
-  .subheading {
-    font-size: 1.5625rem;
-    font-weight: 500;
-  }
-
-  @include a.media("smTablet") {
-    max-width: none;
-
-    .subheading {
-      font-size: 1.35781rem;
-    }
+  .imgContainer {
+    width: 100%;
+    max-width: 550px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

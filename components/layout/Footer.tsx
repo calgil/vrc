@@ -20,7 +20,7 @@ export const Footer = () => {
         <div className={s.container}>
           <div className={s.footerContent}>
             <div className={s.linkColumn}>
-              <Link className={s.columnTitle} href="/contact">
+              <Link className={s.columnTitle} href="/about/contact">
                 contact us
               </Link>
               <ul className={s.contactInfo}>
@@ -74,7 +74,7 @@ export const Footer = () => {
           <div className={s.branding}>
             <Link className={s.logo} href="/">
               <Image
-                src="/logo-white.webp"
+                src="/logos/logo-white.webp"
                 alt="logo"
                 width={120}
                 height={49}
