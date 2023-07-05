@@ -14,15 +14,7 @@ export const Hero = ({ homepage, heading, subHeading, bgUrl }: HeroProps) => {
     <div
       className={s.heroBg}
       style={{
-        backgroundImage: `linear-gradient(
-          108deg,
-          rgba(0, 105, 117, 1) 0%,
-          rgba(0, 105, 117, 1) 55%,
-          rgba(0, 105, 117, 0.89) 55%,
-          rgba(0, 105, 117, 0.89) 65%,
-          transparent 65%,
-          transparent 100%
-        ), url(${bgUrl})`,
+        backgroundImage: `url(${bgUrl})`,
       }}
     >
       <div className={s.container}>
