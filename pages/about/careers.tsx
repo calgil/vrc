@@ -16,7 +16,12 @@ export default function Careers() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero homepage={false} bgUrl="" />
+        <Hero
+          homepage={false}
+          bgUrl="/pages/about/careers/careersBanner.webp"
+          heading="Careers"
+          subHeading="Join a team that is passionate about providing the highest level of veterinary care"
+        />
         <div className={s.container}>
           <div className={s.careers}>
             <div className={s.careersText}>
