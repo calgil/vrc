@@ -22,7 +22,7 @@ export default function Owners() {
       <main>
         <Hero
           homepage={false}
-          bgUrl=""
+          bgUrl="/pages/owners/ownersBanner.webp"
           heading="Information for Pet Owners"
           subHeading="We value communication and being transparent, because we understand that our patients are your family."
         />
