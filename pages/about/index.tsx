@@ -18,7 +18,11 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero homepage={false} bgUrl="" heading="About Us" />
+        <Hero
+          homepage={false}
+          bgUrl="/pages/about/aboutHeader.webp"
+          heading="About Us"
+        />
         <OurStory />
         <CoreValues />
         <div className={s.btnContainer}>
