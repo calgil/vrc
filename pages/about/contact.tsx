@@ -18,7 +18,11 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero homepage={false} bgUrl="" heading="Contact Us" />
+        <Hero
+          homepage={false}
+          bgUrl="/pages/about/contact/contactBanner.webp"
+          heading="Contact Us"
+        />
         <ContactInfo />
         <EmergencyContact />
         <ContactForm />
