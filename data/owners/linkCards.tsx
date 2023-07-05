@@ -8,7 +8,7 @@ export const ownerLinkCards: LinkCardType[] = [
       "Check back soon as we expand this knowledge library!",
     ],
     linkUrl: "/",
-    bgUrl: "/owners/educationCenter.webp",
+    bgUrl: "pages/owners/educationCenter.webp",
     bgColor: "rgba(154, 48, 64, 0.85)",
   },
   {
@@ -17,7 +17,7 @@ export const ownerLinkCards: LinkCardType[] = [
       "If your pet is being treated with us, click here to view their clinic camera and check in with them",
     ],
     linkUrl: "/",
-    bgUrl: "/owners/clinicCamera.webp",
+    bgUrl: "pages/owners/clinicCamera.webp",
     bgColor: "rgba(1, 109, 118, 0.85)",
   },
 ];

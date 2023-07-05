@@ -16,7 +16,7 @@ export default function Services() {
       <main>
         <Hero
           homepage={false}
-          bgUrl="/heroBg/servicesBg.webp"
+          bgUrl="/pages/services/servicesBanner.webp"
           heading="Services"
           subHeading="Our highly trained doctors and staff are available to diagnose and treat a variety of conditions"
         />
