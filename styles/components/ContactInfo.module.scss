@@ -2,8 +2,8 @@
 @use "../utilities";
 
 .contactInfo {
-  margin: 2.5rem 0;
   @extend .container;
+  margin: 2.5rem auto;
   display: flex;
   align-items: center;
   gap: 7rem;
@@ -11,7 +11,7 @@
   .map {
     width: 541px;
     height: 692px;
-    background-color: blue;
+    // background-color: blue;
   }
 
   .info {
