@@ -15,9 +15,11 @@
   text-transform: uppercase;
   transition: all 200ms ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: rgba($color: a.$primaryTeal, $alpha: 0.85);
     color: a.$textHighContrast;
+    outline: none;
   }
 }
 
@@ -30,13 +32,15 @@
   text-transform: uppercase;
   transition: all 200ms ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: linear-gradient(
         0deg,
         rgba(153, 153, 153, 0.5) 0%,
         rgba(153, 153, 153, 0.5) 100%
       ),
       #fff;
+    outline: none;
   }
 }
 

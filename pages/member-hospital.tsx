@@ -75,7 +75,6 @@ export default function MemberHospital() {
     e.preventDefault();
     if (!nameInput || !emailInput || !phoneInput || !hospitalName) {
       console.log("no data");
-
       return;
     }
 
