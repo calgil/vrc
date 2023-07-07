@@ -56,6 +56,7 @@ export const ContactInfo = () => {
 };
 
 function Map() {
+  const center = useMemo(() => ({ lat: 38.983829, lng: -104.795938 }), []);
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string,
   });
@@ -64,12 +65,8 @@ function Map() {
     return <div>Loading...</div>;
   }
   return (
-    <GoogleMap
-      zoom={11}
-      center={{ lat: 38.983829, lng: -104.795938 }}
-      mapContainerClassName={s.map}
-    >
-      <MarkerF position={{ lat: 38.983829, lng: -104.795938 }} />
+    <GoogleMap zoom={11} center={center} mapContainerClassName={s.map}>
+      <MarkerF position={center} />
     </GoogleMap>
   );
 }

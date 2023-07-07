@@ -8,10 +8,14 @@
   align-items: center;
   gap: 7rem;
 
+  @include a.media("900") {
+    flex-direction: column;
+  }
+
   .map {
-    width: 541px;
+    width: 100%;
+    max-width: 541px;
     height: 692px;
-    // background-color: blue;
   }
 
   .info {
