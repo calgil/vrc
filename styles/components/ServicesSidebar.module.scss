@@ -1,0 +1,6 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.sidebar {
+  border-right: 1px solid rgba(153, 153, 153, 1);
+}
