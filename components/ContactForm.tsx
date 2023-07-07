@@ -49,30 +49,28 @@ export const ContactForm = () => {
     const formData = new FormData(formElement);
     formData.append("Message", message);
 
-    console.log(formData.values());
-
-    // fetch(
-    //   "https://script.google.com/macros/s/AKfycbzFG4dp4-awe41wKFVrhBR6Z-oxrSx8yOSAh-NlMQgAK7yF9de55SG0r4o8wSJ39NlIOA/exec",
-    //   {
-    //     method: "POST",
-    //     body: formData,
-    //   }
-    // )
-    //   .then((res) => {
-    //     console.log(res);
-    //     if (!res.ok) {
-    //       return setError(true);
-    //     }
-    //     setNameInput("");
-    //     setEmailInput("");
-    //     setPhoneInput("");
-    //     setMessage("");
-    //     setSuccess(true);
-    //   })
-    //   .catch((err) => {
-    //     setError(true);
-    //     console.error(err);
-    //   });
+    fetch(
+      "https://script.google.com/macros/s/AKfycbzFG4dp4-awe41wKFVrhBR6Z-oxrSx8yOSAh-NlMQgAK7yF9de55SG0r4o8wSJ39NlIOA/exec",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      .then((res) => {
+        console.log(res);
+        if (!res.ok) {
+          return setError(true);
+        }
+        setNameInput("");
+        setEmailInput("");
+        setPhoneInput("");
+        setMessage("");
+        setSuccess(true);
+      })
+      .catch((err) => {
+        setError(true);
+        console.error(err);
+      });
   };
   return (
     <section className={s.contactBg}>
@@ -107,6 +105,10 @@ export const ContactForm = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
+          </div>
+          <div className={s.response}>
+            {success && <p className={s.success}>Message sent successfully!</p>}
+            {error && <p className={s.error}>Message failed to send!</p>}
           </div>
           <div className={s.btnContainer}>
             <button className={s.submitBtn}> submit</button>
