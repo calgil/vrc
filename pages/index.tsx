@@ -23,7 +23,7 @@ export default function Home() {
           homepage={true}
           subHeading="Transforming the veterinary experience through 
           empathy and transparency"
-          bgUrl="/pages/home/homeHero.webp"
+          bgUrl="/pages/home/homeBanner.webp"
         />
         <EmergencyContact />
         <LinkCards />
