@@ -66,16 +66,17 @@ export const ServicesSidebar = ({ activeLink }: ServicesSidebarProps) => {
       <div className={cx({ sidebar: true, fixed: isFixed })}>
         <ul className={s.links}>
           {sidebarLinks.map((link) => (
-            <Link
-              href={`/services#${link.href}`}
-              className={cx({
-                link,
-                active: activeLink.includes(link.href.toLowerCase()),
-              })}
-              key={link.page}
-            >
-              {link.page}
-            </Link>
+            <li key={link.page} className={s.linkWrapper}>
+              <Link
+                href={`/services#${link.href}`}
+                className={cx({
+                  link,
+                  active: activeLink.includes(link.href.toLowerCase()),
+                })}
+              >
+                {link.page}
+              </Link>
+            </li>
           ))}
         </ul>
       </div>

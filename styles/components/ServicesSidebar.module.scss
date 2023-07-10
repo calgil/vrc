@@ -7,25 +7,33 @@
   position: relative;
 
   .sidebar {
-    .link {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      padding: 0 8px;
-      margin-bottom: 1rem;
-      font-size: 1.25rem;
-      font-weight: 700;
-      line-height: normal;
-      transition: all 200ms ease-in-out;
-      cursor: pointer;
+    width: 220px;
+    .links {
+      list-style: none;
 
-      &:hover {
-        color: a.$redAccent;
+      .linkWrapper {
+        .link {
+          text-decoration: none;
+          color: inherit;
+          display: block;
+          padding: 1px 8px;
+          margin-bottom: 1rem;
+          font-size: 1.25rem;
+          font-weight: 700;
+          line-height: normal;
+          transition: all 200ms ease-in-out;
+          cursor: pointer;
+          // white-space: nowrap;
+
+          &:hover {
+            color: a.$redAccent;
+          }
+        }
+        .link.active {
+          background-color: a.$redAccent;
+          color: a.$textHighContrast;
+        }
       }
-    }
-    .link.active {
-      background-color: a.$redAccent;
-      color: a.$textHighContrast;
     }
   }
 
@@ -33,5 +41,6 @@
     position: fixed;
     top: 155px;
     bottom: 0;
+    width: 220px;
   }
 }
