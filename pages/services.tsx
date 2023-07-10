@@ -32,7 +32,7 @@ export default function Services() {
           subHeading="Our highly trained doctors and staff are available to diagnose and treat a variety of conditions"
         />
         <div className={s.container}>
-          <ServicesSidebar />
+          <ServicesSidebar activeLink={page} />
           <ServicesContent />
         </div>
       </main>
