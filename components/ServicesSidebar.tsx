@@ -44,7 +44,7 @@ export const ServicesSidebar = ({ activeLink }: ServicesSidebarProps) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const bannerHeight = 300;
+      const bannerHeight = 305;
       const scrollY = window.scrollY || window.pageYOffset;
 
       setIsFixed(scrollY > bannerHeight);
@@ -57,22 +57,24 @@ export const ServicesSidebar = ({ activeLink }: ServicesSidebarProps) => {
   }, []);
 
   return (
-    <div className={cx({ sidebar: true, fixed: isFixed })}>
-      <ul className={s.links}>
-        {sidebarLinks.map((link) => (
-          <li
-            className={cx({
-              link,
-              // active: activeLink.includes(link.page.toLowerCase()),
-              active: activeLink === link.page.toLowerCase(),
-            })}
-            key={link.page}
-            onClick={() => handleLinkClick}
-          >
-            {link.page}
-          </li>
-        ))}
-      </ul>
+    <div className={s.container}>
+      <div className={cx({ sidebar: true, fixed: isFixed })}>
+        <ul className={s.links}>
+          {sidebarLinks.map((link) => (
+            <li
+              className={cx({
+                link,
+                active: activeLink.includes(link.page.toLowerCase()),
+                // active: activeLink === link.page.toLowerCase(),
+              })}
+              key={link.page}
+              onClick={() => handleLinkClick}
+            >
+              {link.page}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

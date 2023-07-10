@@ -1,31 +1,35 @@
 @use "../abstracts" as a;
 @use "../utilities";
 
-.sidebar {
+.container {
   border-right: 1px solid rgba(153, 153, 153, 1);
-  padding-left: 40px;
+  min-width: 230px;
+  position: relative;
 
-  .link {
-    min-width: 230px;
-    display: block;
-    padding-left: 8px;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: normal;
-    transition: all 200ms ease-in-out;
-    cursor: pointer;
+  .sidebar {
+    .link {
+      display: block;
+      padding-left: 8px;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: normal;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
 
-    &:hover {
-      color: a.$redAccent;
+      &:hover {
+        color: a.$redAccent;
+      }
+    }
+    .link.active {
+      background-color: a.$redAccent;
+      color: a.$textHighContrast;
     }
   }
-  .link.active {
-    background-color: a.$redAccent;
-    color: a.$textHighContrast;
-  }
-}
 
-.sidebar.fixed {
-  background-color: green;
+  .sidebar.fixed {
+    position: fixed;
+    top: 155px;
+    bottom: 0;
+  }
 }
