@@ -1,0 +1,19 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.title {
+  @extend .titleRed;
+}
+
+.content {
+  @extend .content;
+
+  .link {
+    text-decoration: none;
+    color: a.$redAccent;
+
+    &:visited {
+      color: a.$redAccent;
+    }
+  }
+}
