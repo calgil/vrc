@@ -10,6 +10,7 @@
     width: 220px;
     .links {
       list-style: none;
+      padding-bottom: 20px;
 
       .linkWrapper {
         .link {
@@ -37,7 +38,7 @@
   }
 
   .sidebar.fixed {
-    position: fixed;
+    position: sticky;
     top: 155px;
     bottom: 0;
     width: 220px;

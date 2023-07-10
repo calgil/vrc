@@ -2,7 +2,7 @@ import s from "../styles/components/ServicesContent.module.scss";
 
 export const ServicesContent = () => {
   return (
-    <section className={s.content}>
+    <section id="content" className={s.content}>
       <section id="anesthesiology">
         <h2>Anesthesiology</h2>
         <p>
