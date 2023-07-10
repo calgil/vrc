@@ -37,7 +37,7 @@ export const ServicesContent = () => {
           esse deleniti error assumenda quis nostrum reiciendis quam.
         </p>
       </section>
-      <section id="imaging">
+      <section id="diagnostics">
         <h2>Imaging</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea amet velit
