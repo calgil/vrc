@@ -63,7 +63,7 @@ export const ServicesSidebar = ({ activeLink }: ServicesSidebarProps) => {
 
   return (
     <div className={s.container}>
-      <div id="sidebar" className={cx({ sidebar: true, fixed: isFixed })}>
+      <div className={cx({ sidebar: true, fixed: isFixed })}>
         <ul className={s.links}>
           {sidebarLinks.map((link) => (
             <li key={link.page} className={s.linkWrapper}>

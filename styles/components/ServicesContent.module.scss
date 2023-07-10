@@ -1,2 +1,7 @@
 @use "../abstracts" as a;
 @use "../utilities";
+
+.content {
+  width: 100%;
+  padding-left: 20px;
+}

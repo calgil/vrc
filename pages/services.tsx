@@ -31,7 +31,7 @@ export default function Services() {
         />
         <div className={s.container}>
           <ServicesSidebar activeLink={page} />
-          <ServicesContent />
+          <ServicesContent activePage={page} />
         </div>
       </main>
     </>
