@@ -11,8 +11,6 @@ export default function Services() {
   const path = router.asPath;
   const page = path.slice(path.lastIndexOf("#") + 1);
 
-  console.log({ page });
-
   return (
     <>
       <Head>

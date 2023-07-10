@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import s from "../styles/components/ServicesSidebar.module.scss";
 import classNames from "classnames/bind";
+import Link from "next/link";
 let cx = classNames.bind(s);
 
 type SidebarLink = {
   page: string;
+  href: string;
 };
 
 type ServicesSidebarProps = {
@@ -17,30 +19,33 @@ export const ServicesSidebar = ({ activeLink }: ServicesSidebarProps) => {
   const sidebarLinks: SidebarLink[] = [
     {
       page: "Anesthesiology",
+      href: "anesthesiology",
     },
     {
       page: "Cardiology",
+      href: "cardiology",
     },
     {
       page: "Diagnostics",
+      href: "diagnostics",
     },
     {
       page: "Exotics",
+      href: "exotics",
     },
     {
       page: "Internal Medicine",
+      href: "internal-medicine",
     },
     {
       page: "Rehab",
+      href: "rehab",
     },
     {
       page: "Surgery",
+      href: "surgery",
     },
   ];
-
-  const handleLinkClick = () => {
-    console.log("link click");
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,17 +66,16 @@ export const ServicesSidebar = ({ activeLink }: ServicesSidebarProps) => {
       <div className={cx({ sidebar: true, fixed: isFixed })}>
         <ul className={s.links}>
           {sidebarLinks.map((link) => (
-            <li
+            <Link
+              href={`/services#${link.href}`}
               className={cx({
                 link,
-                active: activeLink.includes(link.page.toLowerCase()),
-                // active: activeLink === link.page.toLowerCase(),
+                active: activeLink.includes(link.href.toLowerCase()),
               })}
               key={link.page}
-              onClick={() => handleLinkClick}
             >
               {link.page}
-            </li>
+            </Link>
           ))}
         </ul>
       </div>
