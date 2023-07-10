@@ -26,8 +26,8 @@ export default function Services() {
         <Hero
           homepage={false}
           bgUrl="/pages/services/servicesBanner.webp"
-          heading="Services"
-          subHeading="Our highly trained doctors and staff are available to diagnose and treat a variety of conditions"
+          heading="Specialty Services"
+          subHeading="Our specialty teams are available for appointments  to diagnose and treat a variety of conditions."
         />
         <div className={s.container}>
           <ServicesSidebar activeLink={page} />

@@ -17,18 +17,6 @@
 
 .container {
   @extend .container;
-  // display: flex;
-  // padding-bottom: 12px;
-  // padding-top: 37px;
-  // background: linear-gradient(
-  //   108deg,
-  //   rgb(0, 105, 117) 0%,
-  //   rgb(0, 105, 117) 55%,
-  //   rgba(0, 105, 117, 0.89) 55%,
-  //   rgba(0, 105, 117, 0.89) 65%,
-  //   transparent 65%,
-  //   transparent 100%
-  // );
 
   .logoContainer {
     .logo {
@@ -63,7 +51,7 @@
   }
 
   .heroText {
-    max-width: 52%;
+    max-width: 65%;
     padding-top: 20px;
     padding-left: 15px;
     text-align: left;
