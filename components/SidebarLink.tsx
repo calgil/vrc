@@ -25,8 +25,6 @@ export const SidebarLink = ({
 
       const activePathname = new URL(asPath, location.href).hash.slice(1);
 
-      console.log({ activePathname });
-
       const newClassName =
         linkPathname === activePathname
           ? `${className} ${activeClassName}`.trim()
