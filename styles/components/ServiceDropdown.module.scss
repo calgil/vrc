@@ -1,0 +1,43 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.dropdown {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  padding: 1rem 2.5rem;
+
+  .collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      @extend .title;
+      color: a.$purple;
+      font-size: 1.5625rem;
+
+      .soon {
+        color: a.$redAccent;
+      }
+    }
+
+    .arrow {
+      width: 15px;
+      color: a.$purple;
+      transition: all 200ms ease-in-out;
+    }
+    .arrow.down {
+      transform: rotate(90deg);
+    }
+  }
+
+  .content {
+    margin-top: 14px;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+
+.dropdown.grey {
+  background-color: rgba($color: a.$contactFormBg, $alpha: 0.1);
+}

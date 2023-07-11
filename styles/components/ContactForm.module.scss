@@ -2,7 +2,7 @@
 @use "../utilities";
 
 .contactBg {
-  background-color: a.$contactFormBg;
+  background-color: rgba($color: a.$contactFormBg, $alpha: 0.5);
   padding: 2.5rem 0;
   .container {
     @extend .container;
