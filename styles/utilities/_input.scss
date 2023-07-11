@@ -1,0 +1,52 @@
+@use "../abstracts" as a;
+
+.inputBase {
+  background-color: a.$inputBg;
+  color: a.$inputColor;
+  padding: 20px 17px;
+  border-radius: 5px;
+  width: 93%;
+  border: 1px solid a.$inputBorder;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  transition: all 200ms ease-in-out;
+
+  &:hover,
+  &:active {
+    box-shadow: a.$inputActiveOutline;
+  }
+  &:focus {
+    box-shadow: a.$inputFocusOutline;
+    outline: none;
+  }
+}
+
+.submitBtnBase {
+  background: #ffffff;
+  border-radius: 26px;
+  border: 2px solid #ffffff;
+  padding: 10px 30px;
+  color: a.$primaryTeal;
+  font-weight: 400;
+  font-size: 1.01rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: a.$textHighContrast;
+    background: a.$buttonHoverBg;
+  }
+
+  &:active {
+    background: a.$buttonActiveBg;
+    color: a.$textHighContrast;
+    border: 1px solid a.$buttonActiveBorder;
+  }
+
+  &:focus {
+    box-shadow: a.$buttonFocusOutline;
+    outline: none;
+  }
+}

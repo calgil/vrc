@@ -65,7 +65,7 @@ function Map() {
     return <div>Loading...</div>;
   }
   return (
-    <GoogleMap zoom={11} center={center} mapContainerClassName={s.map}>
+    <GoogleMap zoom={13} center={center} mapContainerClassName={s.map}>
       <MarkerF position={center} />
     </GoogleMap>
   );

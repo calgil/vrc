@@ -49,3 +49,16 @@
   font-weight: 700;
   color: a.$primaryTeal;
 }
+
+.titleRed {
+  @extend .title;
+  color: a.$redAccent;
+}
+
+.content {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: a.$primaryText;
+}

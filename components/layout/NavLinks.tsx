@@ -48,7 +48,7 @@ export const NavLinks = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Services
+                Specialty Services
               </a>
               <ul className="dropdown-menu">
                 <li>
@@ -65,13 +65,8 @@ export const NavLinks = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services#imaging" className="dropdown-item">
-                    Diagnostic Imaging and In-House Laboratory
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services#emergency" className="dropdown-item">
-                    Emergency
+                  <Link href="/services#diagnostics" className="dropdown-item">
+                    Diagnostics
                   </Link>
                 </li>
                 <li>
