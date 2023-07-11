@@ -30,8 +30,8 @@ export default function Services() {
           subHeading="Our specialty teams are available for appointments  to diagnose and treat a variety of conditions."
         />
         <div className={s.services}>
-          <ServicesSidebar activeLink={page} />
-          {/* <ServicesContent activePage={page} /> */}
+          <ServicesSidebar />
+          <ServicesContent activePage={page} />
         </div>
       </main>
     </>

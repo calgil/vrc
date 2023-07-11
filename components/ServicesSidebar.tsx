@@ -12,11 +12,7 @@ type SidebarLink = {
   href: string;
 };
 
-type ServicesSidebarProps = {
-  activeLink: string;
-};
-
-export const ServicesSidebar = ({ activeLink }: ServicesSidebarProps) => {
+export const ServicesSidebar = () => {
   const [isFixed, setIsFixed] = useState(false);
 
   const sidebarLinks: SidebarLink[] = [
