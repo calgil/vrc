@@ -4,7 +4,6 @@ import { Hero } from "@/components/Hero";
 import { ServicesContent } from "@/components/ServicesContent";
 import { ServicesSidebar } from "@/components/ServicesSidebar";
 import Head from "next/head";
-import { usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 
 export default function Services() {
@@ -32,7 +31,7 @@ export default function Services() {
         />
         <div className={s.services}>
           <ServicesSidebar activeLink={page} />
-          <ServicesContent activePage={page} />
+          {/* <ServicesContent activePage={page} /> */}
         </div>
       </main>
     </>

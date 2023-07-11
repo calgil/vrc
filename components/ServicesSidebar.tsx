@@ -4,6 +4,7 @@ import s from "../styles/components/ServicesSidebar.module.scss";
 import classNames from "classnames/bind";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { SidebarLink } from "./SidebarLink";
 let cx = classNames.bind(s);
 
 type SidebarLink = {
@@ -67,19 +68,20 @@ export const ServicesSidebar = ({ activeLink }: ServicesSidebarProps) => {
     <div className={s.container}>
       <div className={cx({ sidebar: true, fixed: isFixed })}>
         <ul className={s.links}>
-          {sidebarLinks.map((link) => {
-            const linkClass = cx({
-              linkWrapper: true,
-              active: activeLink.includes(link.href.toLowerCase()),
-            });
-            return (
-              <li key={link.page} className={linkClass}>
-                <Link href={`/services#${link.href}`} className={s.link}>
-                  {link.page}
-                </Link>
-              </li>
-            );
-          })}
+          {sidebarLinks.map((link) => (
+            <li key={link.page} className={s.linkWrapper}>
+              {/* <Link href={`/services#${link.href}`} className={s.link}>
+                {link.page}
+              </Link> */}
+              <SidebarLink
+                activeClassName={s.active}
+                className={s.link}
+                href={`/services#${link.href}`}
+              >
+                {link.page}
+              </SidebarLink>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

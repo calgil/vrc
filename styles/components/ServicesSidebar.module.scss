@@ -30,13 +30,7 @@
             color: a.$redAccent;
           }
         }
-        // .link.active {
-        //   background-color: a.$redAccent;
-        //   color: a.$textHighContrast;
-        // }
-      }
-      .linkWrapper.active {
-        .link {
+        .link.active {
           background-color: a.$redAccent;
           color: a.$textHighContrast;
         }

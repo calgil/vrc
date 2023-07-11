@@ -1,7 +1,6 @@
-"use client";
-import { ServiceDetail } from "@/types/serviceDetail.type";
-import s from "../../../styles/components/ServicesPages/Anesthesiology.module.scss";
 import { ServiceDropdown } from "@/components/ServiceDropdown";
+import s from "../../../styles/components/ServicesPages/Anesthesiology.module.scss";
+// import { ServiceDropdown } from "@/components/ServiceDropdown";
 import { anesthesiologyItems } from "./dropdownItems";
 
 export const Anesthesiology = () => {
@@ -26,9 +25,9 @@ export const Anesthesiology = () => {
         </p>
         <h3 className={s.title}>Anesthesia Services</h3>
       </div>
-      {anesthesiologyItems.map((service, i) => (
+      {/* {anesthesiologyItems.map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
-      ))}
+      ))} */}
     </div>
   );
 };

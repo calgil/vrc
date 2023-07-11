@@ -15,7 +15,6 @@ type ServiceDropdownProps = {
 export const ServiceDropdown = ({ service, index }: ServiceDropdownProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const handleExpandClick = () => {};
   return (
     <div
       className={cx({ dropdown: true, grey: index % 2 === 1 })}
