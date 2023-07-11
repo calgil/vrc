@@ -1,6 +1,7 @@
 "use client";
 import s from "../styles/components/ServicesContent.module.scss";
 import { Anesthesiology } from "./ServicesPages/Anesthesiology/Anesthesiology";
+import { ServicesFooter } from "./ServicesPages/ServicesFooter";
 
 type ServicesContentProps = {
   activePage: string;
@@ -27,5 +28,10 @@ export const ServicesContent = ({ activePage }: ServicesContentProps) => {
         return <div>No Page Found</div>;
     }
   };
-  return <section className={s.content}>{renderPageContent()}</section>;
+  return (
+    <section className={s.content}>
+      {renderPageContent()}
+      <ServicesFooter />
+    </section>
+  );
 };
