@@ -29,8 +29,8 @@ export const ServicesContent = ({ activePage }: ServicesContentProps) => {
     }
   };
   return (
-    <section className={s.content}>
-      {renderPageContent()}
+    <section>
+      <div className={s.content}>{renderPageContent()}</div>
       <ServicesFooter />
     </section>
   );

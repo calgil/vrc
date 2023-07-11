@@ -1,3 +1,4 @@
+"use client";
 import s from "../styles/pages/Services.module.scss";
 import { Hero } from "@/components/Hero";
 import { ServicesContent } from "@/components/ServicesContent";
@@ -29,7 +30,7 @@ export default function Services() {
           heading="Specialty Services"
           subHeading="Our specialty teams are available for appointments  to diagnose and treat a variety of conditions."
         />
-        <div className={s.container}>
+        <div className={s.services}>
           <ServicesSidebar activeLink={page} />
           <ServicesContent activePage={page} />
         </div>
