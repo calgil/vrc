@@ -1,7 +1,5 @@
-"use client";
-import { ServiceDetail } from "@/types/serviceDetail.type";
-import s from "../../../styles/components/ServicesPages/Anesthesiology.module.scss";
 import { ServiceDropdown } from "@/components/ServiceDropdown";
+import s from "../../../styles/components/ServicesPages/Anesthesiology.module.scss";
 import { anesthesiologyItems } from "./dropdownItems";
 
 export const Anesthesiology = () => {

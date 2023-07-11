@@ -1,7 +1,10 @@
+"use client";
 import { useEffect, useState } from "react";
 import s from "../styles/components/ServicesSidebar.module.scss";
 import classNames from "classnames/bind";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { SidebarLink } from "./SidebarLink";
 let cx = classNames.bind(s);
 
 type SidebarLink = {
@@ -9,11 +12,7 @@ type SidebarLink = {
   href: string;
 };
 
-type ServicesSidebarProps = {
-  activeLink: string;
-};
-
-export const ServicesSidebar = ({ activeLink }: ServicesSidebarProps) => {
+export const ServicesSidebar = () => {
   const [isFixed, setIsFixed] = useState(false);
 
   const sidebarLinks: SidebarLink[] = [
@@ -67,15 +66,16 @@ export const ServicesSidebar = ({ activeLink }: ServicesSidebarProps) => {
         <ul className={s.links}>
           {sidebarLinks.map((link) => (
             <li key={link.page} className={s.linkWrapper}>
-              <Link
+              {/* <Link href={`/services#${link.href}`} className={s.link}>
+                {link.page}
+              </Link> */}
+              <SidebarLink
+                activeClassName={s.active}
+                className={s.link}
                 href={`/services#${link.href}`}
-                className={cx({
-                  link,
-                  active: activeLink.includes(link.href.toLowerCase()),
-                })}
               >
                 {link.page}
-              </Link>
+              </SidebarLink>
             </li>
           ))}
         </ul>
