@@ -14,7 +14,7 @@ const pageContentMap: { [key: string]: JSX.Element } = {
   diagnostics: <div>Diagnostics Page Content</div>,
   exotics: <div>Exotics Page Content</div>,
   "internal-medicine": <div>Internal Medicine Page Content</div>,
-  rehab: <div>Rehab Page Content</div>,
+  rehabilitation: <div>Rehabilitation Page Content</div>,
   surgery: <div>Surgery Page Content</div>,
 };
 
