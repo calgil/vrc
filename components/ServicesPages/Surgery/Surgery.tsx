@@ -25,11 +25,13 @@ export const Surgery = () => {
       </div>
       <RequestConsult details="Our surgeons serve as a consultation resource on unusual or difficult cases, and work closely with you, your primary care veterinarian, and our specialists and emergency teams, in a collaborative approach to ensure overall pre-op evaluation and post-op continuity of care for your pet." />
       <div className={s.surgeryDetails}>
-        <CommonConditions
-          title="Soft Tissue Surgery"
-          conditions={softTissueConditions}
-          numColumns={2}
-        />
+        <div className={s.softTissue}>
+          <CommonConditions
+            title="Soft Tissue Surgery"
+            conditions={softTissueConditions}
+            numColumns={2}
+          />
+        </div>
         <div className={s.conditions}>
           <CommonConditions
             title="Thoracic Surgery"
@@ -42,6 +44,19 @@ export const Surgery = () => {
             numColumns={2}
           />
         </div>
+      </div>
+      <div className={s.text}>
+        <h5 className={s.title}>Postoperative Care</h5>
+        <p className={s.content}>
+          Your pet’s postoperative care will be managed around the clock by our
+          surgical team of skilled veterinary nurses, as well as our emergency
+          doctors and nurses overnight until your pet is ready to go home.
+        </p>
+        <p className={s.content}>
+          If you or your primary care veterinarian have any questions regarding
+          any of these procedures or a procedure is not listed, please contact
+          us and we will be happy to answer any questions!
+        </p>
       </div>
     </section>
   );

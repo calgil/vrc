@@ -21,6 +21,11 @@
 
   .surgeryDetails {
     padding-left: 40px;
+    margin: 40px 0;
+
+    .softTissue {
+      margin-bottom: 16px;
+    }
 
     .conditions {
       display: flex;
