@@ -46,16 +46,6 @@
     color: a.$redAccent;
   }
   .submitBtn {
-    @extend .submitBtnBase;
-    background-color: a.$primaryTeal;
-    color: a.$textHighContrast;
-    border: 1px solid a.$primaryTeal;
-
-    &:focus,
-    &:hover,
-    &:active {
-      background-color: white;
-      color: a.$primaryTeal;
-    }
+    @extend .btnBase;
   }
 }

@@ -120,7 +120,11 @@ export default function MemberHospital() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero homepage={false} bgUrl="" heading="Member Hospital" />
+        <Hero
+          homepage={false}
+          bgUrl="/pages/owners/ownersBanner.webp"
+          heading="Member Hospital"
+        />
         <div className={s.container}>
           <div className={s.textContainer}>
             <h3 className={s.title}>How it Works</h3>
