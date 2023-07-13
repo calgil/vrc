@@ -25,6 +25,8 @@ export const Cardiology = () => {
           provide gold standard, compassionate care to your pet to keep them
           feeling their best!
         </p>
+      </div>
+      <div className={s.conditionsContainer}>
         <CommonConditions
           title="Common Conditions Treated by a Cardiologist"
           conditions={cardiologyConditions}

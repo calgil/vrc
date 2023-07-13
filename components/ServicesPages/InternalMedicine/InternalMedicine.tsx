@@ -24,6 +24,8 @@ export const InternalMedicine = () => {
           collaborative approach, cutting-edge techniques, and compassionate
           care.
         </p>
+      </div>
+      <div className={s.conditionsContainer}>
         <CommonConditions
           title="Common Conditions Treated by a  Internist"
           conditions={internalMedicineConditions}

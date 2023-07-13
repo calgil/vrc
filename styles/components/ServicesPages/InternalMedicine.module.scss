@@ -4,11 +4,18 @@
 .medicine {
   .text {
     padding-left: 40px;
+    padding-bottom: 40px;
 
     .content {
       @extend .content;
     }
   }
+
+  .conditionsContainer {
+    margin: 24px 0;
+    padding: 0 40px;
+  }
+
   .title {
     @extend .titleRed;
     margin-bottom: 2rem;

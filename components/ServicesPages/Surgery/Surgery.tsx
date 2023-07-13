@@ -1,3 +1,4 @@
+import { ServiceDropdown } from "@/components/ServiceDropdown";
 import s from "../../../styles/components/ServicesPages/Surgery.module.scss";
 import { CommonConditions } from "../CommonConditions";
 import { RequestConsult } from "../RequestConsult";
@@ -6,6 +7,7 @@ import {
   softTissueConditions,
   thoracicConditions,
 } from "./surgeryConditions";
+import { surgeryServices } from "./surgeryServices";
 
 export const Surgery = () => {
   return (
@@ -45,8 +47,11 @@ export const Surgery = () => {
           />
         </div>
       </div>
+      {surgeryServices.map((service, i) => (
+        <ServiceDropdown key={service.title} service={service} index={i} />
+      ))}
       <div className={s.text}>
-        <h5 className={s.title}>Postoperative Care</h5>
+        <h5 className={`${s.title} ${s.subheader}`}>Postoperative Care</h5>
         <p className={s.content}>
           Your pet’s postoperative care will be managed around the clock by our
           surgical team of skilled veterinary nurses, as well as our emergency

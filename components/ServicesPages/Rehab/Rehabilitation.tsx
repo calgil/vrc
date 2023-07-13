@@ -25,6 +25,8 @@ export const Rehabilitation = () => {
           Center is dedicated to working with you and your pet to develop an
           individualized rehabilitation plan to keep them moving with ease.
         </p>
+      </div>
+      <div className={s.conditionsContainer}>
         <CommonConditions
           title="Common Conditions Treated by a Rehabilitation Specialist"
           conditions={rehabConditions}
