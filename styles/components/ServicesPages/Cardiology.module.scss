@@ -4,12 +4,17 @@
 .cardiology {
   .text {
     padding-left: 2.5rem;
-    .title {
-      @extend .titleRed;
-      margin-bottom: 2rem;
-    }
+
     .content {
       @extend .content;
     }
+  }
+  .title {
+    @extend .titleRed;
+    margin-bottom: 2rem;
+  }
+
+  .title.subheader {
+    margin-top: 2rem;
   }
 }
