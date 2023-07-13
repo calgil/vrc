@@ -37,8 +37,8 @@ export const ServicesSidebar = () => {
       href: "internal-medicine",
     },
     {
-      page: "Rehab",
-      href: "rehab",
+      page: "Rehabilitation",
+      href: "rehabilitation",
     },
     {
       page: "Surgery",

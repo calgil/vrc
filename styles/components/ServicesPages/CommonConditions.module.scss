@@ -1,0 +1,39 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.container {
+  background-color: rgba(111, 113, 168, 0.2);
+  margin: 40px 0;
+  padding: 8px 16px;
+  border-radius: 4px;
+
+  @include a.media("tablet") {
+    margin: 0;
+  }
+
+  .title {
+    @extend .subHeader;
+    color: a.$primaryText;
+  }
+
+  .conditions {
+    display: flex;
+    margin-top: 32px;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @include a.media("900") {
+      display: block;
+
+      .column {
+        margin: 0;
+      }
+    }
+
+    .column {
+      flex: 1;
+    }
+  }
+}

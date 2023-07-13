@@ -1,0 +1,32 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.request {
+  background-color: rgba(243, 245, 157, 0.5);
+
+  padding: 24px 40px;
+
+  .consultTitle {
+    @extend .subHeader;
+    color: a.$primaryText;
+  }
+  .content {
+    display: flex;
+    gap: 40px;
+
+    .details {
+      @extend .content;
+    }
+
+    .btnContainer {
+      display: flex;
+      align-items: center;
+      .cta {
+        display: block;
+        @extend .btnSecondary;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+    }
+  }
+}

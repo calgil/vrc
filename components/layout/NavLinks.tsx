@@ -83,8 +83,11 @@ export const NavLinks = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services#rehab" className="dropdown-item">
-                    Rehab
+                  <Link
+                    href="/services#rehabilitation"
+                    className="dropdown-item"
+                  >
+                    Rehabilitation
                   </Link>
                 </li>
                 <li>
