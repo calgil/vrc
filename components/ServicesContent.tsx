@@ -7,6 +7,7 @@ import { Diagnostics } from "./ServicesPages/Diagnostics/Diagnostics";
 import { InternalMedicine } from "./ServicesPages/InternalMedicine/InternalMedicine";
 import { Rehabilitation } from "./ServicesPages/Rehab/Rehabilitation";
 import { Surgery } from "./ServicesPages/Surgery/Surgery";
+import { Exotics } from "./ServicesPages/Exotics/Exotics";
 
 type ServicesContentProps = {
   activePage: string;
@@ -16,7 +17,7 @@ const pageContentMap: { [key: string]: JSX.Element } = {
   anesthesiology: <Anesthesiology />,
   cardiology: <Cardiology />,
   diagnostics: <Diagnostics />,
-  exotics: <div>Exotics Page Content</div>,
+  exotics: <Exotics />,
   "internal-medicine": <InternalMedicine />,
   rehabilitation: <Rehabilitation />,
   surgery: <Surgery />,

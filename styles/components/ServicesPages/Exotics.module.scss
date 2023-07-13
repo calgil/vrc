@@ -1,0 +1,15 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.title {
+  @extend .title;
+  color: a.$purple;
+  text-align: center;
+}
+
+.exoticsImg {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 42px;
+  margin-bottom: 24px;
+}
