@@ -34,7 +34,12 @@ export const NavLinks = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link href="/services#emergency" className={linkStyle}>
+              <Link
+                href="/emergency"
+                className={
+                  currentRoute === "/emergency" ? activeStyle : linkStyle
+                }
+              >
                 Emergency
               </Link>
             </li>
@@ -115,14 +120,6 @@ export const NavLinks = () => {
                 For Pet Owners
               </Link>
             </li>
-            {/* <li className="nav-item">
-              <Link
-                href="/about"
-                className={currentRoute === "/about" ? activeStyle : linkStyle}
-              >
-                About Us
-              </Link>
-            </li> */}
             <li className="nav-item dropdown">
               <a
                 className={`dropdown-toggle ${
