@@ -1,7 +1,9 @@
+import { ServiceDropdown } from "@/components/ServiceDropdown";
 import s from "../../../styles/components/ServicesPages/Cardiology.module.scss";
 import { CommonConditions } from "../CommonConditions";
 import { RequestConsult } from "../RequestConsult";
 import { cardiologyConditions } from "./conditions";
+import { cardiologyItems } from "./dropdownItems";
 
 export const Cardiology = () => {
   return (
@@ -28,9 +30,12 @@ export const Cardiology = () => {
           conditions={cardiologyConditions}
           numColumns={2}
         />
-        <h5 className={`${s.title} ${s.subheader}`}>Cardiology Services</h5>
       </div>
       <RequestConsult details="During your appointment with the Cardiologist, you will have the opportunity to watch and be involved in the physical exam and diagnostic tests performed on your pet. The Cardiologist will go over the results and a treatment plan with you directly at the time of the appointment. If there are tests that are sent out or take time to receive the results, you will be called at a later date by the Cardiologist or an experienced Cardiology Nurse." />
+      <h5 className={`${s.title} ${s.subheader}`}>Cardiology Services</h5>
+      {cardiologyItems.map((service, i) => (
+        <ServiceDropdown key={service.title} service={service} index={i} />
+      ))}
     </div>
   );
 };
