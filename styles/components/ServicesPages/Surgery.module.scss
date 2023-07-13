@@ -1,0 +1,30 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.surgery {
+  .text {
+    padding-left: 40px;
+
+    .content {
+      @extend .content;
+    }
+  }
+  .title {
+    @extend .titleRed;
+    margin-bottom: 2rem;
+  }
+
+  .title.subheader {
+    margin-top: 2rem;
+    margin-left: 40px;
+  }
+
+  .surgeryDetails {
+    padding-left: 40px;
+
+    .conditions {
+      display: flex;
+      gap: 16px;
+    }
+  }
+}
