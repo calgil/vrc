@@ -1,6 +1,6 @@
 import { ServiceDropdown } from "@/components/ServiceDropdown";
 import s from "../../../styles/components/ServicesPages/Anesthesiology.module.scss";
-import { anesthesiologyItems } from "./dropdownItems";
+import { anesthesiologyServices } from "./anesthesiologyServices";
 
 export const Anesthesiology = () => {
   return (
@@ -24,7 +24,7 @@ export const Anesthesiology = () => {
         </p>
         <h3 className={s.title}>Anesthesia Services</h3>
       </div>
-      {anesthesiologyItems.map((service, i) => (
+      {anesthesiologyServices.map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
     </div>

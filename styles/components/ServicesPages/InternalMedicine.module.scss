@@ -1,7 +1,7 @@
 @use "../../abstracts" as a;
 @use "../../utilities";
 
-.cardiology {
+.medicine {
   .text {
     padding-left: 40px;
     padding-bottom: 40px;
@@ -15,6 +15,7 @@
     margin: 24px 0;
     padding: 0 40px;
   }
+
   .title {
     @extend .titleRed;
     margin-bottom: 2rem;

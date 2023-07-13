@@ -3,6 +3,11 @@ import React, { useEffect, useState } from "react";
 import { Anesthesiology } from "./ServicesPages/Anesthesiology/Anesthesiology";
 import { ServicesFooter } from "./ServicesPages/ServicesFooter";
 import { Cardiology } from "./ServicesPages/Cardiology/Cardiology";
+import { Diagnostics } from "./ServicesPages/Diagnostics/Diagnostics";
+import { InternalMedicine } from "./ServicesPages/InternalMedicine/InternalMedicine";
+import { Rehabilitation } from "./ServicesPages/Rehab/Rehabilitation";
+import { Surgery } from "./ServicesPages/Surgery/Surgery";
+import { Exotics } from "./ServicesPages/Exotics/Exotics";
 
 type ServicesContentProps = {
   activePage: string;
@@ -11,11 +16,11 @@ type ServicesContentProps = {
 const pageContentMap: { [key: string]: JSX.Element } = {
   anesthesiology: <Anesthesiology />,
   cardiology: <Cardiology />,
-  diagnostics: <div>Diagnostics Page Content</div>,
-  exotics: <div>Exotics Page Content</div>,
-  "internal-medicine": <div>Internal Medicine Page Content</div>,
-  rehabilitation: <div>Rehabilitation Page Content</div>,
-  surgery: <div>Surgery Page Content</div>,
+  diagnostics: <Diagnostics />,
+  exotics: <Exotics />,
+  "internal-medicine": <InternalMedicine />,
+  rehabilitation: <Rehabilitation />,
+  surgery: <Surgery />,
 };
 
 export const ServicesContent = ({ activePage }: ServicesContentProps) => {

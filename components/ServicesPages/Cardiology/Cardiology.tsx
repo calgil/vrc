@@ -3,11 +3,11 @@ import s from "../../../styles/components/ServicesPages/Cardiology.module.scss";
 import { CommonConditions } from "../CommonConditions";
 import { RequestConsult } from "../RequestConsult";
 import { cardiologyConditions } from "./conditions";
-import { cardiologyItems } from "./dropdownItems";
+import { cardiologyServices } from "./cardiologyServices";
 
 export const Cardiology = () => {
   return (
-    <div className={s.cardiology}>
+    <section className={s.cardiology}>
       <div className={s.text}>
         <h4 className={s.title}>Cardiology</h4>
         <p className={s.content}>
@@ -25,6 +25,8 @@ export const Cardiology = () => {
           provide gold standard, compassionate care to your pet to keep them
           feeling their best!
         </p>
+      </div>
+      <div className={s.conditionsContainer}>
         <CommonConditions
           title="Common Conditions Treated by a Cardiologist"
           conditions={cardiologyConditions}
@@ -33,9 +35,9 @@ export const Cardiology = () => {
       </div>
       <RequestConsult details="During your appointment with the Cardiologist, you will have the opportunity to watch and be involved in the physical exam and diagnostic tests performed on your pet. The Cardiologist will go over the results and a treatment plan with you directly at the time of the appointment. If there are tests that are sent out or take time to receive the results, you will be called at a later date by the Cardiologist or an experienced Cardiology Nurse." />
       <h5 className={`${s.title} ${s.subheader}`}>Cardiology Services</h5>
-      {cardiologyItems.map((service, i) => (
+      {cardiologyServices.map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
-    </div>
+    </section>
   );
 };

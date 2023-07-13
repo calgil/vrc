@@ -20,8 +20,6 @@ export const CommonConditions = ({
     ];
   }, [] as string[][]);
 
-  console.log({ columns });
-
   return (
     <div className={s.container}>
       <h4 className={s.title}>{title}</h4>

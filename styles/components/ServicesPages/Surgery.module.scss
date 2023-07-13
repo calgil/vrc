@@ -1,19 +1,13 @@
 @use "../../abstracts" as a;
 @use "../../utilities";
 
-.cardiology {
+.surgery {
   .text {
     padding-left: 40px;
-    padding-bottom: 40px;
 
     .content {
       @extend .content;
     }
-  }
-
-  .conditionsContainer {
-    margin: 24px 0;
-    padding: 0 40px;
   }
   .title {
     @extend .titleRed;
@@ -22,6 +16,19 @@
 
   .title.subheader {
     margin-top: 2rem;
-    margin-left: 40px;
+  }
+
+  .surgeryDetails {
+    padding-left: 40px;
+    margin: 40px 0;
+
+    .softTissue {
+      margin-bottom: 16px;
+    }
+
+    .conditions {
+      display: flex;
+      gap: 16px;
+    }
   }
 }
