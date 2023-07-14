@@ -43,4 +43,4 @@ export const diagnosticServices: ServiceDetail[] = [
     content: `This is the use of a specialized camera inserted into the urinary system to identify and treat complex urinary tract diseases.`,
     comingSoon: true,
   },
-];
+].sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1));

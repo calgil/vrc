@@ -45,4 +45,4 @@ export const anesthesiologyServices: ServiceDetail[] = [
     title: "Superior Record Keeping",
     content: `During your pet's procedure, our veterinary staff will keep meticulous records of what drugs were used, what doses were used, and how their body responded to those drugs.  Keeping record of how each individual responds to certain drugs will make each anesthetic event more individualized should additional procedures be needed in the future.`,
   },
-];
+].sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1));

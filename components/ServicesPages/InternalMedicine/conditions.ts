@@ -6,4 +6,4 @@ export const internalMedicineConditions: string[] = [
   "Immune-Mediated Disease",
   "Kidney Diseases",
   "Pulmonary Hypertension",
-];
+].sort((a, b) => (a.toLowerCase() > b.toLowerCase() ? 1 : -1));

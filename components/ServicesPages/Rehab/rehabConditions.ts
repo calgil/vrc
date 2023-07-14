@@ -8,4 +8,4 @@ export const rehabConditions: string[] = [
   "Intervertebral Disc Disease",
   "Neurological Degenerative Disorders",
   "Wounds",
-];
+].sort((a, b) => (a.toLowerCase() > b.toLowerCase() ? 1 : -1));

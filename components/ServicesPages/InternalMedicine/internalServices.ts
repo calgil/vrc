@@ -84,4 +84,4 @@ export const internalServices: ServiceDetail[] = [
     content: `I-131 Therapy is performed in cats with hyperthyroidism (overproduction of thyroid hormone). It is intended to be a permanent treatment for hyperthyroidism without the use of long term oral medications and is effective in 95% of cases. The treatment involves injection of a radioactive isotope that specifically targets overactive thyroid tissue and eliminates it thus returning your cat’s thyroid hormone level back to normal. `,
     comingSoon: true,
   },
-];
+].sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1));

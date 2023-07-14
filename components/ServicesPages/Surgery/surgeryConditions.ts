@@ -9,13 +9,13 @@ export const softTissueConditions: string[] = [
   "Cryptorchidism and testicular torsion",
   "Cystotomy",
   "Urethral surgery (penile urethrostomy, urethral tear)",
-];
+].sort((a, b) => (a.toLowerCase() > b.toLowerCase() ? 1 : -1));
 
 export const thoracicConditions: string[] = [
   "Thoracotomy",
   "Lung Lobectomy",
   "Pericardectomy",
-];
+].sort((a, b) => (a.toLowerCase() > b.toLowerCase() ? 1 : -1));
 
 export const orthopedicConditions: string[] = [
   "Fracture repairs",
@@ -24,4 +24,4 @@ export const orthopedicConditions: string[] = [
   "Cruciate repair",
   "Amputation",
   "Patellar Luxation surgery",
-];
+].sort((a, b) => (a.toLowerCase() > b.toLowerCase() ? 1 : -1));
