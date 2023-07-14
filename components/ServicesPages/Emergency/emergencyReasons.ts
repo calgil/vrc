@@ -58,7 +58,7 @@ export const emergencyReasons: ServiceDetail[] = [
       "Sudden changes in your pets mental state and ability/willingness to be active is indicative of a serious condition occurring in the body that needs attention.",
   },
   {
-    title: "Inability/unwillingness to eat",
+    title: "Inability or unwillingness to eat",
     content:
       "Most animals communicate that they are unwell by not eating. If your pet’s unwillingness to eat lasts more than 24 hours, they need to be evaluated urgently.",
   },

@@ -23,6 +23,7 @@
 
     .arrow {
       width: 15px;
+      min-width: 15px;
       color: a.$purple;
       transition: all 200ms ease-in-out;
     }
