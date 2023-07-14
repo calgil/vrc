@@ -24,16 +24,15 @@
         @extend .title;
       }
       .text {
-        font-size: 1.25rem;
-        margin: 1.5rem 0;
+        @extend .content;
+        margin: 24px 0;
       }
-      .btnContainer {
-        text-align: center;
-
-        .btn {
-          @extend .btnBase;
-          text-transform: uppercase;
-        }
+      .btn {
+        @extend .btnBase;
+        text-decoration: none;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
       }
     }
   }

@@ -25,6 +25,7 @@ export default function Veterinarians() {
           homepage={false}
           bgUrl="/pages/veterinarians/vetsBanner.webp"
           heading="Information for Veterinarians"
+          subHeading="We value communication and being transparent, because we understand that our patients are your patients."
         />
         <section className={s.vets}>
           <h2 className={s.title}>

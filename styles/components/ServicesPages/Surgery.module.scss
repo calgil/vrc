@@ -16,6 +16,8 @@
 
   .title.subheader {
     margin-top: 2rem;
+    margin-bottom: 16px;
+    margin-left: 40px;
   }
 
   .surgeryDetails {
@@ -29,6 +31,11 @@
     .conditions {
       display: flex;
       gap: 16px;
+
+      div {
+        margin: 0;
+        width: 100%;
+      }
     }
   }
 }

@@ -39,7 +39,7 @@ export const CoreValues = () => {
       <ValueCard
         customClass="innovation"
         title="Innovation"
-        details="We will have an open door policy for our employees, an open book policy for our business, and an open clinic policy for our clients."
+        details="We will research the most recent medical protocols, equipment, and practices to remain on the cutting edge."
         lightGrey={true}
       />
       <ValueCard

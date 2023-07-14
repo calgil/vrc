@@ -2,8 +2,6 @@
 import { useEffect, useState } from "react";
 import s from "../styles/components/ServicesSidebar.module.scss";
 import classNames from "classnames/bind";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import { SidebarLink } from "./SidebarLink";
 let cx = classNames.bind(s);
 
@@ -60,19 +58,21 @@ export const ServicesSidebar = () => {
     };
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <div className={s.container}>
+    <div className={s.container} id="top">
       <div className={cx({ sidebar: true, fixed: isFixed })}>
         <ul className={s.links}>
           {sidebarLinks.map((link) => (
             <li key={link.page} className={s.linkWrapper}>
-              {/* <Link href={`/services#${link.href}`} className={s.link}>
-                {link.page}
-              </Link> */}
               <SidebarLink
                 activeClassName={s.active}
                 className={s.link}
                 href={`/services#${link.href}`}
+                onClick={scrollToTop}
               >
                 {link.page}
               </SidebarLink>

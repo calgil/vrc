@@ -41,8 +41,7 @@
       }
 
       .cardText {
-        font-size: 1.25rem;
-        font-weight: 700;
+        @extend .content;
         margin: 1rem 0;
       }
 
@@ -52,6 +51,7 @@
         display: block;
         width: max-content;
         margin: 0 auto;
+        margin-top: 24px;
       }
     }
   }

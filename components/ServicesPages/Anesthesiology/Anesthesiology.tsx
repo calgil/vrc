@@ -1,10 +1,11 @@
 import { ServiceDropdown } from "@/components/ServiceDropdown";
 import s from "../../../styles/components/ServicesPages/Anesthesiology.module.scss";
 import { anesthesiologyServices } from "./anesthesiologyServices";
+import { sortServices } from "@/utilities/sortServices";
 
 export const Anesthesiology = () => {
   return (
-    <div>
+    <section id="anesthesiology">
       <div className={s.text}>
         <h3 className={s.title}>Anesthesiology</h3>
         <p className={s.content}>
@@ -27,11 +28,11 @@ export const Anesthesiology = () => {
             their website.
           </a>
         </p>
-        <h3 className={s.title}>Anesthesia Services</h3>
+        <h3 className={`${s.title} ${s.subheader}`}>Anesthesia Services</h3>
       </div>
-      {anesthesiologyServices.map((service, i) => (
+      {sortServices(anesthesiologyServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
-    </div>
+    </section>
   );
 };

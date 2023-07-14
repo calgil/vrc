@@ -1,6 +1,7 @@
 import { ServiceDropdown } from "@/components/ServiceDropdown";
 import s from "../../../styles/components/ServicesPages/Diagnostics.module.scss";
 import { diagnosticServices } from "./diagnosticServices";
+import { sortServices } from "@/utilities/sortServices";
 
 export const Diagnostics = () => {
   return (
@@ -26,9 +27,9 @@ export const Diagnostics = () => {
           day to assist the veterinarians in performing and interpreting
           important diagnostic tests.
         </p>
-        <h5 className={s.title}>Diagnostic Services</h5>
+        <h5 className={`${s.title} ${s.subheader}`}>Diagnostic Services</h5>
       </div>
-      {diagnosticServices.map((service, i) => (
+      {sortServices(diagnosticServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
     </section>

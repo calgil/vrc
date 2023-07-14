@@ -2,7 +2,7 @@
 @use "../utilities";
 
 .linkCards {
-  @extend .container;
+  // @extend .container;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -17,8 +17,8 @@
     }
 
     .linkCard {
-      width: 250px;
-      height: 250px;
+      width: 280px;
+      height: 280px;
       display: flex;
       align-items: flex-end;
 

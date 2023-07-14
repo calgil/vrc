@@ -7,6 +7,7 @@ import { CommonConditions } from "@/components/ServicesPages/CommonConditions";
 import { emergencyConditions } from "@/components/ServicesPages/Emergency/emergencyConditions";
 import { emergencyReasons } from "@/components/ServicesPages/Emergency/emergencyReasons";
 import { emergencyServices } from "@/components/ServicesPages/Emergency/emergencyServices";
+import { sortServices } from "@/utilities/sortServices";
 import Head from "next/head";
 
 export default function Emergency() {
@@ -29,9 +30,9 @@ export default function Emergency() {
           subHeading="Our Emergency team is available 24/7, including holidays, for your urgent needs."
           bgUrl="/pages/emergency/emergencyBanner.webp"
         />
+        <EmergencyContact />
+        <PaymentAssistance />
         <section className={s.emergency}>
-          <EmergencyContact />
-          <PaymentAssistance />
           <div className={s.text}>
             <h2 className={s.title}>Emergency</h2>
             <p className={s.content}>
@@ -49,7 +50,7 @@ export default function Emergency() {
             </p>
           </div>
           <h3 className={s.subheader}>Common Reasons for an Emergency Visit</h3>
-          {emergencyReasons.map((reason, i) => (
+          {sortServices(emergencyReasons).map((reason, i) => (
             <ServiceDropdown key={reason.title} service={reason} index={i} />
           ))}
           <div className={s.commonContainer}>
@@ -60,7 +61,7 @@ export default function Emergency() {
             />
           </div>
           <h3 className={s.subheader}>Emergency Services</h3>
-          {emergencyServices.map((service, i) => (
+          {sortServices(emergencyServices).map((service, i) => (
             <ServiceDropdown key={service.title} service={service} index={i} />
           ))}
         </section>

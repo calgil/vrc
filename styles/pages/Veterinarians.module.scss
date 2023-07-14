@@ -12,8 +12,7 @@
   }
 
   .text {
-    font-size: 1.25rem;
-    font-weight: 400;
+    @extend .content;
   }
 }
 
@@ -45,8 +44,7 @@
       }
 
       .memberText {
-        font-size: 1.25rem;
-        font-weight: 700;
+        @extend .content;
       }
 
       .memberBtn {
@@ -55,9 +53,9 @@
         display: block;
         width: fit-content;
         margin: 1rem auto;
-        font-size: 1.25rem;
-        font-weight: 700;
-        padding: 1rem 3.75rem;
+        font-size: 1.15rem;
+        font-weight: 500;
+        margin-top: 24px;
       }
     }
   }

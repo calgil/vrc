@@ -10,9 +10,7 @@ export const RequestConsult = ({ details }: RequestConsultProps) => {
     <div className={s.request}>
       <h5 className={s.consultTitle}>Request your one on one consultation.</h5>
       <div className={s.content}>
-        {/* <div> */}
         <p className={s.details}>{details}</p>
-        {/* </div> */}
         <div className={s.btnContainer}>
           <Link className={s.cta} href="">
             Request Consultation

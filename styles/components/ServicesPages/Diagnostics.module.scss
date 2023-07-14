@@ -12,3 +12,8 @@
 .title {
   @extend .titleRed;
 }
+
+.title.subheader {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}

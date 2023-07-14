@@ -8,6 +8,7 @@ import {
   thoracicConditions,
 } from "./surgeryConditions";
 import { surgeryServices } from "./surgeryServices";
+import { sortServices } from "@/utilities/sortServices";
 
 export const Surgery = () => {
   return (
@@ -47,11 +48,12 @@ export const Surgery = () => {
           />
         </div>
       </div>
-      {surgeryServices.map((service, i) => (
+      <h5 className={`${s.title} ${s.subheader}`}>Surgery Services</h5>
+      {sortServices(surgeryServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
+      <h5 className={`${s.title} ${s.subheader}`}>Postoperative Care</h5>
       <div className={s.text}>
-        <h5 className={`${s.title} ${s.subheader}`}>Postoperative Care</h5>
         <p className={s.content}>
           Your pet’s postoperative care will be managed around the clock by our
           surgical team of skilled veterinary nurses, as well as our emergency

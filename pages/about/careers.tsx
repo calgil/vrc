@@ -23,29 +23,30 @@ export default function Careers() {
           subHeading="Join a team that is passionate about providing the highest level of veterinary care"
         />
         <div className={s.container}>
-          <div className={s.careers}>
-            <div className={s.careersText}>
-              <h3 className={s.title}>People Make the Difference</h3>
-              <p className={s.details}>
-                Join a company that is passionate about veterinary medicine,
-                promotes a healthy work/life balance, and provides opportunities
-                for growth.
-              </p>
-              <p className={s.details}>
-                We are looking for Emergency Veterinarians, Client Service
-                Representatives, Technicians, Assistants, and Specialists!
-              </p>
-              <p className={s.details}>
-                To learn more and apply to our open positions, email your resume
-                to
-                <Link
-                  className={s.link}
-                  href="mailto:careers@northspringsvrc.com"
-                >
-                  careers@northspringsvrc.com.
-                </Link>
-              </p>
-            </div>
+          <h3 className={s.title}>A Step In the Right Direction</h3>
+          <p className={s.content}>
+            Join a company that is passionate about veterinary medicine,
+            promotes a healthy work/life balance, and provides opportunities for
+            growth.
+          </p>
+          <p className={s.content}>
+            We treat our staff as if they are our family. Regardless of how long
+            an individual is with our family, we will leave them better than
+            when we found them, training them in communication in various
+            difficult situations, and how to understand and utilize their own
+            personality traits for personal growth and teamwork.
+          </p>
+          <div className={s.join}>
+            <h4 className={s.joinTitle}>
+              Join the North Springs Veterinary Referral Center Team!
+            </h4>
+            <p className={s.joinText}>
+              To learn more and apply to our open positions, email your resume
+              to{" "}
+              <a className={s.link} href="mailto:careers@northspringsvrc.com">
+                careers@northspringsvrc.com.
+              </a>
+            </p>
           </div>
         </div>
       </main>

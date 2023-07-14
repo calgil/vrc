@@ -26,7 +26,6 @@ export const Navbar = () => (
           />
         </div>
       </Link>
-
       <div className={s.btnContainer}>
         <a className={`${s.btn} ${s.callLink}`} href="tel:+1(719)920-4430">
           <FontAwesomeIcon className={s.icon} icon={faPhone} />
