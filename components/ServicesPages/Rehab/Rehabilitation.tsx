@@ -4,6 +4,7 @@ import { CommonConditions } from "../CommonConditions";
 import { RequestConsult } from "../RequestConsult";
 import { rehabConditions } from "./rehabConditions";
 import { rehabServices } from "./rehabServices";
+import { sortServices } from "@/utilities/sortServices";
 
 export const Rehabilitation = () => {
   return (
@@ -35,7 +36,7 @@ export const Rehabilitation = () => {
       </div>
       <RequestConsult details="During your appointment, the Physical Rehabilitation team will start by obtaining a complete medical history and performing a thorough physical examination on your pet. This will allow for comprehensive and personalized treatment plans to help your pet feel their best." />
       <h5 className={`${s.title} ${s.subheader}`}>Rehabilitation Services</h5>
-      {rehabServices.map((service, i) => (
+      {sortServices(rehabServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
     </section>

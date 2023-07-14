@@ -1,6 +1,7 @@
 import { ServiceDropdown } from "@/components/ServiceDropdown";
 import s from "../../../styles/components/ServicesPages/Anesthesiology.module.scss";
 import { anesthesiologyServices } from "./anesthesiologyServices";
+import { sortServices } from "@/utilities/sortServices";
 
 export const Anesthesiology = () => {
   return (
@@ -29,7 +30,7 @@ export const Anesthesiology = () => {
         </p>
         <h3 className={`${s.title} ${s.subheader}`}>Anesthesia Services</h3>
       </div>
-      {anesthesiologyServices.map((service, i) => (
+      {sortServices(anesthesiologyServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
     </div>

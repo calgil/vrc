@@ -36,4 +36,4 @@ export const emergencyServices: ServiceDetail[] = [
     content:
       "Our hospital is equipped with cutting edge oxygen kennels for treatment of respiratory emergencies. They are designed to increase the percentage of oxygen surrounding your pet while also controlling temperature and humidity so your pet can rest comfortably as they recover.",
   },
-].sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1));
+];

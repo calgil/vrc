@@ -50,4 +50,4 @@ export const cardiologyServices: ServiceDetail[] = [
     content: `Catheter based surgical procedures are used for treatment of common congenital heart diseases such as a patent ductus arteriosus, and pulmonic stenosis, as well as pacemaker implantation, and heartworm removal.`,
     comingSoon: true,
   },
-].sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1));
+];

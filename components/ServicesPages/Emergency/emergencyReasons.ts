@@ -82,4 +82,4 @@ export const emergencyReasons: ServiceDetail[] = [
     content:
       "If your pet has a known medical condition and they are showing signs that their condition is not well regulated, they may need urgent help depending on the disease present and how severe their symptoms are.",
   },
-].sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1));
+];

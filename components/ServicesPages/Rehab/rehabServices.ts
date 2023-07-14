@@ -42,4 +42,4 @@ export const rehabServices: ServiceDetail[] = [
     title: "In Hospital Therapy",
     content: `The Rehabilitation team will take time every day to provide care to hospitalized patients to help them stay comfortable and recover faster to get home to you as soon as possible.`,
   },
-].sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1));
+];

@@ -111,4 +111,4 @@ export const surgeryServices: ServiceDetail[] = [
     content:
       "Many small dogs do not form their knee joint properly which allows for the kneecap to slide around.  There are surgical procedures available to help your pets knee cap become more stable to reduce pain and limping.",
   },
-].sort((a, b) => (a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1));
+];

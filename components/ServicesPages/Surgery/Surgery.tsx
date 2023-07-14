@@ -8,6 +8,7 @@ import {
   thoracicConditions,
 } from "./surgeryConditions";
 import { surgeryServices } from "./surgeryServices";
+import { sortServices } from "@/utilities/sortServices";
 
 export const Surgery = () => {
   return (
@@ -48,7 +49,7 @@ export const Surgery = () => {
         </div>
       </div>
       <h5 className={`${s.title} ${s.subheader}`}>Surgery Services</h5>
-      {surgeryServices.map((service, i) => (
+      {sortServices(surgeryServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
       <h5 className={`${s.title} ${s.subheader}`}>Postoperative Care</h5>

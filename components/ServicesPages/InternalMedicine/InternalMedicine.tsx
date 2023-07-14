@@ -4,6 +4,7 @@ import { CommonConditions } from "../CommonConditions";
 import { RequestConsult } from "../RequestConsult";
 import { internalMedicineConditions } from "./conditions";
 import { internalServices } from "./internalServices";
+import { sortServices } from "@/utilities/sortServices";
 
 export const InternalMedicine = () => {
   return (
@@ -36,7 +37,7 @@ export const InternalMedicine = () => {
       <h5 className={`${s.title} ${s.subheader}`}>
         Internal Medicine Services
       </h5>
-      {internalServices.map((service, i) => (
+      {sortServices(internalServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
     </section>
