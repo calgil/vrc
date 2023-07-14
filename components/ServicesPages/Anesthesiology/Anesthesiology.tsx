@@ -18,7 +18,12 @@ export const Anesthesiology = () => {
           Additionally, we partner with Peak Anesthesia for high risk patients
           that would benefit from the care of specialty trained veterinary
           technicians. To read more about Peak, visit{" "}
-          <a className={s.link} href="https://peakvas.com/">
+          <a
+            className={s.link}
+            href="https://peakvas.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             their website.
           </a>
         </p>

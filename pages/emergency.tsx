@@ -1,5 +1,12 @@
+import s from "../styles/pages/Emergency.module.scss";
 import { EmergencyContact } from "@/components/EmergencyContact";
 import { Hero } from "@/components/Hero";
+import { PaymentAssistance } from "@/components/PaymentAssistance";
+import { ServiceDropdown } from "@/components/ServiceDropdown";
+import { CommonConditions } from "@/components/ServicesPages/CommonConditions";
+import { emergencyConditions } from "@/components/ServicesPages/Emergency/emergencyConditions";
+import { emergencyReasons } from "@/components/ServicesPages/Emergency/emergencyReasons";
+import { emergencyServices } from "@/components/ServicesPages/Emergency/emergencyServices";
 import Head from "next/head";
 
 export default function Emergency() {
@@ -14,6 +21,7 @@ export default function Emergency() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main>
         <Hero
           homepage={false}
@@ -21,7 +29,41 @@ export default function Emergency() {
           subHeading="Our Emergency team is available 24/7, including holidays, for your urgent needs."
           bgUrl="/pages/emergency/emergencyBanner.webp"
         />
-        <EmergencyContact />
+        <section className={s.emergency}>
+          <EmergencyContact />
+          <PaymentAssistance />
+          <div className={s.text}>
+            <h2 className={s.title}>Emergency</h2>
+            <p className={s.content}>
+              Emergency Veterinarians are an integral part of veterinary
+              medicine. Many serious conditions occur without warning and cannot
+              wait for a scheduled appointment with your primary care
+              veterinarian.
+            </p>
+            <p className={s.content}>
+              The Emergency Team at North Springs Veterinary Referral Center are
+              here to help you and your pet through these emergency situations.
+              They are available 24 hours a day, 7 days a week, including
+              weekends and holidays, to ensure that you get the care and
+              attention you need, when you need it.
+            </p>
+          </div>
+          <h3 className={s.subheader}>Common Reasons for an Emergency Visit</h3>
+          {emergencyReasons.map((reason, i) => (
+            <ServiceDropdown key={reason.title} service={reason} index={i} />
+          ))}
+          <div className={s.commonContainer}>
+            <CommonConditions
+              title="Common Emergency Surgeries"
+              conditions={emergencyConditions}
+              numColumns={2}
+            />
+          </div>
+          <h3 className={s.subheader}>Emergency Services</h3>
+          {emergencyServices.map((service, i) => (
+            <ServiceDropdown key={service.title} service={service} index={i} />
+          ))}
+        </section>
       </main>
     </>
   );

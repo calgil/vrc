@@ -1,0 +1,33 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.assistance {
+  background-color: a.$yellowBg;
+
+  .text {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 24px 0;
+    text-align: center;
+
+    .header {
+      @extend.title;
+      color: a.$primaryText;
+    }
+    .content {
+      @extend .content;
+    }
+
+    .btnContainer {
+      display: flex;
+      justify-content: space-between;
+
+      .cta {
+        display: block;
+        white-space: nowrap;
+        text-decoration: none;
+        @extend .btnBase;
+      }
+    }
+  }
+}
