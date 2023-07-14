@@ -13,7 +13,7 @@ export const RequestConsult = ({ details }: RequestConsultProps) => {
         <p className={s.details}>{details}</p>
         <div className={s.btnContainer}>
           <Link className={s.cta} href="">
-            Request Consultation
+            Request <span className={s.addedText}>Consultation</span>
           </Link>
         </div>
       </div>

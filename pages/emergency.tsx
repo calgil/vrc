@@ -7,6 +7,7 @@ import { CommonConditions } from "@/components/ServicesPages/CommonConditions";
 import { emergencyConditions } from "@/components/ServicesPages/Emergency/emergencyConditions";
 import { emergencyReasons } from "@/components/ServicesPages/Emergency/emergencyReasons";
 import { emergencyServices } from "@/components/ServicesPages/Emergency/emergencyServices";
+import { ServicesFooter } from "@/components/ServicesPages/ServicesFooter";
 import { sortServices } from "@/utilities/sortServices";
 import Head from "next/head";
 
@@ -65,6 +66,7 @@ export default function Emergency() {
             <ServiceDropdown key={service.title} service={service} index={i} />
           ))}
         </section>
+        <ServicesFooter />
       </main>
     </>
   );

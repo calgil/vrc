@@ -17,7 +17,7 @@
   background-size: cover;
 
   .title {
-    @extend .title;
+    @extend .subHeader;
     color: inherit;
   }
   .content {
