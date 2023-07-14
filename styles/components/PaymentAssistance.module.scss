@@ -3,6 +3,7 @@
 
 .assistance {
   background-color: a.$yellowBg;
+  padding: 0 10px;
 
   .text {
     width: fit-content;
@@ -21,6 +22,16 @@
     .btnContainer {
       display: flex;
       justify-content: space-between;
+
+      @include a.media("tablet") {
+        flex-direction: column;
+        gap: 20px;
+
+        .cta {
+          width: fit-content;
+          margin: 0 auto;
+        }
+      }
 
       .cta {
         display: block;
