@@ -5,6 +5,7 @@ import { EmergencyContact } from "@/components/EmergencyContact";
 import { LinkCards } from "@/components/LinkCards";
 import Image from "next/image";
 import { Opening } from "@/components/Opening";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -46,9 +47,9 @@ export default function Home() {
                 do not have—translating their needs as well as the needs of our
                 clients into the best care and medical recommendations.
               </p>
-              <div className={s.btnContainer}>
-                <button className={s.btn}>meet our staff</button>
-              </div>
+              <Link className={s.btn} href="/about/staff">
+                meet our staff
+              </Link>
             </div>
             <div className={s.textBlock}>
               <h3 className={s.title}>Family. Community. Positivity. Unity.</h3>
@@ -62,9 +63,9 @@ export default function Home() {
                 and every interaction with you from the very beginning.We
                 believe that a healthy workplace leads to improved care.
               </p>
-              <div className={s.btnContainer}>
-                <button className={s.btn}>about us</button>
-              </div>
+              <Link className={s.btn} href="/about">
+                about us
+              </Link>
             </div>
           </div>
         </section>
