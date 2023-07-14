@@ -12,9 +12,9 @@
     justify-content: space-between;
 
     .title {
-      @extend .title;
+      @extend .subHeader;
       color: a.$purple;
-      font-size: 1.5625rem;
+      font-size: 1.35rem;
 
       .soon {
         color: a.$redAccent;
@@ -34,7 +34,7 @@
   .content {
     margin-top: 14px;
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 

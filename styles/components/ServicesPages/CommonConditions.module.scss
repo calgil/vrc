@@ -3,7 +3,6 @@
 
 .container {
   background-color: rgba(111, 113, 168, 0.2);
-  // margin: 40px 0;
   padding: 8px 16px;
   border-radius: 4px;
 
@@ -14,15 +13,17 @@
   .title {
     @extend .subHeader;
     color: a.$primaryText;
+    margin: 0;
   }
 
   .conditions {
     display: flex;
-    margin-top: 32px;
+    margin-top: 24px;
     font-size: 1.25rem;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
+    @extend .content;
 
     @include a.media("900") {
       display: block;

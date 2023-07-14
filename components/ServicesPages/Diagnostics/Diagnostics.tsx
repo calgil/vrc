@@ -26,7 +26,7 @@ export const Diagnostics = () => {
           day to assist the veterinarians in performing and interpreting
           important diagnostic tests.
         </p>
-        <h5 className={s.title}>Diagnostic Services</h5>
+        <h5 className={`${s.title} ${s.subheader}`}>Diagnostic Services</h5>
       </div>
       {diagnosticServices.map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />

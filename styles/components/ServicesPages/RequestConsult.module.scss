@@ -3,7 +3,6 @@
 
 .request {
   background-color: a.$yellowBg;
-
   padding: 24px 40px;
 
   .consultTitle {
@@ -16,6 +15,7 @@
 
     .details {
       @extend .content;
+      font-size: 1.15rem;
     }
 
     .btnContainer {

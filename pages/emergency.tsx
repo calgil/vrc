@@ -29,9 +29,9 @@ export default function Emergency() {
           subHeading="Our Emergency team is available 24/7, including holidays, for your urgent needs."
           bgUrl="/pages/emergency/emergencyBanner.webp"
         />
+        <EmergencyContact />
+        <PaymentAssistance />
         <section className={s.emergency}>
-          <EmergencyContact />
-          <PaymentAssistance />
           <div className={s.text}>
             <h2 className={s.title}>Emergency</h2>
             <p className={s.content}>

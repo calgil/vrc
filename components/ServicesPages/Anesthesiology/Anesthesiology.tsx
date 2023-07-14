@@ -27,7 +27,7 @@ export const Anesthesiology = () => {
             their website.
           </a>
         </p>
-        <h3 className={s.title}>Anesthesia Services</h3>
+        <h3 className={`${s.title} ${s.subheader}`}>Anesthesia Services</h3>
       </div>
       {anesthesiologyServices.map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
