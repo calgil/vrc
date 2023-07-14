@@ -7,6 +7,10 @@
   position: relative;
   padding-left: 15px;
 
+  @include a.media("900") {
+    display: none;
+  }
+
   .sidebar {
     width: 220px;
     .links {

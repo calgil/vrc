@@ -5,7 +5,7 @@ import { sortServices } from "@/utilities/sortServices";
 
 export const Anesthesiology = () => {
   return (
-    <div>
+    <section id="anesthesiology">
       <div className={s.text}>
         <h3 className={s.title}>Anesthesiology</h3>
         <p className={s.content}>
@@ -33,6 +33,6 @@ export const Anesthesiology = () => {
       {sortServices(anesthesiologyServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
-    </div>
+    </section>
   );
 };

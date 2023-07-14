@@ -1,7 +1,6 @@
 @use "../abstracts" as a;
 @use "../utilities";
 
-// TODO: move this to layout!
 .container {
   @extend .container;
 }
@@ -28,7 +27,6 @@
 
   @include a.media(lgPhone) {
     .imgContainer {
-      // max-width: 420px;
       width: 100%;
     }
   }
@@ -45,10 +43,7 @@
   }
 
   .story {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    line-height: 1.4;
+    @extend .content;
   }
 
   @include a.media(tablet) {
