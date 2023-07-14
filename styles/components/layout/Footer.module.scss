@@ -39,6 +39,10 @@
             color: inherit;
           }
 
+          &:hover {
+            text-decoration: underline;
+          }
+
           .text {
             font-size: 0.761875rem;
 
@@ -84,6 +88,9 @@
 
         &:visited {
           color: inherit;
+        }
+        &:hover {
+          text-decoration: underline;
         }
       }
     }

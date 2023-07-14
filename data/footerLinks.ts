@@ -12,21 +12,21 @@ export type FooterLinkColumn = {
 export const footerLinks: FooterLinkColumn[] = [
   {
     columnName: "Services",
-    mainLink: "/services",
+    mainLink: "/services#anesthesiology",
     links: [
       { label: "Anesthesiology", url: "/services#anesthesiology" },
       { label: "Cardiology", url: "/services#cardiology" },
       {
         label: "Diagnostic Imaging and In-House Laboratory",
-        url: "/services#imaging",
+        url: "/services#diagnostics",
       },
-      { label: "Emergency", url: "/services#emergency" },
+      { label: "Emergency", url: "/emergency" },
       { label: "Exotics", url: "/services#exotics" },
       {
         label: "Internal Medicine",
         url: "/services#internal-medicine",
       },
-      { label: "Rehab", url: "/services#rehab" },
+      { label: "Rehab", url: "/services#rehabilitation" },
       { label: "Surgery", url: "/services#surgery" },
     ],
   },
@@ -34,7 +34,7 @@ export const footerLinks: FooterLinkColumn[] = [
     columnName: "For Veterinarians",
     mainLink: "/veterinarians",
     links: [
-      { label: "Join Our Network", url: "/veterinarians" },
+      { label: "Join Our Network", url: "/member-hospital" },
       { label: "Education Center", url: "/veterinarians" },
       { label: "Referral Intake", url: "/veterinarians" },
     ],
@@ -54,7 +54,7 @@ export const footerLinks: FooterLinkColumn[] = [
     mainLink: "/about",
     links: [
       { label: "Our Story", url: "/about" },
-      { label: "Our Team", url: "/about" },
+      { label: "Our Team", url: "/about/team" },
       { label: "Vision & Values", url: "/about" },
       { label: "News & Events", url: "/about" },
       { label: "Careers", url: "/about/careers" },
