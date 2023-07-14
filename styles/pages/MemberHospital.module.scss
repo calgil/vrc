@@ -20,8 +20,9 @@
   .info {
     margin-bottom: 0.5rem;
     padding-bottom: 20px;
-    font-size: 1.4rem;
-    line-height: 1.2;
+    @extend .content;
+    // font-size: 1.4rem;
+    // line-height: 1.2;
   }
 }
 
@@ -46,10 +47,7 @@
   }
 
   .joinList {
-    // font-family: "Rockford Extra Light";
-    line-height: 1.4;
-    font-weight: 400;
-    font-size: 18px;
+    @extend .content;
     padding-left: 20px;
   }
 
