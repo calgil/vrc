@@ -1,10 +1,10 @@
 import Head from "next/head";
 import s from "../styles/pages/Home.module.scss";
 import { Hero } from "@/components/Hero";
-import { NewsletterForm } from "@/components/NewsletterForm";
 import { EmergencyContact } from "@/components/EmergencyContact";
 import { LinkCards } from "@/components/LinkCards";
 import Image from "next/image";
+import { Opening } from "@/components/Opening";
 
 export default function Home() {
   return (
@@ -25,6 +25,7 @@ export default function Home() {
           empathy and transparency"
           bgUrl="/pages/home/homeBanner.webp"
         />
+        <Opening />
         <EmergencyContact />
         <LinkCards />
         <section className={s.homeInfo}>
