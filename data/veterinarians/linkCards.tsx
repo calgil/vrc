@@ -8,7 +8,7 @@ export const vetLinkCards: LinkCardType[] = [
       "Check back soon as we expand this knowledge library!",
     ],
     linkUrl: "/",
-    bgUrl: "/owners/educationCenter.webp",
+    bgUrl: "/pages/owners/educationCenter.webp",
     bgColor: "rgba(154, 48, 64, 0.85)",
   },
   {
@@ -17,7 +17,7 @@ export const vetLinkCards: LinkCardType[] = [
       "Veterinary hospitals looking to send us information about a patient or refer a client to North Springs VRC will be able to do so through our website.",
     ],
     linkUrl: "/",
-    bgUrl: "/owners/clinicCamera.webp",
+    bgUrl: "/pages/owners/clinicCamera.webp",
     bgColor: "rgba(1, 109, 118, 0.85)",
   },
 ];
