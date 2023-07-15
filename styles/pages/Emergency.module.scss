@@ -9,6 +9,11 @@
     padding-left: 40px;
     padding-top: 40px;
 
+    @include a.media("smTablet") {
+      padding: 0 10px;
+      margin-bottom: 40px;
+    }
+
     .content {
       @extend .content;
     }
@@ -28,5 +33,9 @@
   .commonContainer {
     padding: 40px;
     margin-top: 16px;
+
+    @include a.media("smTablet") {
+      padding: 40px 10px;
+    }
   }
 }

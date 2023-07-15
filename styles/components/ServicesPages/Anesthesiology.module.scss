@@ -2,7 +2,11 @@
 @use "../../utilities";
 
 .text {
-  padding-left: 2.5rem;
+  padding-left: 40px;
+
+  @include a.media("smTablet") {
+    padding: 0 10px;
+  }
 
   .title {
     @extend .titleRed;

@@ -10,11 +10,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 
     .title {
       @extend .subHeader;
       color: a.$purple;
       font-size: 1.35rem;
+
+      // TODO: decide how to handle long titles
+      // @include a.media("lgPhone") {
+      //   word-break: break-word;
+      // }
 
       .soon {
         color: a.$redAccent;
@@ -23,6 +29,7 @@
 
     .arrow {
       width: 15px;
+      min-width: 15px;
       color: a.$purple;
       transition: all 200ms ease-in-out;
     }
