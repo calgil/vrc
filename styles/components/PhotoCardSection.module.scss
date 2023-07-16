@@ -26,7 +26,7 @@
       padding: 24px;
       background-color: a.$buttonWhiteBg;
       border-radius: 16px;
-      border: 1px solid a.$grey;
+      border: 1px solid a.$darkGrey;
       flex: 1;
 
       @include a.media(smTablet) {
