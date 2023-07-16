@@ -9,6 +9,8 @@ import {
 } from "./surgeryConditions";
 import { surgeryServices } from "./surgeryServices";
 import { sortServices } from "@/utilities/sortServices";
+import { ServicesFooter } from "../ServicesFooter";
+import { cardiologyCommunicationText } from "../Cardiology/reliableCommunication";
 
 export const Surgery = () => {
   return (
@@ -65,6 +67,7 @@ export const Surgery = () => {
           us and we will be happy to answer any questions!
         </p>
       </div>
+      <ServicesFooter textBlocks={cardiologyCommunicationText} />
     </section>
   );
 };

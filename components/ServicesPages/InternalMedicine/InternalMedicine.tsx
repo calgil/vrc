@@ -5,6 +5,8 @@ import { RequestConsult } from "../RequestConsult";
 import { internalMedicineConditions } from "./conditions";
 import { internalServices } from "./internalServices";
 import { sortServices } from "@/utilities/sortServices";
+import { ServicesFooter } from "../ServicesFooter";
+import { internalMedicineCommunication } from "./reliableCommunication";
 
 export const InternalMedicine = () => {
   return (
@@ -40,6 +42,7 @@ export const InternalMedicine = () => {
       {sortServices(internalServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
+      <ServicesFooter textBlocks={internalMedicineCommunication} />
     </section>
   );
 };

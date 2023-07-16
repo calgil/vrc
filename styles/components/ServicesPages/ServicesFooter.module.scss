@@ -16,13 +16,16 @@
   background-position: center;
   background-size: cover;
 
-  .title {
-    @extend .subHeader;
-    color: inherit;
-  }
-  .content {
-    color: a.$textHighContrast;
-    font-size: 1.25rem;
-    font-weight: 400;
+  .container {
+    @extend .container;
+    .title {
+      @extend .subHeader;
+      color: inherit;
+    }
+    .content {
+      color: a.$textHighContrast;
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
   }
 }

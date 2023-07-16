@@ -5,6 +5,8 @@ import { RequestConsult } from "../RequestConsult";
 import { cardiologyConditions } from "./conditions";
 import { cardiologyServices } from "./cardiologyServices";
 import { sortServices } from "@/utilities/sortServices";
+import { ServicesFooter } from "../ServicesFooter";
+import { cardiologyCommunicationText } from "./reliableCommunication";
 
 export const Cardiology = () => {
   return (
@@ -39,6 +41,7 @@ export const Cardiology = () => {
       {sortServices(cardiologyServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
+      <ServicesFooter textBlocks={cardiologyCommunicationText} />
     </section>
   );
 };
