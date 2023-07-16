@@ -10,8 +10,14 @@ let cx = classNames.bind(s);
 export const NavLinks = () => {
   const currentRoute = usePathname();
 
-  const linkStyle = cx("nav-link", s.navLink); // Combine "nav-link" with s.navLink
+  const linkStyle = cx("nav-link", s.navLink);
   const activeStyle = cx(linkStyle, s.active);
+
+  const scrollToTop = () => {
+    console.log("scroll");
+
+    window.scrollTo(0, 0);
+  };
 
   useEffect(() => {
     import("bootstrap");
@@ -39,6 +45,7 @@ export const NavLinks = () => {
                 className={
                   currentRoute === "/emergency" ? activeStyle : linkStyle
                 }
+                onClick={scrollToTop}
               >
                 Emergency
               </Link>
@@ -60,22 +67,35 @@ export const NavLinks = () => {
                   <Link
                     href="/services#anesthesiology"
                     className="dropdown-item"
+                    onClick={scrollToTop}
                   >
                     Anesthesiology
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services#cardiology" className="dropdown-item">
+                  <Link
+                    href="/services#cardiology"
+                    className="dropdown-item"
+                    onClick={scrollToTop}
+                  >
                     Cardiology
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services#diagnostics" className="dropdown-item">
+                  <Link
+                    href="/services#diagnostics"
+                    className="dropdown-item"
+                    onClick={scrollToTop}
+                  >
                     Diagnostics
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services#exotics" className="dropdown-item">
+                  <Link
+                    href="/services#exotics"
+                    className="dropdown-item"
+                    onClick={scrollToTop}
+                  >
                     Exotics
                   </Link>
                 </li>
@@ -83,6 +103,7 @@ export const NavLinks = () => {
                   <Link
                     href="/services#internal-medicine"
                     className="dropdown-item"
+                    onClick={scrollToTop}
                   >
                     Internal Medicine
                   </Link>
@@ -91,12 +112,17 @@ export const NavLinks = () => {
                   <Link
                     href="/services#rehabilitation"
                     className="dropdown-item"
+                    onClick={scrollToTop}
                   >
                     Rehabilitation
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services#surgery" className="dropdown-item">
+                  <Link
+                    href="/services#surgery"
+                    className="dropdown-item"
+                    onClick={scrollToTop}
+                  >
                     Surgery
                   </Link>
                 </li>
@@ -108,6 +134,7 @@ export const NavLinks = () => {
                 className={
                   currentRoute === "/veterinarians" ? activeStyle : linkStyle
                 }
+                onClick={scrollToTop}
               >
                 For Veterinarians
               </Link>
@@ -116,6 +143,7 @@ export const NavLinks = () => {
               <Link
                 href="/owners"
                 className={currentRoute === "/owners" ? activeStyle : linkStyle}
+                onClick={scrollToTop}
               >
                 For Pet Owners
               </Link>
@@ -134,17 +162,29 @@ export const NavLinks = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <Link href="/about" className="dropdown-item">
+                  <Link
+                    href="/about"
+                    className="dropdown-item"
+                    onClick={scrollToTop}
+                  >
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/careers" className="dropdown-item">
+                  <Link
+                    href="/about/careers"
+                    className="dropdown-item"
+                    onClick={scrollToTop}
+                  >
                     Careers
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/contact" className="dropdown-item">
+                  <Link
+                    href="/about/contact"
+                    className="dropdown-item"
+                    onClick={scrollToTop}
+                  >
                     Contact Us
                   </Link>
                 </li>
