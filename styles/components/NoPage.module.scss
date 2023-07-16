@@ -1,0 +1,17 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.error {
+  text-align: center;
+
+  padding: 48px 10px;
+  .title {
+    @extend .title;
+    color: a.$purple;
+  }
+
+  .sorry {
+    @extend .content;
+    color: a.$purple;
+  }
+}
