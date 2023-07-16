@@ -17,10 +17,9 @@
       color: a.$purple;
       font-size: 1.35rem;
 
-      // TODO: decide how to handle long titles
-      // @include a.media("lgPhone") {
-      //   word-break: break-word;
-      // }
+      @include a.media("phone") {
+        font-size: 1.1rem;
+      }
 
       .soon {
         color: a.$redAccent;

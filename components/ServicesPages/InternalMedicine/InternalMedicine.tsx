@@ -17,7 +17,7 @@ export const InternalMedicine = () => {
           treatment. Your Primary care veterinarian may encourage a referral to
           our Internal Medicine department if conventional diagnostic tests are
           inconclusive or if your pet is not responding as expected to
-          appropriate treatment.{" "}
+          appropriate treatment.
         </p>
         <p className={s.content}>
           The Internal Medicine team at North Springs Veterinary Referral Center
