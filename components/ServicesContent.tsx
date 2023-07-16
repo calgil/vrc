@@ -9,6 +9,7 @@ import { Rehabilitation } from "./ServicesPages/Rehab/Rehabilitation";
 import { Surgery } from "./ServicesPages/Surgery/Surgery";
 import { Exotics } from "./ServicesPages/Exotics/Exotics";
 import { NoPage } from "./NoPage";
+import Image from "next/image";
 
 type ServicesContentProps = {
   activePage: string;
@@ -34,17 +35,30 @@ export const ServicesContent = ({ activePage }: ServicesContentProps) => {
     }
   }, [isReady]);
 
-  const pageContent =
-    isHydrationComplete && pageContentMap[activePage] ? (
-      pageContentMap[activePage]
-    ) : (
-      <NoPage />
-    );
+  const renderPageContent = () => {
+    if (!isHydrationComplete) {
+      return (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "50px",
+          }}
+        >
+          <Image src="/loading.gif" alt="loading" width={200} height={200} />
+        </div>
+      );
+    }
+    if (isHydrationComplete && !pageContentMap[activePage]) {
+      return <NoPage />;
+    }
+    return pageContentMap[activePage];
+  };
 
   return (
     <section style={{ flex: 1 }}>
-      {/* add loading svg */}
-      <div>{pageContent}</div>
+      <div>{renderPageContent()}</div>
       {/* <ServicesFooter /> */}
     </section>
   );

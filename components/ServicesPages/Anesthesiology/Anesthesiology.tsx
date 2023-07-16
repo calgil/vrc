@@ -5,7 +5,7 @@ import { sortServices } from "@/utilities/sortServices";
 
 export const Anesthesiology = () => {
   return (
-    <section id="anesthesiology">
+    <section>
       <div className={s.text}>
         <h3 className={s.title}>Anesthesiology</h3>
         <p className={s.content}>
