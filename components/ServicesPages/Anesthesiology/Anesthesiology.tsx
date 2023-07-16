@@ -2,6 +2,8 @@ import { ServiceDropdown } from "@/components/ServiceDropdown";
 import s from "../../../styles/components/ServicesPages/Anesthesiology.module.scss";
 import { anesthesiologyServices } from "./anesthesiologyServices";
 import { sortServices } from "@/utilities/sortServices";
+import { ServicesFooter } from "../ServicesFooter";
+import { cardiologyCommunicationText } from "../Cardiology/reliableCommunication";
 
 export const Anesthesiology = () => {
   return (
@@ -33,6 +35,7 @@ export const Anesthesiology = () => {
       {sortServices(anesthesiologyServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
+      <ServicesFooter textBlocks={cardiologyCommunicationText} />
     </section>
   );
 };

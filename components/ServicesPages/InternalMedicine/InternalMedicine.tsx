@@ -5,6 +5,8 @@ import { RequestConsult } from "../RequestConsult";
 import { internalMedicineConditions } from "./conditions";
 import { internalServices } from "./internalServices";
 import { sortServices } from "@/utilities/sortServices";
+import { ServicesFooter } from "../ServicesFooter";
+import { internalMedicineCommunication } from "./reliableCommunication";
 
 export const InternalMedicine = () => {
   return (
@@ -17,7 +19,7 @@ export const InternalMedicine = () => {
           treatment. Your Primary care veterinarian may encourage a referral to
           our Internal Medicine department if conventional diagnostic tests are
           inconclusive or if your pet is not responding as expected to
-          appropriate treatment.{" "}
+          appropriate treatment.
         </p>
         <p className={s.content}>
           The Internal Medicine team at North Springs Veterinary Referral Center
@@ -40,6 +42,7 @@ export const InternalMedicine = () => {
       {sortServices(internalServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
+      <ServicesFooter textBlocks={internalMedicineCommunication} />
     </section>
   );
 };

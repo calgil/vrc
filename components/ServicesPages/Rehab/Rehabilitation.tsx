@@ -5,6 +5,8 @@ import { RequestConsult } from "../RequestConsult";
 import { rehabConditions } from "./rehabConditions";
 import { rehabServices } from "./rehabServices";
 import { sortServices } from "@/utilities/sortServices";
+import { ServicesFooter } from "../ServicesFooter";
+import { rehabCommunications } from "./reliableCommunication";
 
 export const Rehabilitation = () => {
   return (
@@ -39,6 +41,7 @@ export const Rehabilitation = () => {
       {sortServices(rehabServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
+      <ServicesFooter textBlocks={rehabCommunications} />
     </section>
   );
 };

@@ -2,6 +2,8 @@ import { ServiceDropdown } from "@/components/ServiceDropdown";
 import s from "../../../styles/components/ServicesPages/Diagnostics.module.scss";
 import { diagnosticServices } from "./diagnosticServices";
 import { sortServices } from "@/utilities/sortServices";
+import { ServicesFooter } from "../ServicesFooter";
+import { cardiologyCommunicationText } from "../Cardiology/reliableCommunication";
 
 export const Diagnostics = () => {
   return (
@@ -32,6 +34,7 @@ export const Diagnostics = () => {
       {sortServices(diagnosticServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />
       ))}
+      <ServicesFooter textBlocks={cardiologyCommunicationText} />
     </section>
   );
 };
