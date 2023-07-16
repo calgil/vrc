@@ -8,6 +8,7 @@ import { InternalMedicine } from "./ServicesPages/InternalMedicine/InternalMedic
 import { Rehabilitation } from "./ServicesPages/Rehab/Rehabilitation";
 import { Surgery } from "./ServicesPages/Surgery/Surgery";
 import { Exotics } from "./ServicesPages/Exotics/Exotics";
+import { NoPage } from "./NoPage";
 
 type ServicesContentProps = {
   activePage: string;
@@ -37,14 +38,14 @@ export const ServicesContent = ({ activePage }: ServicesContentProps) => {
     isHydrationComplete && pageContentMap[activePage] ? (
       pageContentMap[activePage]
     ) : (
-      <div>No Page Found</div>
+      <NoPage />
     );
 
   return (
-    <section>
+    <section style={{ flex: 1 }}>
       {/* add loading svg */}
       <div>{pageContent}</div>
-      <ServicesFooter />
+      {/* <ServicesFooter /> */}
     </section>
   );
 };
