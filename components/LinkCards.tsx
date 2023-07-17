@@ -11,13 +11,13 @@ export type LinkCard = {
 export const LinkCards = () => {
   const linkCards: LinkCard[] = [
     {
-      url: "/services#emergency",
+      url: "/emergency",
       bgUrl: "/pages/home/cardBg/emergencyBg.webp",
       bgColor: "rgba(154, 48, 64, 0.85)",
       text: "Emergency Services",
     },
     {
-      url: "/services",
+      url: "/services/#anesthesiology",
       bgUrl: "/pages/home/cardBg/specialtyBg.webp",
       bgColor: "rgba(111, 113, 168, 0.85)",
       text: "Specialty Service",
@@ -29,7 +29,7 @@ export const LinkCards = () => {
       text: "For Referring Veterinarians",
     },
     {
-      url: "/veterinarians",
+      url: "/owners",
       bgUrl: "/pages/home/cardBg/owners.webp",
       bgColor: "rgba(1, 109, 118, 0.85)",
       text: "For Pet Owners",

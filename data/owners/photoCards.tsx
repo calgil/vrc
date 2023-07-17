@@ -7,7 +7,7 @@ export const ownerPhotoCards: PhotoCardType[] = [
       "Our specialty teams are available for appointments to diagnose and treat a variety of conditions.",
       "View our services page to learn more about how we can help you and your pet.",
     ],
-    linkUrl: "/services/#emergency",
+    linkUrl: "/services/#anesthesiology",
     btnText: "view services",
   },
   {

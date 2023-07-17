@@ -40,7 +40,6 @@ export default function Owners() {
           </p>
         </section>
         <PhotoCardSection cards={ownerPhotoCards} />
-
         <LinkCardSection cards={ownerLinkCards} />
         <EmergencyContact />
         <PaymentAssistance />

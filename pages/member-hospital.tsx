@@ -192,7 +192,7 @@ export default function MemberHospital() {
                   Post surgical transfer care includes:
                   <ul className={s.joinList}>
                     <li>Complimentary examination</li>
-                    <li>Hospitalization for 14 hours (5pm – 8am MT)</li>
+                    <li>Hospitalization for 14 hours (6pm – 8am MT)</li>
                     <li>Fluids</li>
                     <li>PCV/TS/Lytes/BG once overnight</li>
                     <li>Pain management</li>
@@ -221,8 +221,6 @@ export default function MemberHospital() {
                 Fill out our contact form to learn more about how to join our
                 Network and the benefits that Member Hospitals can receive, or
                 email our team at
-                {/* To learn more about how to join our Network and the benefits
-                that Member Hospitals can receive, please email our team at */}
                 <br />
                 <Link
                   className={s.link}
