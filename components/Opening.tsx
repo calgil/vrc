@@ -10,6 +10,7 @@ export const Opening = () => {
           Meet our staff, tour our facility, and get to know us! Join us for
           fun, raffles, and prizes!
         </p>
+        <p className={s.content}>12pm-6pm</p>
         <p className={s.content}>September 9th, 2023</p>
       </div>
       <div className={s.grandOpening}>

@@ -14,7 +14,7 @@ export const ownerLinkCards: LinkCardType[] = [
   {
     title: "Clinic Camera",
     textBlocks: [
-      "If your pet is being treated with us, click here to view their clinic camera and check in with them",
+      "If your pet is being treated with us, click here to view their clinic camera and check in with them.",
     ],
     linkUrl: "/",
     bgUrl: "/pages/owners/clinicCamera.webp",
