@@ -18,7 +18,7 @@ export const CoreValues = () => {
       <ValueCard
         customClass="unity"
         title="Unity"
-        details="Each and every team member’s contribution is part of the whole. Every idea, suggestion, and how they are treated is equal, creating unity throughout the hospital."
+        details="Each and every team member's contribution is part of the whole. Every idea, suggestion, and how they are treated is equal, creating unity throughout the hospital."
       />
       <ValueCard
         customClass="titleCard"
@@ -28,7 +28,7 @@ export const CoreValues = () => {
       <ValueCard
         customClass="community"
         title="Community"
-        details="We believe that it is our obligation to give back to our community by contributing to local animal missions and partnering with local non-profit initiatives."
+        details="We believe in giving back to our community through local missions & non-profit initiatives "
         lightGrey={true}
       />
       <ValueCard

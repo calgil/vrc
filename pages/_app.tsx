@@ -27,5 +27,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <Analytics />
       </Layout>
     </div>
+
   );
 }
