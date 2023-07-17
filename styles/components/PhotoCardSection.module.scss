@@ -28,6 +28,7 @@
       border-radius: 16px;
       border: 1px solid a.$darkGrey;
       flex: 1;
+      min-height: 360px;
 
       @include a.media(smTablet) {
         max-width: none;
