@@ -28,7 +28,7 @@ export const CoreValues = () => {
       <ValueCard
         customClass="community"
         title="Community"
-        details="We believe in giving back to our community through local missions & non-profit initiatives "
+        details="We believe in giving back to our community through local missions & non-profit initiatives."
         lightGrey={true}
       />
       <ValueCard
