@@ -17,7 +17,6 @@ type FormProps = {
 export const Form = ({
   children,
   onSubmit,
-  // action,
   inputs,
   textarea,
   submitBtn,

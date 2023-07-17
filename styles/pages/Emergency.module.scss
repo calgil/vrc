@@ -1,0 +1,41 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.emergency {
+  @extend .container;
+
+  .text {
+    margin-top: 24px;
+    padding-left: 40px;
+    padding-top: 40px;
+
+    @include a.media("smTablet") {
+      padding: 0 10px;
+      margin-bottom: 40px;
+    }
+
+    .content {
+      @extend .content;
+    }
+  }
+
+  .title {
+    @extend .titleRed;
+  }
+
+  .subheader {
+    @extend .titleRed;
+    margin-top: 34px;
+    margin-bottom: 34px;
+    margin-left: 40px;
+  }
+
+  .commonContainer {
+    padding: 40px;
+    margin-top: 16px;
+
+    @include a.media("smTablet") {
+      padding: 40px 10px;
+    }
+  }
+}

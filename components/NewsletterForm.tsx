@@ -5,34 +5,22 @@ import { isEmailValid } from "@/utils/isEmailValid";
 
 let cx = classNames.bind(s);
 
-type NewsletterFormProps = {
-  heading: string;
-  description: string;
-  inHero: boolean;
-};
-
 export type FormData = {
   name: string;
   email: string;
 };
 
-export const NewsletterForm = ({
-  heading,
-  description,
-  inHero,
-}: NewsletterFormProps) => {
+export const NewsletterForm = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
   let newsletterClass = cx({
     newsletter: true,
-    inHero,
   });
 
   let formClass = cx({
     formContainer: true,
-    inHero,
   });
 
   let nameInputClass = cx({
@@ -55,25 +43,6 @@ export const NewsletterForm = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // this sucks figure it out!!
-    // if (!name) {
-    //   setMessage("Name is required");
-    //   return setNameError(true);
-    // }
-    // if (!email) {
-    //   setMessage("Email is required");
-    //   return setEmailError(true);
-    // }
-    // if (name) {
-    //   setNameError(false);
-    // }
-    // if (email) {
-    //   setEmailError(false);
-    // }
-    // if (name && email) {
-    //   setMessage("");
-    // }
-    // console.log("subscribe", { name, email });
 
     fetch(
       `${process.env.CONVERTKIT_BASE_URL}/${process.env.CONVERTKIT_FORM_ID}/subscribe`,
@@ -90,15 +59,20 @@ export const NewsletterForm = ({
       }
     )
       .then((response) => response.json())
-      .then((data) => console.log(data))
       .catch((error) => console.error(error));
     setName("");
     setEmail("");
   };
   return (
     <div className={newsletterClass}>
-      <h4 className={s.newsletterTitle}>{heading}</h4>
-      <p className={s.description}>{description}</p>
+      <h4 className={s.newsletterTitle}>
+        Sign up for the North Springs VRC Newsletter!
+      </h4>
+      <p className={s.description}>
+        Stay up to date and receive the the latest information and news about
+        our Grand Opening, added services, specialties, new hires, events and
+        more!
+      </p>
       <form className={formClass} onSubmit={handleSubmit}>
         <div className={s.inputContainer}>
           <input
@@ -114,7 +88,7 @@ export const NewsletterForm = ({
             name="email"
             type="email"
             value={email}
-            placeholder="Email Address"
+            placeholder="Your Email Address"
             onChange={handleEmailChange}
           />
         </div>

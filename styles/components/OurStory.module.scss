@@ -1,32 +1,20 @@
 @use "../abstracts" as a;
 @use "../utilities";
 
-// TODO: move this to layout!
 .container {
   @extend .container;
 }
 
-.headerText {
-  margin-top: 50px;
-  margin-bottom: 60px;
-  color: a.$blue;
-  text-align: center;
-  font-size: 2.15rem;
-
-  @include a.media(tablet) {
-    font-size: 1.9rem;
-    // em to rem
-  }
-}
-
 .ourStory {
   display: flex;
+  align-items: center;
   gap: 30px;
-  padding-bottom: 90px;
+  padding: 2.5rem 0;
 
   .imgContainer {
     max-width: 470px;
     min-width: 290px;
+    margin-top: 2rem;
   }
 
   @include a.media(tablet) {
@@ -35,16 +23,11 @@
     text-align: left;
     gap: 0;
     padding-bottom: 60px;
-
-    .imgContainer {
-      max-width: 580px;
-      min-width: none;
-    }
   }
 
   @include a.media(lgPhone) {
     .imgContainer {
-      max-width: 420px;
+      width: 100%;
     }
   }
 }
@@ -54,31 +37,25 @@
   line-height: 1.2;
   color: a.$primaryText;
 
-  h5 {
-    font-size: 1.9rem;
-    // em to rem
-    font-weight: 600;
-    margin-bottom: 30px;
+  .storyTitle {
+    @extend .title;
+    margin-bottom: 1rem;
   }
 
-  p {
-    font-family: a.$lightFontFamily;
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    line-height: 1.4;
+  .story {
+    @extend .content;
   }
 
   @include a.media(tablet) {
     padding: 30px;
     padding-right: 0;
 
-    h5 {
+    .storyTitle {
       font-size: 1.3rem;
       padding-bottom: 15px;
       margin-bottom: 0.5rem;
     }
-    p {
+    .story {
       font-size: 16px;
     }
   }

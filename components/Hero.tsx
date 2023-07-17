@@ -1,87 +1,57 @@
 import Image from "next/image";
 import Link from "next/link";
 import s from "../styles/components/Hero.module.scss";
-import classNames from "classnames/bind";
-import { NewsletterForm } from "./NewsletterForm";
-import { SocialLinks } from "./SocialLinks";
-
-let cx = classNames.bind(s);
 
 type HeroProps = {
   homepage: boolean;
-  // addNewsletter: boolean;
   heading?: string;
   subHeading?: string;
-  imageURL: string;
+  bgUrl: string;
 };
 
-export const Hero = ({
-  homepage,
-  heading,
-  subHeading,
-  imageURL,
-}: HeroProps) => {
-  let bgClass = cx({
-    heroBg: true,
-    homepage,
-  });
-
+export const Hero = ({ homepage, heading, subHeading, bgUrl }: HeroProps) => {
   return (
     <div
+      className={s.heroBg}
       style={{
-        backgroundImage: `url(${imageURL})`,
-        // "linear-gradient(108deg, rgb(0, 105, 117, 0.89) 64.95%, transparent 65%), url(/home-header.jpg)",
+        backgroundImage: `url(${bgUrl})`,
       }}
-      className={bgClass}
     >
       <div className={s.container}>
-        <Link href="/">
+        <div>
           <div className={s.logoContainer}>
-            <Image
-              className={s.logo}
-              src="/vrc-logo.png"
-              alt="logo"
-              width={350}
-              height={117}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
-            />
-          </div>
-        </Link>
-        <div className={s.heroText}>
-          <h3>{subHeading}</h3>
-          <h1> {heading}</h1>
-          {homepage && (
-            <>
-              <NewsletterForm
-                inHero={true}
-                heading="Stay in the Know!"
-                description="Subscribe to our newsletter to receive the latest information and news
-        about our Grand Opening!"
-              />
-              <div className={s.social}>
-                <h6 className={s.connect}>
-                  <strong>Connect with us</strong>
-                </h6>
-                <SocialLinks />
-              </div>
-            </>
-          )}
-        </div>
-        {homepage && (
-          <div className={s.down}>
-            <Link href="#our-story" passHref>
+            {homepage && (
               <Image
-                width={130}
-                height={120}
-                src="/downArrow.png"
-                alt="down arrow"
+                className={s.logo}
+                src="/logos/home.webp"
+                alt="logo"
+                width={354}
+                height={122}
               />
-            </Link>
+            )}
+            {!homepage && (
+              <div className={s.pageHeader}>
+                <Image
+                  className={s.logo}
+                  src="/logos/smLogo.webp"
+                  alt="logo"
+                  width={110}
+                  height={122}
+                />
+                <h1 className={s.heading}>{heading}</h1>
+              </div>
+            )}
           </div>
-        )}
+          <div className={s.heroText}>
+            <h3 className={s.subheading}>{subHeading}</h3>
+          </div>
+        </div>
+        {/* <div
+          className={s.imgContainer}
+          style={{
+            backgroundImage: `url(${bgUrl})`,
+          }}
+        ></div> */}
       </div>
     </div>
   );

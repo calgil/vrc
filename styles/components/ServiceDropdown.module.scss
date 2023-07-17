@@ -1,0 +1,49 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.dropdown {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  padding: 1rem 2.5rem;
+
+  .collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    .title {
+      @extend .subHeader;
+      color: a.$purple;
+      font-size: 1.35rem;
+
+      @include a.media("phone") {
+        font-size: 1.1rem;
+      }
+
+      .soon {
+        color: a.$redAccent;
+      }
+    }
+
+    .arrow {
+      width: 15px;
+      min-width: 15px;
+      color: a.$purple;
+      transition: all 200ms ease-in-out;
+    }
+    .arrow.down {
+      transform: rotate(90deg);
+    }
+  }
+
+  .content {
+    margin-top: 14px;
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+}
+
+.dropdown.grey {
+  background-color: rgba($color: a.$contactFormBg, $alpha: 0.1);
+}

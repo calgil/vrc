@@ -1,12 +1,12 @@
 @use "../abstracts" as a;
-@use "../components";
+@use "../utilities";
 
 .formContainer {
   background-color: #e1e1e1;
   padding: 50px;
 
   .formDetails {
-    font-family: "Rockford Extra Light";
+    // font-family: "Rockford Extra Light";
     line-height: 1.4;
     font-weight: 400;
     font-size: 18px;
@@ -14,7 +14,7 @@
   }
 
   .link {
-    color: a.$blue;
+    color: a.$primaryTeal;
   }
 
   .form {
@@ -43,19 +43,9 @@
     color: green;
   }
   .error {
-    color: red;
+    color: a.$redAccent;
   }
   .submitBtn {
-    @extend .submitBtnBase;
-    background-color: a.$blue;
-    color: a.$textHighContrast;
-    border: 1px solid a.$blue;
-
-    &:focus,
-    &:hover,
-    &:active {
-      background-color: white;
-      color: a.$blue;
-    }
+    @extend .btnBase;
   }
 }

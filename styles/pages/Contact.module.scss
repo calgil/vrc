@@ -1,0 +1,56 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+// .contactInfo {
+//   margin: 2.5rem 0;
+//   @extend .container;
+//   display: flex;
+//   align-items: center;
+//   gap: 7rem;
+
+//   .map {
+//     width: 541px;
+//     height: 692px;
+//     background-color: blue;
+//   }
+
+//   .info {
+//     .title {
+//       color: a.$primaryText;
+//       font-size: 1.5625rem;
+//       font-weight: 500;
+//       margin-bottom: 1rem;
+//     }
+
+//     .links {
+//       margin-bottom: 2.5rem;
+//     }
+
+//     .contactLink {
+//       display: flex;
+//       align-items: center;
+//       color: inherit;
+//       text-decoration: none;
+//       margin-bottom: 1rem;
+
+//       &:visited {
+//         color: inherit;
+//       }
+
+//       .icon {
+//         margin-right: 0.25rem;
+//         width: 1rem;
+//       }
+
+//       .text {
+//         padding-left: 1rem;
+//       }
+//     }
+
+//     .email {
+//       .text {
+//         color: a.$primaryTeal;
+//       }
+//     }
+//   }
+// }

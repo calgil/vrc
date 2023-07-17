@@ -1,0 +1,23 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.text {
+  padding-left: 40px;
+
+  @include a.media("smTablet") {
+    padding: 0 10px;
+  }
+
+  .content {
+    @extend .content;
+  }
+}
+
+.title {
+  @extend .titleRed;
+}
+
+.title.subheader {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}

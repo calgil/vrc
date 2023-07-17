@@ -1,0 +1,154 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.footer {
+  background-color: a.$footerBg;
+  color: a.$textHighContrast;
+  padding: 50px 0;
+
+  .container {
+    @extend .container;
+    padding-top: 42px;
+    padding-left: 76px;
+    padding-bottom: 82px;
+    padding-right: 51px;
+  }
+
+  .footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    .linkColumn {
+      color: white;
+
+      .contactInfo {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 24px;
+
+        .item {
+          color: inherit;
+          text-decoration: none;
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+
+          &:visited {
+            color: inherit;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          .text {
+            font-size: 0.761875rem;
+
+            .address {
+              margin: 0;
+            }
+          }
+        }
+        .icon {
+          width: 19px;
+        }
+      }
+    }
+
+    .columnTitle {
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      font-size: 0.856875rem;
+      line-height: 1.143125rem;
+      font-weight: 500;
+      color: inherit;
+      text-decoration: none;
+
+      &:visited {
+        color: inherit;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .linkColumn {
+      max-width: 200px;
+
+      .link {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 0.761875rem;
+
+        &:visited {
+          color: inherit;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .branding {
+    margin-top: 10px;
+
+    @include a.minWidth("tablet") {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: block;
+      margin: 15px 0;
+    }
+    .copyright {
+      margin-top: 15px;
+      font-size: 0.761875rem;
+
+      @include a.minWidth("tablet") {
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .link {
+        color: inherit;
+
+        &:visited {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  // .contact {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-around;
+  //   font-size: 13px;
+  //   font-family: "Rockford Extra Light";
+  //   font-weight: 400;
+
+  //   .copyright {
+  //     padding-left: 15px;
+  //     padding-right: 25px;
+
+  //     .link {
+  //       color: white;
+  //       text-decoration: underline;
+  //       transition: all 200ms ease-in-out;
+
+  //       &:hover {
+  //         text-decoration: none;
+  //       }
+  //     }
+  //   }
+  // }
+}

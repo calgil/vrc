@@ -75,7 +75,6 @@ export default function MemberHospital() {
     e.preventDefault();
     if (!nameInput || !emailInput || !phoneInput || !hospitalName) {
       console.log("no data");
-
       return;
     }
 
@@ -123,8 +122,8 @@ export default function MemberHospital() {
       <main>
         <Hero
           homepage={false}
-          heading="Member Hospital Network"
-          imageURL="/member-network-banner.jpeg"
+          bgUrl="/pages/owners/ownersBanner.webp"
+          heading="Member Hospital"
         />
         <div className={s.container}>
           <div className={s.textContainer}>
@@ -235,92 +234,6 @@ export default function MemberHospital() {
             </Form>
           </div>
         </div>
-        {/* <div className={s.container}> */}
-        {/* <h3 className={`${s.title} ${s.memberTitle}`}>
-            Member Hospital Network Pricing Guide
-          </h3> */}
-
-        {/* <div className={s.pricing}>
-            <div className={s.imgContainer}>
-              <Image
-                src="/dog-member-hospital-network.jpg"
-                alt="dog"
-                width={348}
-                height={533}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
-            </div>
-            <div className={s.pricingText}>
-              <p className={s.bold}>
-                This Pricing Guide is intended for Member Hospitals to provide
-                their clients general pricing ranges of various emergency and
-                specialty services.
-              </p>
-              <p className={s.standard}>
-                Pricing can vary and will depend on their pet’s unique
-                situation. After an initial examination, clients will receive an
-                estimate based on the DVM’s recommendations.
-              </p>
-              <p className={s.standard}>
-                <span className={s.bold}>Examination:</span> $125 | $90 for
-                Member Hospitals
-              </p>
-              <p className={s.standard}>
-                <span className={s.bold}>Overnight hospitalization:</span>
-                $1500-2000
-              </p>
-              <p className={s.standard}>
-                <span className={s.bold}>
-                  Uncomplicated abdominal exploratory (with 24 hours post op):
-                </span>
-                $5000-7000
-              </p>
-              <p className={s.standard}>
-                <span className={s.bold}>Laceration repair:</span>
-                $1000-1800
-              </p>
-              <p className={s.standard}>
-                <span className={s.bold}>
-                  Initial stabilization of a critical emergency:
-                </span>
-                $1000-2000(initial 1 to 2 hours, not long term care)
-              </p>
-              <p className={s.standard}>
-                <span className={s.bold}>Blood/plasma transfusion:</span>
-                $1200-1600(not including hospitalization/aftercare)
-              </p>
-              <p className={s.standard}>
-                <span className={s.bold}>
-                  Parvo Treatment (initial 24 hours ):
-                </span>
-                $2500
-              </p>
-              <p className={s.standard}>
-                <span className={s.bold}>
-                  Parvo Treatment (following hospitalization):
-                </span>
-                $1500-2000/day (avg hospitalization is 3-5 days)
-              </p>
-              <p className={s.standard}>
-                <span className={s.bold}>C-section:</span>
-                $4000-6000
-              </p>
-              <p className={s.standard}>
-                <span className={s.bold}>Baseline diagnostics:</span>
-                $650(radiographs, CBC, chem, lytes, UA)
-              </p>
-            </div>
-          </div> */}
-        {/* </div> */}
-        <NewsletterForm
-          inHero={false}
-          heading="Stay in the Know!"
-          description="Stay up to date and receive the the latest information and news about our
-                Grand Opening, added services, specialties, new hires, events and more!"
-        />
       </main>
     </>
   );

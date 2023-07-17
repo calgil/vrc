@@ -1,0 +1,31 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.serviceFooter {
+  color: a.$textHighContrast;
+  padding: 2rem 2.5rem;
+  border-radius: 0.25rem;
+  background: linear-gradient(
+      0deg,
+      rgba(1, 109, 118, 0.85) 0%,
+      rgba(1, 109, 118, 0.85) 100%
+    ),
+    url("/dumb.jpeg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .container {
+    @extend .container;
+    .title {
+      @extend .subHeader;
+      color: inherit;
+    }
+    .content {
+      color: a.$textHighContrast;
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+  }
+}

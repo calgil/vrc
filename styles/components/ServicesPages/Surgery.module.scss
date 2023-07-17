@@ -1,0 +1,58 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.surgery {
+  .text {
+    padding-left: 40px;
+
+    @include a.media("smTablet") {
+      padding: 0 10px;
+      margin-bottom: 40px;
+    }
+
+    .content {
+      @extend .content;
+    }
+  }
+  .title {
+    @extend .titleRed;
+    margin-bottom: 2rem;
+  }
+
+  .title.subheader {
+    margin-top: 2rem;
+    margin-bottom: 16px;
+    margin-left: 40px;
+
+    @include a.media("smTablet") {
+      margin-left: 10px;
+    }
+  }
+
+  .surgeryDetails {
+    padding-left: 40px;
+    margin: 40px 0;
+
+    @include a.media("smTablet") {
+      padding: 0 10px;
+    }
+
+    .softTissue {
+      margin-bottom: 16px;
+    }
+
+    .conditions {
+      display: flex;
+      gap: 16px;
+
+      @include a.media("smTablet") {
+        flex-direction: column;
+      }
+
+      div {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+}

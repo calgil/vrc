@@ -1,22 +1,21 @@
 @use "../abstracts" as a;
-@use "../components";
+@use "../utilities";
 
 .newsletter {
-  background-color: a.$blue;
-  color: a.$textHighContrast;
+  background-color: a.$newsLetterBg;
   text-align: center;
   padding: 0 20px;
   padding-top: 90px;
   padding-bottom: 120px;
 
   .newsletterTitle {
-    font-size: 1.689rem;
+    font-size: 1.75rem;
+    font-weight: 500;
   }
   .description {
-    font-family: "Rockford Extra Light";
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.4;
-    font-weight: 400;
+    font-weight: 300;
     max-width: 50ch;
     margin: 0 auto;
     margin-top: 4px;
@@ -95,12 +94,15 @@
       }
     }
     .input.error {
-      border: 2px solid red;
+      border: 2px solid a.$redAccent;
     }
   }
 
   .submitBtn {
-    @extend .submitBtnBase;
+    @extend .btnBase;
+    background-color: white;
+    color: a.$primaryTeal;
+    border: 2px solid a.$primaryTeal;
   }
 
   .errorMsg {

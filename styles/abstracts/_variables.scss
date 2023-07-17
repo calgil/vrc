@@ -1,6 +1,6 @@
 // Hero
 $textHighContrast: white;
-$blue: rgb(0, 105, 117);
+$primaryTeal: #016d76;
 
 // Default Text
 $primaryText: #252525;
@@ -8,10 +8,21 @@ $primaryText: #252525;
 // Values Cards
 $grey: #f0f0f0;
 $lightGrey: #f7f7f7;
-$purple: #6234bd;
+$darkGrey: rgba(153, 153, 153, 1);
+$purple: rgba(111, 113, 168, 1);
 
 // HomePage
-$redText: #99001f;
+$redAccent: #9a3040;
+$darkerRed: rgba(122, 38, 50, 100%);
+
+// Newsletter
+$newsLetterBg: rgba(111, 113, 168, 0.5);
+
+//ContactForm
+$contactFormBg: rgba(153, 153, 153, 1);
+
+//Yellow Background
+$yellowBg: rgba(243, 245, 157, 0.5);
 
 // button
 // button hover
@@ -35,7 +46,7 @@ $inputBg: #ffffff;
 $inputFocusOutline: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 
 // input active
-$inputActiveOutline: 0 0 0 0.1rem $blue;
+$inputActiveOutline: 0 0 0 0.1rem $primaryTeal;
 
 // footer
-$footerBg: #1f1615;
+$footerBg: #252525;
