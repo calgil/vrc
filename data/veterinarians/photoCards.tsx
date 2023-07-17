@@ -13,7 +13,8 @@ export const vetPhotoCards: PhotoCardType[] = [
   {
     title: "Join Our Team",
     textBlocks: [
-      `If you are passionate about animal care and are looking to work at a place where you can make a positive impact in others' lives, then check out our latest job opportunities.`,
+      "Our mission statement and core values translate to our staff as well.",
+      "If you are passionate about animal care and looking for a positive workplace that supports your growth and goals, then check out our latest job opportunities.",
     ],
     linkUrl: "/about/careers",
     btnText: "view careers",
