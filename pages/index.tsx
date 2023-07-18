@@ -17,6 +17,10 @@ export default function Home() {
           name="description"
           content="Transforming the veterinary experience through empathy and transparency Opening Summer 2023! Stay in the Know! Subscribe to our newsletter to receive the latest information and news about our Grand Opening!"
         />
+        <meta
+          name="google-site-verification"
+          content="JakQhQMci5HCnG0Wlu4LuQErYRxWQlOINZ1YxlCp4eY"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={s.main}>
