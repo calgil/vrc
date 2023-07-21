@@ -1,0 +1,23 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.container {
+  @extend .container;
+  padding: 40px 0;
+
+  .title {
+    @extend .titleRed;
+  }
+
+  .soon {
+    margin: 32px 0;
+    text-align: center;
+    @extend .title;
+    color: a.$purple;
+  }
+
+  .img {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
