@@ -2,11 +2,13 @@ import { ComingSoon } from "@/components/ComingSoon";
 import { Hero } from "@/components/Hero";
 import Head from "next/head";
 
-export default function Staff() {
+export default function Education() {
   return (
     <>
       <Head>
-        <title>Careers | North Springs Veterinary Referral Center</title>
+        <title>
+          Education Center | North Springs Veterinary Referral Center
+        </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
@@ -17,8 +19,8 @@ export default function Staff() {
       <main>
         <Hero
           homepage={false}
-          bgUrl="/pages/about/staff/teamBanner.webp"
-          heading="Meet Our Staff"
+          bgUrl="/pages/education/educationBanner.webp"
+          heading="Education Center"
         />
         <ComingSoon />
       </main>
