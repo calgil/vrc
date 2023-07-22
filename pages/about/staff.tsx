@@ -20,7 +20,7 @@ export default function Staff() {
           bgUrl="/pages/about/staff/teamBanner.webp"
           heading="Meet Our Staff"
         />
-        <ComingSoon title="Our Staff" imgSrc="/" />
+        <ComingSoon />
       </main>
     </>
   );

@@ -1,19 +1,18 @@
 import Image from "next/image";
 import s from "../styles/components/ComingSoon.module.scss";
 
-type ComingSoonProps = {
-  title: string;
-  imgSrc: string;
-};
-
-export const ComingSoon = ({ title, imgSrc }: ComingSoonProps) => {
+export const ComingSoon = () => {
   return (
-    <div className={s.container}>
-      <h1 className={s.title}>{title}</h1>
-      <h2 className={s.soon}>Coming Soon!</h2>
-      <div className={s.img}>
-        <Image src={imgSrc} alt="coming soon" width={200} height={200} />
+    <section className={s.comingSoon}>
+      <div className={s.soon}>
+        <Image
+          src="/pages/comingSoon/comingSoon.webp"
+          alt="coming soon"
+          width={327}
+          height={547}
+        />
+        <h2 className={s.title}>Coming Soon!</h2>
       </div>
-    </div>
+    </section>
   );
 };

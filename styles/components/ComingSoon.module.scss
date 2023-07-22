@@ -1,23 +1,20 @@
 @use "../abstracts" as a;
 @use "../utilities";
 
-.container {
-  @extend .container;
-  padding: 40px 0;
-
-  .title {
-    @extend .titleRed;
-  }
+.comingSoon {
+  background: linear-gradient(
+    90deg,
+    a.$purple 23.96%,
+    rgba(111, 113, 168, 0) 100%
+  );
 
   .soon {
-    margin: 32px 0;
-    text-align: center;
-    @extend .title;
-    color: a.$purple;
+    display: flex;
+    align-items: center;
   }
 
-  .img {
-    width: fit-content;
-    margin: 0 auto;
+  .title {
+    @extend .title;
+    color: a.$textHighContrast;
   }
 }

@@ -22,7 +22,7 @@ export default function Education() {
           bgUrl="/pages/education/educationBanner.webp"
           heading="Education Center"
         />
-        <ComingSoon title="Education Center" imgSrc="/" />
+        <ComingSoon />
       </main>
     </>
   );

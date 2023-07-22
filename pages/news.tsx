@@ -20,7 +20,7 @@ export default function News() {
           bgUrl="/pages/news/newsBanner.webp"
           heading="News & Events"
         />
-        <ComingSoon title="News and Events" imgSrc="/" />
+        <ComingSoon />
       </main>
     </>
   );
