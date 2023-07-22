@@ -7,7 +7,7 @@ export const vetLinkCards: LinkCardType[] = [
       "We plan to compile a library of resources, both video and print, to share our knowledge and help educate others.",
       "Check back soon as we expand this knowledge library!",
     ],
-    linkUrl: "/",
+    linkUrl: "/education",
     bgUrl: "/pages/owners/educationCenter.webp",
     bgColor: "rgba(154, 48, 64, 0.85)",
   },

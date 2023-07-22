@@ -40,9 +40,10 @@ export default function Owners() {
           </p>
         </section>
         <PhotoCardSection cards={ownerPhotoCards} />
-        <LinkCardSection cards={ownerLinkCards} />
         <EmergencyContact />
         <PaymentAssistance />
+        <h3 className={s.comingSoon}>Coming Soon!</h3>
+        <LinkCardSection cards={ownerLinkCards} />
       </main>
     </>
   );
