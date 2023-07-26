@@ -32,9 +32,9 @@ export const EmergencyContact = () => {
           provide the highest quality of care for your beloved family member.
         </p>
         <p className={s.poison}>
-          If your pet ingested something, please call the Pet Poison Hotline at{" "}
-          <a className={s.call} href="tel:+1(855) 764-7661">
-            (855) 764-7661.
+          If your pet ingested something, please call Animal Poison Control at
+          <a className={s.call} href="tel:+1(888) 426-4435">
+            (888) 426-4435.
           </a>
         </p>
       </div>
