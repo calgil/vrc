@@ -9,7 +9,7 @@ export const emergencyServices: ServiceDetail[] = [
   {
     title: "Critical Care",
     content:
-      "If your pet is experiencing a life threatening emergency, our Emergency team will act quickly to provide immediate stabilizing care, perform diagnostics to understand the nature of the illness, then nurse them back to health.",
+      "If your pet is experiencing a life threatening emergency, our Emergency team will act quickly to provide immediate stabilizing care, perform diagnostics to understand the nature of the illness, then technician them back to health.",
   },
   {
     title: "Urgent Care",
@@ -29,7 +29,7 @@ export const emergencyServices: ServiceDetail[] = [
   {
     title: "Hospitalization and Nursing Care",
     content:
-      "Leaving your pets in the hospital is stressful. You can feel at ease knowing that our hospital is staffed with skilled veterinary nurses and doctors 24-7. They will receive gold standard, compassionate care throughout their entire stay.",
+      "Leaving your pets in the hospital is stressful. You can feel at ease knowing that our hospital is staffed with skilled veterinary technicians and doctors 24-7. They will receive gold standard, compassionate care throughout their entire stay.",
   },
   {
     title: "Oxygen Therapy",
