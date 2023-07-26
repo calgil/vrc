@@ -7,4 +7,5 @@ export const cardiologyConditions: string[] = [
   "Endocarditis",
   "Myxomatous Valve Disease",
   "Pulmonary Hypertension",
+  "Dietary DCM",
 ].sort((a, b) => (a.toLowerCase() > b.toLowerCase() ? 1 : -1));

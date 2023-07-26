@@ -36,7 +36,7 @@ export const Cardiology = () => {
           numColumns={2}
         />
       </div>
-      <RequestConsult details="During your appointment with the Cardiologist, you will have the opportunity to watch and be involved in the physical exam and diagnostic tests performed on your pet. The Cardiologist will go over the results and a treatment plan with you directly at the time of the appointment. If there are tests that are sent out or take time to receive the results, you will be called at a later date by the Cardiologist or an experienced Cardiology Nurse." />
+      <RequestConsult details="During your appointment with the Cardiologist, you will have the opportunity to watch and be involved in the physical exam and diagnostic tests performed on your pet. The Cardiologist will go over the results and a treatment plan with you directly at the time of the appointment. If there are tests that are sent out or take time to receive the results, you will be called at a later date by the Cardiologist or an experienced Cardiology Technician." />
       <h5 className={`${s.title} ${s.subheader}`}>Cardiology Services</h5>
       {sortServices(cardiologyServices).map((service, i) => (
         <ServiceDropdown key={service.title} service={service} index={i} />

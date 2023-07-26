@@ -26,8 +26,8 @@ export const cardiologyServices: ServiceDetail[] = [
     content: `Many cardiac diseases can be life threatening and need urgent attention. Our Emergency team is available for your urgent cardiac needs 24-7. Our Cardiologist will be actively involved in the care of your pet during their stay in the hospital with us. They will receive gold standard medical care and monitoring with wireless continuous electrocardiogram monitoring (telemetry), oxygen support with temperature and humidity-controlled kennels, and 24-7 nursing care`,
   },
   {
-    title: "Nurse visits",
-    content: `Most cardiac diseases require follow-up tests over time to adequately control symptoms and extend their quality of life. Our experienced cardiac nurses are here for your routine blood work visits, Holter monitor placements, electrocardiogram monitoring, blood pressure measurements and much more. These visits are reserved for pets that have already met with the Cardiologist for an initial consultation, and are feeling well but are coming in for routine testing and monitoring.`,
+    title: "Technician Visits",
+    content: `Most cardiac diseases require follow-up tests over time to adequately control symptoms and extend their quality of life. Our experienced cardiac technicians are here for your routine blood work visits, Holter monitor placements, electrocardiogram monitoring, blood pressure measurements and much more. These visits are reserved for pets that have already met with the Cardiologist for an initial consultation, and are feeling well but are coming in for routine testing and monitoring.`,
   },
   {
     title: "Abdominocentesis and Thoracocentesis",

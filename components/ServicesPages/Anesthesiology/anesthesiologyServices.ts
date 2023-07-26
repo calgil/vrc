@@ -6,8 +6,8 @@ export const anesthesiologyServices: ServiceDetail[] = [
     content: `Prior to anesthesia, your pet will be evaluated using physical examination, baseline blood testing and x-rays. This ensures that they are safe to undergo anesthesia or guides modifications that need to be made to keep them safe.`,
   },
   {
-    title: "Dedicated Anesthetic Nurse",
-    content: `Our hospital is fully staffed with registered veterinary nurses.  While your pet is under anesthesia, they will have a dedicated nurse to monitor their vital signs and make adjustments to their protocol as needed.`,
+    title: "Dedicated Anesthetic Technician",
+    content: `Our hospital is fully staffed with registered veterinary technicians.  While your pet is under anesthesia, they will have a dedicated technician to monitor their vital signs and make adjustments to their protocol as needed.`,
   },
   {
     title: "Positive Pressure Ventilation",
@@ -15,7 +15,7 @@ export const anesthesiologyServices: ServiceDetail[] = [
   },
   {
     title: "Continuous Electrocardiogram (ECG) Monitoring",
-    content: `An electrocardiogram monitors the electrical function of the heart. With this tool, our veterinary nurses will ensure that your pet has an appropriate heart rate and rhythm throughout their procedure.`,
+    content: `An electrocardiogram monitors the electrical function of the heart. With this tool, our veterinary technicians will ensure that your pet has an appropriate heart rate and rhythm throughout their procedure.`,
   },
   {
     title: "End-Tidal Capnography",

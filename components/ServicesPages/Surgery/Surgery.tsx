@@ -58,8 +58,9 @@ export const Surgery = () => {
       <div className={s.text}>
         <p className={s.content}>
           Your pet’s postoperative care will be managed around the clock by our
-          surgical team of skilled veterinary nurses, as well as our emergency
-          doctors and nurses overnight until your pet is ready to go home.
+          surgical team of skilled veterinary technicians, as well as our
+          emergency doctors and technicians overnight until your pet is ready to
+          go home.
         </p>
         <p className={s.content}>
           If you or your primary care veterinarian have any questions regarding
