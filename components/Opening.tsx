@@ -3,7 +3,7 @@ import s from "../styles/components/Opening.module.scss";
 export const Opening = () => {
   return (
     <section className={s.opening}>
-      <h2 className={s.title}>Join us for our Open House!</h2>
+      <h2 className={s.title}>Join us for our Grand Opening!</h2>
       <div className={s.openHouse}>
         <h3 className={s.subtitle}>Grand Opening</h3>
         <p className={s.content}>
