@@ -14,7 +14,9 @@ export const Opening = () => {
         <p className={s.content}>12pm-6pm</p>
         <p className={s.content}>September 9th, 2023</p>
         <p className={s.content}>
-          <Link href="/rsvp">RSVP here</Link>
+          <Link className={s.link} href="/rsvp">
+            RSVP here
+          </Link>
         </p>
       </div>
       <div className={s.grandOpening}>

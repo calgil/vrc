@@ -30,5 +30,13 @@
     color: a.$textHighContrast;
     margin: 0;
     font-weight: 700;
+
+    .link {
+      color: a.$textHighContrast;
+
+      &:visited {
+        color: a.$textHighContrast;
+      }
+    }
   }
 }
