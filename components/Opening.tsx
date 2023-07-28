@@ -1,3 +1,4 @@
+import Link from "next/link";
 import s from "../styles/components/Opening.module.scss";
 
 export const Opening = () => {
@@ -12,6 +13,9 @@ export const Opening = () => {
         </p>
         <p className={s.content}>12pm-6pm</p>
         <p className={s.content}>September 9th, 2023</p>
+        <p className={s.content}>
+          <Link href="/rsvp">RSVP here</Link>
+        </p>
       </div>
       <div className={s.grandOpening}>
         <h3 className={s.subtitle}>Official Opening Date</h3>

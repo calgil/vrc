@@ -8,7 +8,7 @@ type FormProps = {
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   // action: string;
   inputs: Input[];
-  textarea: TextArea;
+  textarea?: TextArea;
   submitBtn: SubmitBtn;
   success: boolean;
   error: boolean;
@@ -31,12 +31,14 @@ export const Form = ({
           {inputs.map((input) => (
             <InputBase key={input.name} input={input} />
           ))}
-          <textarea
-            className={`${s.input} ${s.message}`}
-            onChange={textarea.onChange}
-            placeholder={textarea.placeholder}
-            value={textarea.value}
-          ></textarea>
+          {textarea && (
+            <textarea
+              className={`${s.input} ${s.message}`}
+              onChange={textarea.onChange}
+              placeholder={textarea.placeholder}
+              value={textarea.value}
+            ></textarea>
+          )}
         </div>
         {success && <div className={s.success}>Message sent successfully!</div>}
         {error && <div className={s.error}>Message failed to send</div>}

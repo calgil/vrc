@@ -5,8 +5,11 @@
   background-color: #e1e1e1;
   padding: 50px;
 
+  @include a.media("phone") {
+    padding: 20px 10px;
+  }
+
   .formDetails {
-    // font-family: "Rockford Extra Light";
     line-height: 1.4;
     font-weight: 400;
     font-size: 18px;
@@ -25,6 +28,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    @include a.media("phone") {
+      justify-content: center;
+    }
 
     .input {
       @extend .inputBase;
