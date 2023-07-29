@@ -32,11 +32,15 @@
     font-weight: 700;
 
     .link {
-      color: a.$textHighContrast;
-
-      &:visited {
-        color: a.$textHighContrast;
-      }
+      display: block;
+      @extend .btnSecondary;
+      width: fit-content;
+      margin: 0 auto;
+      margin-top: 16px;
+      text-decoration: none;
+      // &:visited {
+      //   color: a.$textHighContrast;
+      // }
     }
   }
 }
