@@ -52,7 +52,12 @@
   .error {
     color: a.$redAccent;
   }
-  .submitBtn {
-    @extend .btnBase;
+  .btnContainer {
+    display: flex;
+    justify-content: flex-start;
+
+    .submitBtn {
+      @extend .btnBase;
+    }
   }
 }

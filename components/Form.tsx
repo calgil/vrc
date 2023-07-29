@@ -42,7 +42,13 @@ export const Form = ({
         </div>
         {success && <div className={s.success}>Message sent successfully!</div>}
         {error && <div className={s.error}>Message failed to send</div>}
-        <input className={s.submitBtn} type="submit" value={submitBtn.value} />
+        <div className={s.btnContainer}>
+          <input
+            className={s.submitBtn}
+            type="submit"
+            value={submitBtn.value}
+          />
+        </div>
       </form>
     </div>
   );

@@ -1,4 +1,4 @@
-import s from "../styles/pages/RSVP.module.scss";
+import s from "../../styles/pages/RSVP.module.scss";
 import { Form } from "@/components/Form";
 import { Hero } from "@/components/Hero";
 import { Input, SubmitBtn } from "@/types/input.type";
@@ -22,14 +22,6 @@ export default function RSVP() {
       onChange: (e) => setNameInput(e.target.value),
     },
     {
-      name: "Company",
-      placeholder: "Company*",
-      type: "text",
-      required: true,
-      value: companyInput,
-      onChange: (e) => setCompanyInput(e.target.value),
-    },
-    {
       name: "Email",
       placeholder: "Email*",
       type: "email",
@@ -37,15 +29,26 @@ export default function RSVP() {
       value: emailInput,
       onChange: (e) => setEmailInput(e.target.value),
     },
+    {
+      name: "Company",
+      placeholder: "Company (Optional)",
+      type: "text",
+      required: false,
+      value: companyInput,
+      onChange: (e) => setCompanyInput(e.target.value),
+    },
   ];
 
   const submitBtn: SubmitBtn = {
-    value: "RSVP",
+    value: "Submit",
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!nameInput || !companyInput || !emailInput) {
+
+    // setLoading(true)
+
+    if (!nameInput || !emailInput) {
       console.log("more stuff");
     }
 
@@ -63,15 +66,19 @@ export default function RSVP() {
         console.log({ res });
 
         if (!res.ok) {
+          // setLoading(false)
           return setError(true);
         }
         setNameInput("");
         setCompanyInput("");
         setEmailInput("");
+        // setLoading(false)
+        // redirect to confirmation page
       })
       .catch((err) => {
         setError(true);
         console.error(err);
+        // setLoading(false)
       });
   };
 
@@ -92,10 +99,10 @@ export default function RSVP() {
       </Head>
       <main>
         <Hero
-          homepage={false}
-          bgUrl="/pages/services/servicesBanner.webp"
-          heading="RSVP to our Open House"
-          subHeading="Do we want text here?"
+          homepage={true}
+          bgUrl="/pages/home/homeBanner.webp"
+          subHeading="Transforming the veterinary experience through 
+          empathy and transparency"
         />
         <div className={s.formContainer}>
           <Form
@@ -106,7 +113,6 @@ export default function RSVP() {
             error={error}
           >
             <h1 className={s.formTitle}>RSVP Here!</h1>
-            <p className={s.formDetails}>Additional text? </p>
           </Form>
         </div>
       </main>
