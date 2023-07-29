@@ -4,11 +4,15 @@ import { Hero } from "@/components/Hero";
 import { Input, SubmitBtn } from "@/types/input.type";
 import Head from "next/head";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function RSVP() {
+  const router = useRouter();
   const [nameInput, setNameInput] = useState("");
   const [companyInput, setCompanyInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
+
+  const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
@@ -46,7 +50,7 @@ export default function RSVP() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // setLoading(true)
+    setIsLoading(true);
 
     if (!nameInput || !emailInput) {
       console.log("more stuff");
@@ -66,19 +70,20 @@ export default function RSVP() {
         console.log({ res });
 
         if (!res.ok) {
-          // setLoading(false)
+          setIsLoading(false);
           return setError(true);
         }
         setNameInput("");
         setCompanyInput("");
         setEmailInput("");
-        // setLoading(false)
-        // redirect to confirmation page
+        setIsLoading(false);
+        setSuccess(true);
+        router.push("/rsvp/confirmation");
       })
       .catch((err) => {
         setError(true);
         console.error(err);
-        // setLoading(false)
+        setIsLoading(false);
       });
   };
 
@@ -111,8 +116,14 @@ export default function RSVP() {
             submitBtn={submitBtn}
             success={success}
             error={error}
+            loading={isLoading}
           >
             <h1 className={s.formTitle}>RSVP Here!</h1>
+            <p className={s.formDetails}>
+              Meet our staff, tour our facility, and get to know us! Join us for
+              fun, raffles, and prizes!
+            </p>
+            <p className={s.formDetails}>12pm-6pm September 9th, 2023</p>
           </Form>
         </div>
       </main>

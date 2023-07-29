@@ -16,6 +16,7 @@ export default function MemberHospital() {
   const [hospitalName, setHospitalName] = useState("");
   const [message, setMessage] = useState("");
 
+  const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const inputs: Input[] = [
@@ -73,6 +74,7 @@ export default function MemberHospital() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
     if (!nameInput || !emailInput || !phoneInput || !hospitalName) {
       console.log("no data");
       return;
@@ -99,9 +101,11 @@ export default function MemberHospital() {
         setZipInput("");
         setHospitalName("");
         setMessage("");
+        setIsLoading(false);
         setSuccess(true);
       })
       .catch((err) => {
+        setIsLoading(false);
         setError(true);
         console.error(err);
       });
@@ -209,6 +213,7 @@ export default function MemberHospital() {
               submitBtn={submitBtn}
               success={success}
               error={error}
+              loading={isLoading}
             >
               <h4 className={s.formTitle}>Join the Member Hospital Network</h4>
               <p className={s.formDetails}>
