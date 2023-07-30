@@ -118,7 +118,7 @@ export default function RSVP() {
             error={error}
             loading={isLoading}
           >
-            <h1 className={s.formTitle}>RSVP for our Open House</h1>
+            <h1 className={s.formTitle}>RSVP to our Open House</h1>
             <p className={s.formDetails}>
               Meet our staff, tour our facility, and get to know us! Join us for
               fun, raffles, and prizes!
