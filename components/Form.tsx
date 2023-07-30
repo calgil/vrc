@@ -2,16 +2,17 @@ import { Input, SubmitBtn, TextArea } from "@/types/input.type";
 import Link from "next/link";
 import s from "../styles/components/Form.module.scss";
 import { InputBase } from "./InputBase";
+import Image from "next/image";
 
 type FormProps = {
   children?: React.ReactNode;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  // action: string;
   inputs: Input[];
-  textarea: TextArea;
+  textarea?: TextArea;
   submitBtn: SubmitBtn;
   success: boolean;
   error: boolean;
+  loading: boolean;
 };
 
 export const Form = ({
@@ -22,6 +23,7 @@ export const Form = ({
   submitBtn,
   success,
   error,
+  loading,
 }: FormProps) => {
   return (
     <div className={s.formContainer}>
@@ -31,16 +33,27 @@ export const Form = ({
           {inputs.map((input) => (
             <InputBase key={input.name} input={input} />
           ))}
-          <textarea
-            className={`${s.input} ${s.message}`}
-            onChange={textarea.onChange}
-            placeholder={textarea.placeholder}
-            value={textarea.value}
-          ></textarea>
+          {textarea && (
+            <textarea
+              className={`${s.input} ${s.message}`}
+              onChange={textarea.onChange}
+              placeholder={textarea.placeholder}
+              value={textarea.value}
+            ></textarea>
+          )}
         </div>
+        {loading && (
+          <Image src="/loading.gif" alt="loading" width={50} height={50} />
+        )}
         {success && <div className={s.success}>Message sent successfully!</div>}
         {error && <div className={s.error}>Message failed to send</div>}
-        <input className={s.submitBtn} type="submit" value={submitBtn.value} />
+        <div className={s.btnContainer}>
+          <input
+            className={s.submitBtn}
+            type="submit"
+            value={submitBtn.value}
+          />
+        </div>
       </form>
     </div>
   );
