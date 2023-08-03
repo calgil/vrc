@@ -8,6 +8,7 @@ import { emergencyConditions } from "@/components/ServicesPages/Emergency/emerge
 import { emergencyReasons } from "@/components/ServicesPages/Emergency/emergencyReasons";
 import { emergencyServices } from "@/components/ServicesPages/Emergency/emergencyServices";
 import { emergencyCommunicationText } from "@/components/ServicesPages/Emergency/reliableCommunication";
+import { RequestConsult } from "@/components/ServicesPages/RequestConsult";
 import { ServicesFooter } from "@/components/ServicesPages/ServicesFooter";
 import { sortServices } from "@/utilities/sortServices";
 import Head from "next/head";
@@ -33,6 +34,11 @@ export default function Emergency() {
           bgUrl="/pages/emergency/emergencyBanner.webp"
         />
         <EmergencyContact />
+        <RequestConsult
+          title="On your way?"
+          details="Go ahead and fill out our intake paperwork online."
+          btnText="Intake Form"
+        />
         <PaymentAssistance />
         <section className={s.emergency}>
           <div className={s.text}>
