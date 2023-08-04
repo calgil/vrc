@@ -35,7 +35,11 @@ export const InternalMedicine = () => {
           numColumns={2}
         />
       </div>
-      <RequestConsult details="During your appointment, the Internal medicine team will start by obtaining a complete medical history and performing a thorough physical examination on your pet. This will allow for comprehensive diagnostic test recommendations and personalized treatment plans to help your pet feel their best. " />
+      <RequestConsult
+        title="Request Consultation"
+        details="During your appointment, the Internal medicine team will start by obtaining a complete medical history and performing a thorough physical examination on your pet. This will allow for comprehensive diagnostic test recommendations and personalized treatment plans to help your pet feel their best. "
+        btnText="Request Consult"
+      />
       <h5 className={`${s.title} ${s.subheader}`}>
         Internal Medicine Services
       </h5>

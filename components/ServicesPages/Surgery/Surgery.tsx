@@ -28,7 +28,11 @@ export const Surgery = () => {
           monitoring, offer care that surpasses basic surgical needs.
         </p>
       </div>
-      <RequestConsult details="Our surgeons serve as a consultation resource on unusual or difficult cases, and work closely with you, your primary care veterinarian, and our specialists and emergency teams, in a collaborative approach to ensure overall pre-op evaluation and post-op continuity of care for your pet." />
+      <RequestConsult
+        title="Request Consult"
+        details="Our surgeons serve as a consultation resource on unusual or difficult cases, and work closely with you, your primary care veterinarian, and our specialists and emergency teams, in a collaborative approach to ensure overall pre-op evaluation and post-op continuity of care for your pet."
+        btnText="Request Consult"
+      />
       <div className={s.surgeryDetails}>
         <div className={s.softTissue}>
           <CommonConditions
