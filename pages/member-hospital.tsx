@@ -146,6 +146,14 @@ export default function MemberHospital() {
               the primary emergency and specialty hospital you advertise online,
               in-print, over the phone, and in-person.
             </h5>
+            <a
+              className={s.link}
+              href="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCaF0JkXSB_SsGMC7zcs-PKImhOkWRfGihXzYM6XznT3sHepY_SO9l69N6vjDS1E9Q*"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              join our Member Hospital Network
+            </a>
           </div>
         </div>
         <div className={s.container}>
@@ -215,7 +223,9 @@ export default function MemberHospital() {
               error={error}
               loading={isLoading}
             >
-              <h4 className={s.formTitle}>Join the Member Hospital Network</h4>
+              <h4 className={s.formTitle}>
+                Request Information about the Member Hospital Network
+              </h4>
               <p className={s.formDetails}>
                 While North Springs VRC will accept any patient to provide
                 emergency and specialty care, we also partner with local

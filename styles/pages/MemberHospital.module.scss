@@ -22,6 +22,11 @@
     padding-bottom: 20px;
     @extend .content;
   }
+
+  .link {
+    @extend .btnBase;
+    text-decoration: none;
+  }
 }
 
 .join {

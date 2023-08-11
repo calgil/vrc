@@ -5,12 +5,14 @@ type RequestConsultProps = {
   title: string;
   details: string;
   btnText: string;
+  formUrl: string;
 };
 
 export const RequestConsult = ({
   title,
   details,
   btnText,
+  formUrl,
 }: RequestConsultProps) => {
   return (
     <div className={s.bg}>
@@ -23,7 +25,7 @@ export const RequestConsult = ({
           <div className={s.btnContainer}>
             <Link
               className={s.cta}
-              href="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCqadats9G7XRqVyeJTGIWARzEh3tRAst9xm7BMsqOAXWlKM6Del5iLNEyMOVg0m8c*"
+              href={formUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
