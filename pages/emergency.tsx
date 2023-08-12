@@ -34,6 +34,7 @@ export default function Emergency() {
           bgUrl="/pages/emergency/emergencyBanner.webp"
         />
         <EmergencyContact />
+        {/* TODO: How can we make this not look like trash? */}
         <RequestConsult
           title="On your way?"
           details="Go ahead and fill out our intake paperwork online."

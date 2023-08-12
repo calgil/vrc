@@ -16,7 +16,8 @@ export const vetLinkCards: LinkCardType[] = [
     textBlocks: [
       "Veterinary hospitals looking to send us information about a patient or refer a client to North Springs VRC will be able to do so through our website.",
     ],
-    linkUrl: "/",
+    linkUrl:
+      "https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhDGYmSzyYeMbuhi9Sh2QRD3I3yv3aheb6y6o49UZcYfBVq_u55QHKOFhg476Mz7Qus*",
     bgUrl: "/pages/owners/clinicCamera.webp",
     bgColor: "rgba(1, 109, 118, 0.85)",
   },

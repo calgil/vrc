@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 import s from "../styles/components/LinkCardSection.module.scss";
 
 export type LinkCardType = {
@@ -17,8 +17,10 @@ export const LinkCardSection = ({ cards }: LinkCardSectionProps) => {
   return (
     <section className={s.linkCards}>
       {cards.map((card) => (
-        <Link
+        <a
           href={card.linkUrl}
+          rel="noopener noreferrer"
+          target="_blank"
           key={card.title}
           className={s.linkCard}
           style={{
@@ -31,7 +33,7 @@ export const LinkCardSection = ({ cards }: LinkCardSectionProps) => {
               {text}
             </p>
           ))}
-        </Link>
+        </a>
       ))}
     </section>
   );
