@@ -3,6 +3,8 @@
 
 .linkCards {
   display: flex;
+  @extend .container;
+  padding: 0;
 
   .linkCard {
     padding: 2rem;
