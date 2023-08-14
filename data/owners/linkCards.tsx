@@ -6,17 +6,20 @@ export const ownerLinkCards: LinkCard[] = [
     bgUrl: "/pages/home/cardBg/emergencyBg.webp",
     bgColor: "rgba(154, 48, 64, 0.85)",
     text: "Education Center",
+    external: true,
   },
   {
     url: "",
     bgUrl: "/pages/home/cardBg/specialtyBg.webp",
     bgColor: "rgba(111, 113, 168, 0.85)",
     text: "Clinic Cameras",
+    external: true,
   },
   {
     url: "https://covetrusrx.zendesk.com/hc/en-us/articles/360038804991-Website-Shop-Now-Buttons&utm_source=redirect",
     bgUrl: "/pages/home/cardBg/vets.webp",
     bgColor: "rgba(37, 37, 37, 0.85)",
     text: "Online Pharmacy",
+    external: true,
   },
 ];

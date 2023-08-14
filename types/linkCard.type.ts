@@ -3,4 +3,5 @@ export type LinkCard = {
   bgUrl: string;
   bgColor: string;
   text: string;
+  external: boolean;
 };
