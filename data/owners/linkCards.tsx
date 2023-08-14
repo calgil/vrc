@@ -9,7 +9,7 @@ export const ownerLinkCards: LinkCard[] = [
     external: false,
   },
   {
-    url: "",
+    url: "/education",
     bgUrl: "/pages/home/cardBg/specialtyBg.webp",
     bgColor: "rgba(111, 113, 168, 0.85)",
     text: "Clinic Cameras",
