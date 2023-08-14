@@ -1,57 +1,56 @@
 import Link from "next/link";
 import s from "../styles/components/LinkCards.module.scss";
+import { LinkCard } from "@/types/linkCard.type";
 
-export type LinkCard = {
-  url: string;
-  bgUrl: string;
-  bgColor: string;
-  text: string;
+type LinkCardProps = {
+  cards: LinkCard[];
 };
 
-export const LinkCards = () => {
-  const linkCards: LinkCard[] = [
-    {
-      url: "/emergency",
-      bgUrl: "/pages/home/cardBg/emergencyBg.webp",
-      bgColor: "rgba(154, 48, 64, 0.85)",
-      text: "Emergency Services",
-    },
-    {
-      url: "/services/#anesthesiology",
-      bgUrl: "/pages/home/cardBg/specialtyBg.webp",
-      bgColor: "rgba(111, 113, 168, 0.85)",
-      text: "Specialty Service",
-    },
-    {
-      url: "/veterinarians",
-      bgUrl: "/pages/home/cardBg/vets.webp",
-      bgColor: "rgba(37, 37, 37, 0.85)",
-      text: "For Referring Veterinarians",
-    },
-    {
-      url: "/owners",
-      bgUrl: "/pages/home/cardBg/owners.webp",
-      bgColor: "rgba(1, 109, 118, 0.85)",
-      text: "For Pet Owners",
-    },
-  ];
+export const LinkCards = ({ cards }: LinkCardProps) => {
   return (
     <div className={s.linkCards}>
-      {linkCards.map((card) => (
-        <Link className={s.link} key={card.text} href={card.url}>
-          <div
-            className={s.linkCard}
-            style={{
-              background: ` linear-gradient(
-            ${card.bgColor}, 
-            ${card.bgColor}
-          ), url(${card.bgUrl}) no-repeat center / cover`,
-            }}
-          >
-            <p className={s.cardText}>{card.text}</p>
-          </div>
-        </Link>
-      ))}
+      {cards.map((card) => {
+        if (card.external) {
+          return (
+            <a
+              className={s.link}
+              key={card.text}
+              href={card.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div
+                className={s.linkCard}
+                style={{
+                  background: ` linear-gradient(
+              ${card.bgColor}, 
+              ${card.bgColor}
+            ), url(${card.bgUrl}) no-repeat center / cover`,
+                }}
+              >
+                <p className={s.cardText}>{card.text}</p>
+              </div>
+            </a>
+          );
+        }
+        if (!card.external) {
+          return (
+            <Link className={s.link} key={card.text} href={card.url}>
+              <div
+                className={s.linkCard}
+                style={{
+                  background: ` linear-gradient(
+              ${card.bgColor}, 
+              ${card.bgColor}
+            ), url(${card.bgUrl}) no-repeat center / cover`,
+                }}
+              >
+                <p className={s.cardText}>{card.text}</p>
+              </div>
+            </Link>
+          );
+        }
+      })}
     </div>
   );
 };

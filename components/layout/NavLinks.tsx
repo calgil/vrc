@@ -128,16 +128,38 @@ export const NavLinks = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item">
-              <Link
-                href="/veterinarians"
-                className={
+            <li className="nav-item dropdown">
+              <a
+                className={`dropdown-toggle ${
                   currentRoute === "/veterinarians" ? activeStyle : linkStyle
-                }
-                onClick={scrollToTop}
+                }`}
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
                 For Veterinarians
-              </Link>
+              </a>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link
+                    href="/member-hospital"
+                    className="dropdown-item"
+                    onClick={scrollToTop}
+                  >
+                    Member Hospital
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/veterinarians"
+                    className="dropdown-item"
+                    onClick={scrollToTop}
+                  >
+                    For Veterinarians
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="nav-item">
               <Link

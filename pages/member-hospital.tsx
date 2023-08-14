@@ -146,6 +146,14 @@ export default function MemberHospital() {
               the primary emergency and specialty hospital you advertise online,
               in-print, over the phone, and in-person.
             </h5>
+            <a
+              className={s.link}
+              href="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCaF0JkXSB_SsGMC7zcs-PKImhOkWRfGihXzYM6XznT3sHepY_SO9l69N6vjDS1E9Q*"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              join our Member Hospital Network
+            </a>
           </div>
         </div>
         <div className={s.container}>
@@ -155,55 +163,38 @@ export default function MemberHospital() {
                 <h3 className={s.joinTitle}>Benefits for Providers</h3>
                 <ul className={s.joinList}>
                   <li>
-                    Direct contact with Dr. Ganzer, CEO, and extra effort taken
-                    to communicate in manner requested.
+                    We will recommend your hospital for clients that do not have
+                    a primary care DVM
                   </li>
                   <li>
-                    Access to continuing education & specialty consultations.
+                    Direct contact with our hospital administration regarding
+                    cases and other needs
                   </li>
                   <li>
-                    Member Hospitals receive an eNewsletter with hospital
-                    updates and CE information.
+                    Continuing education/lunch and learn opportunities from our
+                    specialists
+                  </li>
+                  <li>eNewsletter with hospital updates and information</li>
+                  <li>
+                    Opportunity to be featured and advertised as our Member
+                    Hospital of the Month
+                  </li>
+                  <li>Gifts and social events for your hospital</li>
+                  <li>
+                    Pricing guides for appropriate estimates and easy transfers
                   </li>
                   <li>
-                    Opportunity to be featured as our Member Hospital of the
-                    Month in our eNewsletter and social media channels to help
-                    lift up our local veterinarians.
-                  </li>
-                  <li>
-                    Featured Member Hospitals will also receive a gift basket
-                    for their team to enjoy.
+                    Open communication between the Member Hospital Liaison at
+                    North Springs VRC and your primary contact regarding
+                    marketing materials, building relationships between our
+                    hospitals, and the needs of the owners
                   </li>
                 </ul>
               </div>
               <h3 className={s.joinTitle}>Benefits for Clients</h3>
               <ul className={s.joinList}>
-                <li>
-                  Clients receive 30% off the exam fee and 10% discount on all
-                  other services.
-                </li>
-                <li>
-                  Complimentary treatment of vaccine reactions for any vaccine
-                  given by any Member Hospital.
-                </li>
-                <li>
-                  There will be an option for overnight post surgical
-                  care/hospitalization with a flat rate for the Member Hospitals
-                  to offer clients if a pet needs extra monitoring after a
-                  procedure at the GP’s office.
-                </li>
-                <li>
-                  Post surgical transfer care includes:
-                  <ul className={s.joinList}>
-                    <li>Complimentary examination</li>
-                    <li>Hospitalization for 14 hours (6pm – 8am MT)</li>
-                    <li>Fluids</li>
-                    <li>PCV/TS/Lytes/BG once overnight</li>
-                    <li>Pain management</li>
-                    <li>Antibiotic injections</li>
-                    <li>GI protectants/other miscellaneous medications</li>
-                  </ul>
-                </li>
+                <li>Discount on the initial emergency examination</li>
+                <li>Discount and package pricing on certain treatments</li>
               </ul>
             </div>
             <Form
@@ -215,7 +206,9 @@ export default function MemberHospital() {
               error={error}
               loading={isLoading}
             >
-              <h4 className={s.formTitle}>Join the Member Hospital Network</h4>
+              <h4 className={s.formTitle}>
+                Request Information about the Member Hospital Network
+              </h4>
               <p className={s.formDetails}>
                 While North Springs VRC will accept any patient to provide
                 emergency and specialty care, we also partner with local

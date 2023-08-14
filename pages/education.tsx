@@ -20,7 +20,7 @@ export default function Education() {
         <Hero
           homepage={false}
           bgUrl="/pages/education/educationBanner.webp"
-          heading="Education Center"
+          heading="Coming Soon!"
         />
         <ComingSoon />
       </main>

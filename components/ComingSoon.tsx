@@ -1,5 +1,6 @@
 import Image from "next/image";
 import s from "../styles/components/ComingSoon.module.scss";
+import Link from "next/link";
 
 export const ComingSoon = () => {
   return (
@@ -11,7 +12,9 @@ export const ComingSoon = () => {
           width={327}
           height={547}
         />
-        <h2 className={s.title}>Coming Soon!</h2>
+        <Link href="/" className={s.homeBtn}>
+          Return to Homepage
+        </Link>
       </div>
     </section>
   );

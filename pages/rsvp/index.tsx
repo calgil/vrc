@@ -8,7 +8,9 @@ import { useRouter } from "next/router";
 
 export default function RSVP() {
   const router = useRouter();
+
   const [nameInput, setNameInput] = useState("");
+  const [numAttending, setNumAttending] = useState("");
   const [companyInput, setCompanyInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
 
@@ -32,6 +34,14 @@ export default function RSVP() {
       required: true,
       value: emailInput,
       onChange: (e) => setEmailInput(e.target.value),
+    },
+    {
+      name: "#Attending",
+      placeholder: "Number Attending *",
+      type: "number",
+      required: true,
+      value: numAttending,
+      onChange: (e) => setNumAttending(e.target.value),
     },
     {
       name: "Company",
