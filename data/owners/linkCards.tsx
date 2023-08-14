@@ -2,18 +2,18 @@ import { LinkCard } from "@/types/linkCard.type";
 
 export const ownerLinkCards: LinkCard[] = [
   {
-    url: "",
+    url: "/education",
     bgUrl: "/pages/home/cardBg/emergencyBg.webp",
     bgColor: "rgba(154, 48, 64, 0.85)",
     text: "Education Center",
-    external: true,
+    external: false,
   },
   {
-    url: "",
+    url: "/education",
     bgUrl: "/pages/home/cardBg/specialtyBg.webp",
     bgColor: "rgba(111, 113, 168, 0.85)",
     text: "Clinic Cameras",
-    external: true,
+    external: false,
   },
   {
     url: "https://covetrusrx.zendesk.com/hc/en-us/articles/360038804991-Website-Shop-Now-Buttons&utm_source=redirect",

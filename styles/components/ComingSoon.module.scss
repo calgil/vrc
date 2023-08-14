@@ -12,9 +12,12 @@
     display: flex;
     align-items: center;
   }
-
-  .title {
-    @extend .title;
-    color: a.$textHighContrast;
+  .homeBtn {
+    @extend .btnSecondary;
+    text-decoration: none;
   }
+  // .title {
+  //   @extend .title;
+  //   color: a.$textHighContrast;
+  // }
 }
