@@ -7,6 +7,7 @@ import { LinkCardSection, LinkCardType } from "@/components/LinkCardSection";
 import { ownerLinkCards } from "@/data/owners/linkCards";
 import { ownerPhotoCards } from "@/data/owners/photoCards";
 import { PaymentAssistance } from "@/components/PaymentAssistance";
+import { LinkCards } from "@/components/LinkCards";
 
 export default function Owners() {
   return (
@@ -42,8 +43,7 @@ export default function Owners() {
         <PhotoCardSection cards={ownerPhotoCards} />
         <EmergencyContact />
         <PaymentAssistance />
-        <h3 className={s.comingSoon}>Coming Soon!</h3>
-        <LinkCardSection cards={ownerLinkCards} />
+        <LinkCards cards={ownerLinkCards} />
       </main>
     </>
   );

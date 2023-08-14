@@ -6,6 +6,7 @@ import { LinkCards } from "@/components/LinkCards";
 import Image from "next/image";
 import { Opening } from "@/components/Opening";
 import Link from "next/link";
+import { homeLinkCards } from "@/data/home/linkCards";
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
         />
         <Opening />
         <EmergencyContact />
-        <LinkCards />
+        <LinkCards cards={homeLinkCards} />
         <section className={s.homeInfo}>
           <Image
             className={s.infoImg}

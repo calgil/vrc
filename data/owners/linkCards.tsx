@@ -1,23 +1,22 @@
-import { LinkCardType } from "@/components/LinkCardSection";
+import { LinkCard } from "@/types/linkCard.type";
 
-export const ownerLinkCards: LinkCardType[] = [
+export const ownerLinkCards: LinkCard[] = [
   {
-    title: "Education Center",
-    textBlocks: [
-      "We plan to compile a library of resources, both video and print, to share our knowledge and help educate others.",
-      "Check back soon as we expand this knowledge library!",
-    ],
-    linkUrl: "/education",
-    bgUrl: "/pages/owners/educationCenter.webp",
+    url: "",
+    bgUrl: "/pages/home/cardBg/emergencyBg.webp",
     bgColor: "rgba(154, 48, 64, 0.85)",
+    text: "Education Center",
   },
   {
-    title: "Clinic Camera",
-    textBlocks: [
-      "If your pet is being treated with us, click here to view their clinic camera and check in with them.",
-    ],
-    linkUrl: "/",
-    bgUrl: "/pages/owners/clinicCamera.webp",
-    bgColor: "rgba(1, 109, 118, 0.85)",
+    url: "",
+    bgUrl: "/pages/home/cardBg/specialtyBg.webp",
+    bgColor: "rgba(111, 113, 168, 0.85)",
+    text: "Clinic Cameras",
+  },
+  {
+    url: "https://covetrusrx.zendesk.com/hc/en-us/articles/360038804991-Website-Shop-Now-Buttons&utm_source=redirect",
+    bgUrl: "/pages/home/cardBg/vets.webp",
+    bgColor: "rgba(37, 37, 37, 0.85)",
+    text: "Online Pharmacy",
   },
 ];
