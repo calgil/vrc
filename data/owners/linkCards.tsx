@@ -16,10 +16,10 @@ export const ownerLinkCards: LinkCard[] = [
     external: false,
   },
   {
-    url: "https://covetrusrx.zendesk.com/hc/en-us/articles/360038804991-Website-Shop-Now-Buttons&utm_source=redirect",
+    url: "/education",
     bgUrl: "/pages/home/cardBg/vets.webp",
     bgColor: "rgba(37, 37, 37, 0.85)",
     text: "Online Pharmacy",
-    external: true,
+    external: false,
   },
 ];
