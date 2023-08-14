@@ -16,10 +16,10 @@ export const ownerLinkCards: LinkCard[] = [
     external: false,
   },
   {
-    url: "/education",
+    url: "https://northspringsvrc.vetsfirstchoice.com/",
     bgUrl: "/pages/home/cardBg/vets.webp",
     bgColor: "rgba(37, 37, 37, 0.85)",
     text: "Online Pharmacy",
-    external: false,
+    external: true,
   },
 ];
