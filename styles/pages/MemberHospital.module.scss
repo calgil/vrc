@@ -23,9 +23,13 @@
     @extend .content;
   }
 
-  .link {
+  .formLink {
     @extend .btnBase;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
   }
 }
 
@@ -64,10 +68,13 @@
 
   .formDetails {
     @extend .content;
-  }
 
-  .link {
-    color: a.$primaryTeal;
+    .emailLink {
+      color: a.$primaryTeal;
+      @include a.media(phone) {
+        word-wrap: break-word;
+      }
+    }
   }
 
   @include a.media(tablet) {
@@ -125,7 +132,6 @@
   }
 
   .pricingText {
-    // font-family: "Rockford Extra Light";
     line-height: 1.5;
     font-weight: 400;
     padding-left: 10px;
@@ -136,9 +142,7 @@
     }
 
     .bold {
-      // font-family: "Rockford Regular";
       font-weight: bolder;
-      // font-size: 18px;
     }
   }
 

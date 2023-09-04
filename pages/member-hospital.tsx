@@ -147,7 +147,7 @@ export default function MemberHospital() {
               in-print, over the phone, and in-person.
             </h5>
             <a
-              className={s.link}
+              className={s.formLink}
               href="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCaF0JkXSB_SsGMC7zcs-PKImhOkWRfGihXzYM6XznT3sHepY_SO9l69N6vjDS1E9Q*"
               target="_blank"
               rel="noopener noreferrer"
@@ -220,12 +220,12 @@ export default function MemberHospital() {
                 Network and the benefits that Member Hospitals can receive, or
                 email our team at
                 <br />
-                <Link
-                  className={s.link}
+                <a
+                  className={s.emailLink}
                   href="mailto:memberhospital@northspringsvrc.com"
                 >
                   memberhospital@northspringsvrc.com
-                </Link>
+                </a>
               </p>
             </Form>
           </div>
