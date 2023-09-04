@@ -7,14 +7,18 @@
   border-radius: 0.25rem;
   background: linear-gradient(
       0deg,
-      rgba(1, 109, 118, 0.85) 0%,
-      rgba(1, 109, 118, 0.85) 100%
+      a.$serviceFooterBg 0%,
+      a.$serviceFooterBg 100%
     ),
     url("/pages/services/communicationBg.webp");
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include a.media("900") {
+    background: a.$serviceFooterBg;
+  }
 
   .container {
     @extend .container;

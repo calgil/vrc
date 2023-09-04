@@ -2,10 +2,13 @@
 @use "../utilities";
 
 .linkCards {
-  display: flex;
-  // TODO: We wanted this centered, and not using the entire screen
   @extend .container;
   padding: 0;
+  display: flex;
+
+  @include a.media(tablet) {
+    flex-direction: column;
+  }
 
   .linkCard {
     padding: 2rem;
@@ -18,9 +21,14 @@
     transition: all 200ms ease-in-out;
 
     // TODO: How can we make it clear this is a link?
-    // &:hover {
-    //   transform: scale(1.01);
-    // }
+
+    @include a.media(tablet) {
+      background: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
     .linkTitle {
       font-size: 1.7rem;
