@@ -218,13 +218,13 @@ export default function MemberHospital() {
               <p className={s.formDetails}>
                 Fill out our contact form to learn more about how to join our
                 Network and the benefits that Member Hospitals can receive, or
-                email our team at
+                email our team
                 <br />
                 <a
                   className={s.emailLink}
                   href="mailto:memberhospital@northspringsvrc.com"
                 >
-                  memberhospital@northspringsvrc.com
+                  here.
                 </a>
               </p>
             </Form>
