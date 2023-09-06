@@ -47,6 +47,23 @@
   }
 }
 
+.btnTertiary {
+  background-color: a.$buttonWhiteBg;
+  color: a.$redAccent;
+  border: 2px solid a.$redAccent;
+  border-radius: 25px;
+  padding: 8px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: a.$redAccent;
+    color: a.$textHighContrast;
+    border: 2px solid a.$textHighContrast;
+  }
+}
+
 .title {
   font-size: 1.875rem;
   font-weight: 700;

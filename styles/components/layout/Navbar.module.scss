@@ -82,16 +82,17 @@
         }
 
         .findBtn {
-          background-color: a.$buttonWhiteBg;
-          color: a.$redAccent;
-          border: 1px solid transparent;
-          transition: all 200ms ease-in-out;
+          @extend .btnTertiary;
+          // background-color: a.$buttonWhiteBg;
+          // color: a.$redAccent;
+          // border: 1px solid transparent;
+          // transition: all 200ms ease-in-out;
 
-          &:hover {
-            background-color: a.$redAccent;
-            color: a.$textHighContrast;
-            border: 1px solid a.$textHighContrast;
-          }
+          // &:hover {
+          //   background-color: a.$redAccent;
+          //   color: a.$textHighContrast;
+          //   border: 1px solid a.$textHighContrast;
+          // }
 
           .text {
             margin-left: 8px;
