@@ -31,6 +31,9 @@ export const EmergencyContact = () => {
           Our experienced team is prepared for any pet emergency and will
           provide the highest quality of care for your beloved family member.
         </p>
+        <a className={s.formBtn} href="">
+          fill out intake form
+        </a>
         <p className={s.poison}>
           If your pet ingested something, please call ASPCA Animal Poison
           Control at
