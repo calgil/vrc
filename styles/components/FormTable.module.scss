@@ -1,0 +1,71 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.tableContainer {
+  @extend .container;
+  width: 100%;
+  max-width: 925px;
+  margin: 40px auto;
+
+  .table {
+    width: 100%;
+    border-top: 1px solid a.$darkGrey;
+    border-left: 1px solid a.$darkGrey;
+    border-right: 1px solid a.$darkGrey;
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+      border-bottom: 1px solid a.$darkGrey;
+
+      &:nth-child(odd) {
+        background-color: white;
+      }
+
+      &:nth-child(even) {
+        background-color: rgba($color: a.$darkGrey, $alpha: 0.1);
+      }
+
+      .heading {
+        @extend .subHeader;
+        flex: 2;
+        padding: 0 15px;
+      }
+      .subHeading {
+        @extend .content;
+        border-left: 1px solid a.$darkGrey;
+        text-align: center;
+        flex: 1;
+        padding-left: 10px;
+      }
+      .formData {
+        flex: 2;
+        padding: 0 15px;
+
+        .formTitle {
+          @extend .content;
+          font-weight: 400;
+          margin: 0;
+        }
+        .formDescription {
+          @extend .content;
+          font-size: 0.9375rem;
+          margin: 0;
+        }
+      }
+      .formLink {
+        border-left: 1px solid a.$darkGrey;
+        text-align: center;
+        flex: 1;
+        padding-left: 10px;
+
+        .link {
+          color: a.$primaryTeal;
+          text-underline-offset: 3px;
+        }
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@ import { ownerPhotoCards } from "@/data/owners/photoCards";
 import { PaymentAssistance } from "@/components/PaymentAssistance";
 import { LinkCards } from "@/components/LinkCards";
 import { RequestConsult } from "@/components/ServicesPages/RequestConsult";
+import { FormTable } from "@/components/FormTable";
 
 export default function Owners() {
   return (
@@ -43,14 +44,9 @@ export default function Owners() {
         </section>
         <PhotoCardSection cards={ownerPhotoCards} />
         <EmergencyContact />
-        <RequestConsult
-          title="On your way?"
-          details="Go ahead and fill out our intake paperwork online."
-          btnText="Intake Form"
-          formUrl="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCQLDika86ROSJ-K7v4bC2oHXhAmy090nVh6IE_bfx-oqHDjIulLxvAff_ul86HUs0*"
-        />
         <PaymentAssistance />
         <LinkCards cards={ownerLinkCards} />
+        <FormTable />
       </main>
     </>
   );

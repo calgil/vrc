@@ -61,6 +61,11 @@
       max-width: 540px;
       margin: 0 auto;
       font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .formBtn {
+      @extend .btnTertiary;
     }
 
     .poison {

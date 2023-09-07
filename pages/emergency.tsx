@@ -25,7 +25,6 @@ export default function Emergency() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
         <Hero
           homepage={false}
@@ -34,13 +33,6 @@ export default function Emergency() {
           bgUrl="/pages/emergency/emergencyBanner.webp"
         />
         <EmergencyContact />
-        {/* TODO: How can we make this not look like trash? */}
-        <RequestConsult
-          title="On your way?"
-          details="Go ahead and fill out our intake paperwork online."
-          btnText="Intake Form"
-          formUrl="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCQLDika86ROSJ-K7v4bC2oHXhAmy090nVh6IE_bfx-oqHDjIulLxvAff_ul86HUs0*"
-        />
         <PaymentAssistance />
         <section className={s.emergency}>
           <div className={s.text}>

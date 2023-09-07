@@ -1,12 +1,18 @@
 @use "../../abstracts" as a;
+@use "../../utilities";
 
-.navLink {
-  &:hover,
-  &.active {
-    color: a.$redAccent;
-  }
+.navLinks {
+  @extend .container;
+  padding: 0;
 
-  &.active {
-    text-decoration: underline;
+  .navLink {
+    &:hover,
+    &.active {
+      color: a.$redAccent;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
   }
 }
