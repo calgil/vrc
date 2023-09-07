@@ -15,7 +15,7 @@ const formTableData: formRow[] = [
   },
   {
     title: "Specialty Re-Check",
-    description: "Make another appointment with the best in the business!",
+    description: "Complete this form prior to your recheck appointment.",
     link: "https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhD0fuR7HN3PlZMDbNSBHwPtTVaBQl7mgmgpiL6IO5Hw6hSKiliz0ZHg5HKGCrJXj3k*",
   },
 ];

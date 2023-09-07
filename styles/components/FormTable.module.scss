@@ -30,7 +30,8 @@
 
       .heading {
         @extend .subHeader;
-        flex: 3;
+        flex: 2;
+        padding: 0 15px;
       }
       .subHeading {
         @extend .content;
@@ -40,7 +41,9 @@
         padding-left: 10px;
       }
       .formData {
-        flex: 3;
+        flex: 2;
+        padding: 0 15px;
+
         .formTitle {
           @extend .content;
           font-weight: 400;
