@@ -8,14 +8,14 @@ type formRow = {
 
 const formTableData: formRow[] = [
   {
-    title: "Specialty Client Intake",
+    title: "Specialty Client Request Appointment",
     description:
       "Complete this form to make an appointment with one of our specialists.",
     link: "https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhAkXPf0TMV6ciJi982UrS4haahB4-CFD4gdrE1tas81_ebNRkeleGJ8wsOiGQ0RT6E*",
   },
   {
     title: "Specialty Re-Check",
-    description: "Complete this form prior to your recheck appointment.",
+    description: "Complete this form prior to your appointment.",
     link: "https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhD0fuR7HN3PlZMDbNSBHwPtTVaBQl7mgmgpiL6IO5Hw6hSKiliz0ZHg5HKGCrJXj3k*",
   },
 ];

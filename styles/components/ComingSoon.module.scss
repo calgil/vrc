@@ -12,12 +12,13 @@
     display: flex;
     align-items: center;
   }
+  .soonTitle {
+    @extend .title;
+    color: a.$textHighContrast;
+    margin-bottom: 30px;
+  }
   .homeBtn {
     @extend .btnSecondary;
     text-decoration: none;
   }
-  // .title {
-  //   @extend .title;
-  //   color: a.$textHighContrast;
-  // }
 }
