@@ -4,14 +4,16 @@ type formRow = {
   title: string;
   description: string;
   link: string;
+  formName?: string;
 };
 
 const formTableData: formRow[] = [
   {
-    title: "Specialty Client Request Appointment",
+    title: "Specialty Initial Consult",
     description:
-      "Complete this form to make an appointment with one of our specialists.",
+      "Complete this form prior to your appointment with our specialist.",
     link: "https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhAkXPf0TMV6ciJi982UrS4haahB4-CFD4gdrE1tas81_ebNRkeleGJ8wsOiGQ0RT6E*",
+    formName: "Specialty Intake",
   },
   {
     title: "Specialty Re-Check",
@@ -43,7 +45,7 @@ export const FormTable = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {form.title} Form
+                {form.formName ? form.formName : form.title} Form
               </a>
             </td>
           </tr>
