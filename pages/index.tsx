@@ -4,7 +4,6 @@ import { Hero } from "@/components/Hero";
 import { EmergencyContact } from "@/components/EmergencyContact";
 import { LinkCards } from "@/components/LinkCards";
 import Image from "next/image";
-import { Opening } from "@/components/Opening";
 import Link from "next/link";
 import { homeLinkCards } from "@/data/home/linkCards";
 
@@ -31,7 +30,6 @@ export default function Home() {
           empathy and transparency"
           bgUrl="/pages/home/homeBanner.webp"
         />
-        <Opening />
         <EmergencyContact />
         <LinkCards cards={homeLinkCards} />
         <section className={s.homeInfo}>
