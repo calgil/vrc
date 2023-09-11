@@ -12,9 +12,12 @@ export const ComingSoon = () => {
           width={327}
           height={547}
         />
-        <Link href="/" className={s.homeBtn}>
-          Return to Homepage
-        </Link>
+        <div>
+          <h4 className={s.soonTitle}>Coming Soon!</h4>
+          <Link href="/" className={s.homeBtn}>
+            Return to Homepage
+          </Link>
+        </div>
       </div>
     </section>
   );
