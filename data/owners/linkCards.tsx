@@ -9,11 +9,11 @@ export const ownerLinkCards: LinkCard[] = [
     external: false,
   },
   {
-    url: "/education",
+    url: "https://ai-video.turingvideo.com/login",
     bgUrl: "/pages/home/cardBg/specialtyBg.webp",
     bgColor: "rgba(111, 113, 168, 0.85)",
     text: "Clinic Cameras",
-    external: false,
+    external: true,
   },
   {
     url: "https://northspringsvrc.vetsfirstchoice.com/",
