@@ -1,4 +1,3 @@
-import Head from "next/head";
 import s from "../styles/pages/Home.module.scss";
 import { Hero } from "@/components/Hero";
 import { EmergencyContact } from "@/components/EmergencyContact";
@@ -6,23 +5,16 @@ import { LinkCards } from "@/components/LinkCards";
 import Image from "next/image";
 import Link from "next/link";
 import { homeLinkCards } from "@/data/home/linkCards";
+import { CustomMetadata, Meta } from "@/components/Meta";
 
 export default function Home() {
+  const customMetadata: CustomMetadata = {
+    title: "24 Hour Vet Clinic",
+    keywords: ["vet clinic open at night", "cat doctor near me 24 hours"],
+  };
   return (
     <>
-      <Head>
-        <title>Home | North Springs Veterinary Referral Center</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Transforming the veterinary experience through empathy and transparency Opening Summer 2023! Stay in the Know! Subscribe to our newsletter to receive the latest information and news about our Grand Opening!"
-        />
-        <meta
-          name="google-site-verification"
-          content="JakQhQMci5HCnG0Wlu4LuQErYRxWQlOINZ1YxlCp4eY"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta data={customMetadata} />
       <main className={s.main}>
         <Hero
           homepage={true}

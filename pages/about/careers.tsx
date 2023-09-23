@@ -7,6 +7,7 @@ export default function Careers() {
   return (
     <>
       <Head>
+        {/* TODO: Refactor this */}
         <title>Careers | North Springs Veterinary Referral Center</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -19,6 +20,7 @@ export default function Careers() {
         <Hero
           homepage={false}
           bgUrl="/pages/about/careers/careersBanner.webp"
+          // TODO: More descriptive title?
           heading="Careers"
           subHeading="Join a team that is passionate about providing the highest level of veterinary care"
         />

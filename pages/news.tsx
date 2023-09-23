@@ -6,6 +6,7 @@ export default function News() {
   return (
     <>
       <Head>
+        {/* TODO: Refactor this */}
         <title>News & Events | North Springs Veterinary Referral Center</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta

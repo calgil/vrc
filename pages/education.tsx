@@ -6,6 +6,7 @@ export default function Education() {
   return (
     <>
       <Head>
+        {/* TODO: Refactor this */}
         <title>
           Education Center | North Springs Veterinary Referral Center
         </title>

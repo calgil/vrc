@@ -43,15 +43,12 @@ export const Hero = ({ homepage, heading, subHeading, bgUrl }: HeroProps) => {
             )}
           </div>
           <div className={s.heroText}>
-            <h3 className={s.subheading}>{subHeading}</h3>
+            {homepage && (
+              <h1 className={s.heading}>24 Hour Emergency Pet Care</h1>
+            )}
+            {subHeading && <h3 className={s.subheading}>{subHeading}</h3>}
           </div>
         </div>
-        {/* <div
-          className={s.imgContainer}
-          style={{
-            backgroundImage: `url(${bgUrl})`,
-          }}
-        ></div> */}
       </div>
     </div>
   );

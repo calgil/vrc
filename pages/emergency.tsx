@@ -1,6 +1,7 @@
 import s from "../styles/pages/Emergency.module.scss";
 import { EmergencyContact } from "@/components/EmergencyContact";
 import { Hero } from "@/components/Hero";
+import { CustomMetadata, Meta } from "@/components/Meta";
 import { PaymentAssistance } from "@/components/PaymentAssistance";
 import { ServiceDropdown } from "@/components/ServiceDropdown";
 import { CommonConditions } from "@/components/ServicesPages/CommonConditions";
@@ -8,27 +9,21 @@ import { emergencyConditions } from "@/components/ServicesPages/Emergency/emerge
 import { emergencyReasons } from "@/components/ServicesPages/Emergency/emergencyReasons";
 import { emergencyServices } from "@/components/ServicesPages/Emergency/emergencyServices";
 import { emergencyCommunicationText } from "@/components/ServicesPages/Emergency/reliableCommunication";
-import { RequestConsult } from "@/components/ServicesPages/RequestConsult";
 import { ServicesFooter } from "@/components/ServicesPages/ServicesFooter";
 import { sortServices } from "@/utilities/sortServices";
-import Head from "next/head";
 
 export default function Emergency() {
+  const customMetadata: CustomMetadata = {
+    title: "Emergency Care",
+    keywords: [""],
+  };
   return (
     <>
-      <Head>
-        <title>Emergency | North Springs Veterinary Referral Center</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Transforming the veterinary experience through empathy and transparency Opening Summer 2023! Stay in the Know! Subscribe to our newsletter to receive the latest information and news about our Grand Opening!"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta data={customMetadata} />
       <main>
         <Hero
           homepage={false}
-          heading="Emergency"
+          heading="Emergency Veterinarian Clinic"
           subHeading="Our Emergency team is available 24/7, including holidays, for your urgent needs."
           bgUrl="/pages/emergency/emergencyBanner.webp"
         />
