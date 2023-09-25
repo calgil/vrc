@@ -7,20 +7,15 @@ import { PhotoCardSection, PhotoCardType } from "@/components/PhotoCardSection";
 import { LinkCardSection, LinkCardType } from "@/components/LinkCardSection";
 import { vetLinkCards } from "@/data/veterinarians/linkCards";
 import { vetPhotoCards } from "@/data/veterinarians/photoCards";
+import { CustomMetadata, Meta } from "@/components/Meta";
 
 export default function Veterinarians() {
+  const customMetadata: CustomMetadata = {
+    title: "Veterinarians",
+  };
   return (
     <>
-      <Head>
-        {/* TODO: Refactor this */}
-        <title>Veterinarians | North Springs Veterinary Referral Center</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Transforming the veterinary experience through empathy and transparency Opening Summer 2023! Stay in the Know! Subscribe to our newsletter to receive the latest information and news about our Grand Opening!"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta data={customMetadata} />
       <main>
         <Hero
           homepage={false}

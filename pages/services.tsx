@@ -10,9 +10,9 @@ export default function Services() {
   const customMetadata: CustomMetadata = {
     title: "Specialty Animal Services",
     keywords: [
-      "anesthesiology",
-      "cardiology",
-      "internal medicine",
+      "animal anesthesiology",
+      "animal cardiology",
+      "animal internal medicine",
       "animal surgery",
       "animal rehabilitation",
     ],
