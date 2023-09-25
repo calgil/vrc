@@ -1,7 +1,8 @@
 import { Layout } from "@/components/Layout";
 import localFont from "next/font/local";
 import type { AppProps } from "next/app";
-import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
+// import { Analytics } from "@vercel/analytics/react";
 import "@/styles/globals.scss";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { CustomMetadata, Meta } from "@/components/Meta";
@@ -29,11 +30,26 @@ const defaultMetadata: CustomMetadata = {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script strategy="lazyOnload" id="analytics">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
       <Meta data={defaultMetadata} />
       <div className={myFont.className}>
         <Layout>
           <Component {...pageProps} />
-          <Analytics />
+          {/* <Analytics /> */}
         </Layout>
       </div>
     </>
