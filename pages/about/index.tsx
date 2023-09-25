@@ -1,6 +1,5 @@
 import { Hero } from "@/components/Hero";
 import s from "../../styles/pages/About.module.scss";
-import Head from "next/head";
 import { OurStory } from "@/components/OurStory";
 import { CoreValues } from "@/components/CoreValues";
 import Link from "next/link";
@@ -18,7 +17,6 @@ export default function About() {
         <Hero
           homepage={false}
           bgUrl="/pages/about/aboutHeader.webp"
-          // TODO: More description
           heading="About Us"
         />
         <OurStory />
