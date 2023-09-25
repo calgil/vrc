@@ -1,8 +1,5 @@
 import s from "../styles/pages/MemberHospital.module.scss";
 import { Hero } from "@/components/Hero";
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { Input, SubmitBtn, TextArea } from "@/types/input.type";
 import { Form } from "@/components/Form";

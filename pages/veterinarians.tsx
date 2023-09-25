@@ -1,5 +1,4 @@
 import { Hero } from "@/components/Hero";
-import Head from "next/head";
 import s from "../styles/pages/Veterinarians.module.scss";
 import Image from "next/image";
 import Link from "next/link";
