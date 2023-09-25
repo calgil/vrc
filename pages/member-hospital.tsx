@@ -1,15 +1,15 @@
 import s from "../styles/pages/MemberHospital.module.scss";
 import { Hero } from "@/components/Hero";
-import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { Input, SubmitBtn, TextArea } from "@/types/input.type";
 import { Form } from "@/components/Form";
 import { useState } from "react";
+import { CustomMetadata, Meta } from "@/components/Meta";
 
 export default function MemberHospital() {
-  // Future: Maybe use a form/form data for this?
+  const customMetadata: CustomMetadata = {
+    title: "Member Hospital",
+  };
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
@@ -113,18 +113,7 @@ export default function MemberHospital() {
   };
   return (
     <>
-      <Head>
-        {/* TODO: Refactor this */}
-        <title>
-          Member Hospital | North Springs Veterinary Referral Center
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Transforming the veterinary experience through empathy and transparency Opening Summer 2023! Stay in the Know! Subscribe to our newsletter to receive the latest information and news about our Grand Opening!"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta data={customMetadata} />
       <main>
         <Hero
           homepage={false}

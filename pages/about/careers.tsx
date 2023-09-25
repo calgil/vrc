@@ -1,26 +1,18 @@
 import { Hero } from "@/components/Hero";
 import s from "../../styles/pages/Careers.module.scss";
-import Head from "next/head";
-import Link from "next/link";
+import { CustomMetadata, Meta } from "@/components/Meta";
 
 export default function Careers() {
+  const customMetadata: CustomMetadata = {
+    title: "Careers",
+  };
   return (
     <>
-      <Head>
-        {/* TODO: Refactor this */}
-        <title>Careers | North Springs Veterinary Referral Center</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Transforming the veterinary experience through empathy and transparency Opening Summer 2023! Stay in the Know! Subscribe to our newsletter to receive the latest information and news about our Grand Opening!"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta data={customMetadata} />
       <main>
         <Hero
           homepage={false}
           bgUrl="/pages/about/careers/careersBanner.webp"
-          // TODO: More descriptive title?
           heading="Careers"
           subHeading="Join a team that is passionate about providing the highest level of veterinary care"
         />

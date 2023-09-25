@@ -14,8 +14,13 @@ import { sortServices } from "@/utilities/sortServices";
 
 export default function Emergency() {
   const customMetadata: CustomMetadata = {
-    title: "Emergency Care",
-    keywords: [""],
+    title: "Emergency Animal Hospital",
+    keywords: [
+      "emergency vet near me",
+      "emergency animal hospital near me",
+      "emergency vet",
+      "animal hospital",
+    ],
   };
   return (
     <>

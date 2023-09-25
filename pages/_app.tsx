@@ -2,7 +2,6 @@ import { Layout } from "@/components/Layout";
 import localFont from "next/font/local";
 import type { AppProps } from "next/app";
 import Script from "next/script";
-// import { Analytics } from "@vercel/analytics/react";
 import "@/styles/globals.scss";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { CustomMetadata, Meta } from "@/components/Meta";
@@ -22,7 +21,7 @@ const myFont = localFont({
 });
 
 const defaultMetadata: CustomMetadata = {
-  title: "Default Title",
+  title: "North Springs Veterinary Referral Center",
   description:
     "Open Now! 24 hour Emergency Veterinarian Clinic serving Colorado Springs and the surrounding area. Our experienced team is prepared for any pet emergency and will provide the highest quality of care for your beloved family member.",
 };
@@ -49,7 +48,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className={myFont.className}>
         <Layout>
           <Component {...pageProps} />
-          {/* <Analytics /> */}
         </Layout>
       </div>
     </>

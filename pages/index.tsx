@@ -9,8 +9,13 @@ import { CustomMetadata, Meta } from "@/components/Meta";
 
 export default function Home() {
   const customMetadata: CustomMetadata = {
-    title: "24 Hour Vet Clinic",
-    keywords: ["vet clinic open at night", "cat doctor near me 24 hours"],
+    title: "Emergency Animal Hospital",
+    keywords: [
+      "vet clinic open at night",
+      "cat doctor near me 24 hours",
+      "vet clinic open now",
+      "emergency vet clinic near me",
+    ],
   };
   return (
     <>
