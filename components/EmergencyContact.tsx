@@ -6,10 +6,10 @@ export const EmergencyContact = () => {
   return (
     <section className={s.emergencyInfo}>
       <div className={s.container}>
-        <h3 className={s.header}>
+        <h2 className={s.header}>
           If you are experiencing an emergency, please call or come directly to
           our hospital.
-        </h3>
+        </h2>
         <div className={s.emergencyContact}>
           <a className={s.contactInfo} href="tel:+1(719)920-4430">
             <FontAwesomeIcon className={s.icon} icon={faPhone} />

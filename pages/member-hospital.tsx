@@ -9,6 +9,7 @@ import { Form } from "@/components/Form";
 import { useState } from "react";
 
 export default function MemberHospital() {
+  // Future: Maybe use a form/form data for this?
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
@@ -113,6 +114,7 @@ export default function MemberHospital() {
   return (
     <>
       <Head>
+        {/* TODO: Refactor this */}
         <title>
           Member Hospital | North Springs Veterinary Referral Center
         </title>

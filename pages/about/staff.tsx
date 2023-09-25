@@ -6,6 +6,7 @@ export default function Staff() {
   return (
     <>
       <Head>
+        {/* TODO: Refactor this */}
         <title>Careers | North Springs Veterinary Referral Center</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta

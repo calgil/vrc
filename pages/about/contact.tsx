@@ -9,6 +9,7 @@ export default function Contact() {
   return (
     <>
       <Head>
+        {/* TODO: Re-factor this */}
         <title>Contact | North Springs Veterinary Referral Center</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta

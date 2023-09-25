@@ -9,6 +9,7 @@ export default function About() {
   return (
     <>
       <Head>
+        {/* TODO: Refactor this */}
         <title>About Us | North Springs Veterinary Referral Center</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -21,6 +22,7 @@ export default function About() {
         <Hero
           homepage={false}
           bgUrl="/pages/about/aboutHeader.webp"
+          // TODO: More description
           heading="About Us"
         />
         <OurStory />
