@@ -1,28 +1,29 @@
 "use client";
+import { CustomMetadata, Meta } from "@/components/Meta";
 import s from "../styles/pages/Services.module.scss";
 import { Hero } from "@/components/Hero";
 import { ServicesContent } from "@/components/ServicesContent";
 import { ServicesSidebar } from "@/components/ServicesSidebar";
-import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function Services() {
+  const customMetadata: CustomMetadata = {
+    title: "Specialty Animal Services",
+    keywords: [
+      "anesthesiology",
+      "cardiology",
+      "internal medicine",
+      "animal surgery",
+      "animal rehabilitation",
+    ],
+  };
   const router = useRouter();
   const path = router.asPath;
   const page = path.slice(path.lastIndexOf("#") + 1);
 
   return (
     <>
-      <Head>
-        {/* TODO: Refactor this */}
-        <title>Services | North Springs Veterinary Referral Center</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Transforming the veterinary experience through empathy and transparency Opening Summer 2023! Stay in the Know! Subscribe to our newsletter to receive the latest information and news about our Grand Opening!"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta data={customMetadata} />
       <main>
         <Hero
           homepage={false}
