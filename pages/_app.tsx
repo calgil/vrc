@@ -32,6 +32,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS}`}
+      />
 
       <Script id="google-analytics">
         {`
