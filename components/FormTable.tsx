@@ -12,12 +12,13 @@ const formTableData: formRow[] = [
     title: "Specialty Initial Consult",
     description:
       "Complete this form prior to your appointment with our specialist.",
-    link: "https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhAkXPf0TMV6ciJi982UrS4haahB4-CFD4gdrE1tas81_ebNRkeleGJ8wsOiGQ0RT6E*",
+    link: "https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhAHApx_Ra0XpnZCzxIHp1e4fwkDaz9xLlrXRBPxIaX2ulmhyTxGi6nYdnMywwxK7Vk*",
     formName: "Specialty Intake",
   },
   {
     title: "Specialty Re-Check",
-    description: "Complete this form prior to your appointment.",
+    description:
+      "Complete this form prior to your re-check appointment with our specialist.",
     link: "https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhD0fuR7HN3PlZMDbNSBHwPtTVaBQl7mgmgpiL6IO5Hw6hSKiliz0ZHg5HKGCrJXj3k*",
   },
 ];
