@@ -14,13 +14,15 @@ import { sortServices } from "@/utilities/sortServices";
 
 export default function Emergency() {
   const customMetadata: CustomMetadata = {
-    title: "Emergency Animal Hospital",
+    title: "Animal Emergency and Specialty Center in Colorado Springs",
     keywords: [
       "emergency vet near me",
       "emergency animal hospital near me",
       "emergency vet",
       "animal hospital",
     ],
+    description:
+      "North Springs is a 24 hour Animal Emergency Clinic serving Colorado Springs and the surrounding area. Our experienced team is prepared for any pet emergency.",
   };
   return (
     <>
