@@ -5,7 +5,7 @@ export const Exotics = () => {
   return (
     <section>
       <div className={s.text}>
-        <h3 className={s.title}>Exotics</h3>
+        <h2 className={s.title}>Exotics</h2>
       </div>
       <h3 className={`${s.title} ${s.secondaryTitle}`}>Coming Soon!</h3>
       <div className={s.exoticsImg}>
