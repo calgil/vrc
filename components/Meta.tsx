@@ -18,7 +18,7 @@ export const Meta = ({ data }: MetaProps) => {
   ];
   return (
     <Head>
-      <title>{title} | North Springs Veterinary Referral Center</title>
+      <title>{title}</title>
       {keywords && keywords.length > 0 && (
         <meta
           name="keywords"

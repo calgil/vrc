@@ -7,7 +7,9 @@ import { CustomMetadata, Meta } from "@/components/Meta";
 
 export default function About() {
   const customMetadata: CustomMetadata = {
-    title: "About Us",
+    title: "About Our Animal ER Care in Colorado Springs, Colorado",
+    description:
+      "North Springs Veterinary Referral Service is a 24 hour animal ER care center. We are prepared to provide the highest quality care for any pet emergency!",
   };
 
   return (
@@ -17,7 +19,7 @@ export default function About() {
         <Hero
           homepage={false}
           bgUrl="/pages/about/aboutHeader.webp"
-          heading="About Us"
+          heading="About Our 24 Hour Animal ER Care in Colorado Springs"
         />
         <OurStory />
         <CoreValues />
