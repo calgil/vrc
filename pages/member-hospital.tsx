@@ -77,7 +77,6 @@ export default function MemberHospital() {
     e.preventDefault();
     setIsLoading(true);
     if (!nameInput || !emailInput || !phoneInput || !hospitalName) {
-      console.log("no data");
       return;
     }
 
@@ -108,7 +107,6 @@ export default function MemberHospital() {
       .catch((err) => {
         setIsLoading(false);
         setError(true);
-        console.error(err);
       });
   };
   return (

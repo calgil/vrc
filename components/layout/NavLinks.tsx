@@ -14,8 +14,6 @@ export const NavLinks = () => {
   const activeStyle = cx(linkStyle, s.active);
 
   const scrollToTop = () => {
-    console.log("scroll");
-
     window.scrollTo(0, 0);
   };
 

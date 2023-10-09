@@ -42,7 +42,6 @@ export const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!nameInput || !emailInput || !phoneInput || !message) {
-      console.log("missing inputs");
       return;
     }
     const formElement = e.currentTarget;
@@ -57,7 +56,6 @@ export const ContactForm = () => {
       }
     )
       .then((res) => {
-        console.log(res);
         if (!res.ok) {
           return setError(true);
         }
@@ -69,7 +67,6 @@ export const ContactForm = () => {
       })
       .catch((err) => {
         setError(true);
-        console.error(err);
       });
   };
   return (
