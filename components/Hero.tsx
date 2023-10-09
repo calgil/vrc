@@ -44,7 +44,7 @@ export const Hero = ({ homepage, heading, subHeading, bgUrl }: HeroProps) => {
           <div className={s.heroText}>
             {homepage && (
               <h1 className={s.heading}>
-                24 Hour Emergency and Specialty Care
+                24 Hour Emergency Vet and Specialty Care
               </h1>
             )}
             {subHeading && <h3 className={s.subheading}>{subHeading}</h3>}

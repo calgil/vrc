@@ -9,13 +9,15 @@ import { CustomMetadata, Meta } from "@/components/Meta";
 
 export default function Home() {
   const customMetadata: CustomMetadata = {
-    title: "Emergency Animal Hospital",
+    title: "Emergency Vet",
     keywords: [
       "vet clinic open at night",
       "cat doctor near me 24 hours",
       "vet clinic open now",
       "emergency vet clinic near me",
     ],
+    description:
+      "Open Now! 24 hour Emergency Veterinarian Clinic serving Colorado Springs and the surrounding area. Our experienced team is prepared for any pet emergency!",
   };
   return (
     <>
