@@ -30,7 +30,7 @@ export default function Emergency() {
       <main>
         <Hero
           homepage={false}
-          heading="Emergency Veterinarian Clinic"
+          heading="Animal Emergency and Specialty Center in Colorado Springs"
           subHeading="Our Emergency team is available 24/7, including holidays, for your urgent needs."
           bgUrl="/pages/emergency/emergencyBanner.webp"
         />
