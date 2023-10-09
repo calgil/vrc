@@ -13,7 +13,9 @@ import { CustomMetadata, Meta } from "@/components/Meta";
 
 export default function Owners() {
   const customMetadata: CustomMetadata = {
-    title: "Pet Owners",
+    title: "Information For Pet Owners | North Springs Veterinary ",
+    description:
+      "Open Now! 24 hour Emergency Veterinarian Clinic serving Colorado Springs & the surrounding area. Find all the necessary information you need as a pet owner here",
   };
   return (
     <>

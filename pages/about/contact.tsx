@@ -6,7 +6,9 @@ import { CustomMetadata, Meta } from "@/components/Meta";
 
 export default function Contact() {
   const customMetadata: CustomMetadata = {
-    title: "Contact Us",
+    title: "Contact A Emergency Veterinarian in Colorado Springs, CO",
+    description:
+      "We are a 24 hour Emergency Veterinarian Clinic serving Colorado Springs and the surrounding area. Our emergency Veterinarian are prepared for any pet emergency!",
   };
   return (
     <>
