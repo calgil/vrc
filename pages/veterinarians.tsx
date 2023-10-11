@@ -60,7 +60,6 @@ export default function Veterinarians() {
           </div>
         </section>
         <PhotoCardSection cards={vetPhotoCards} />
-        <h3 className={s.comingSoon}>Coming Soon!</h3>
         <LinkCardSection cards={vetLinkCards} />
       </main>
     </>
