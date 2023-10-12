@@ -1,13 +1,11 @@
 import { Hero } from "@/components/Hero";
 import s from "../styles/pages/Owners.module.scss";
 import { EmergencyContact } from "@/components/EmergencyContact";
-import { PhotoCardSection, PhotoCardType } from "@/components/PhotoCardSection";
-import { LinkCardSection, LinkCardType } from "@/components/LinkCardSection";
+import { PhotoCardSection } from "@/components/PhotoCardSection";
 import { ownerLinkCards } from "@/data/owners/linkCards";
 import { ownerPhotoCards } from "@/data/owners/photoCards";
 import { PaymentAssistance } from "@/components/PaymentAssistance";
 import { LinkCards } from "@/components/LinkCards";
-import { RequestConsult } from "@/components/ServicesPages/RequestConsult";
 import { FormTable } from "@/components/FormTable";
 import { CustomMetadata, Meta } from "@/components/Meta";
 
@@ -39,11 +37,11 @@ export default function Owners() {
             how we work to uphold our values.
           </p>
         </section>
+        <FormTable />
         <PhotoCardSection cards={ownerPhotoCards} />
         <EmergencyContact />
         <PaymentAssistance />
         <LinkCards cards={ownerLinkCards} />
-        <FormTable />
       </main>
     </>
   );

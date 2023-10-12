@@ -12,11 +12,7 @@
 
   .text {
     font-size: 1.25rem;
+    max-width: 45ch;
+    margin: 20px auto;
   }
-}
-
-.comingSoon {
-  text-align: center;
-  color: a.$redAccent;
-  margin: 2.5rem 0;
 }
