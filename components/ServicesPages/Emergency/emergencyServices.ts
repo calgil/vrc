@@ -9,7 +9,7 @@ export const emergencyServices: ServiceDetail[] = [
   {
     title: "Critical Care",
     content:
-      "If your pet is experiencing a life threatening emergency, our Emergency team will act quickly to provide immediate stabilizing care, perform diagnostics to understand the nature of the illness, then technician them back to health.",
+      "If your pet is experiencing a life threatening emergency, our Emergency team will act quickly to provide immediate stabilizing care, perform diagnostics to understand the nature of the illness, then treat them back to health.",
   },
   {
     title: "Urgent Care",
