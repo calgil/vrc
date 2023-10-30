@@ -39,7 +39,7 @@ export default function About() {
         <Hero
           homepage={false}
           bgUrl="/pages/about/aboutHeader.webp"
-          heading="About Our 24 Hour Animal ER Care in Colorado Springs"
+          heading="About Our 24 Hour Animal ER Care"
         />
         <OurStory />
         <PhotoCardSection cards={tourCards} />
