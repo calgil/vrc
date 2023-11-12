@@ -1,0 +1,32 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.teamContainer {
+  padding-top: 40px;
+  @extend .container;
+
+  .title {
+    @extend .title;
+    text-align: center;
+  }
+  .content {
+    @extend .content;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .teamSelection {
+    width: fit-content;
+    margin: 40px auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .team {
+      list-style: none;
+      font-size: 20px;
+      font-weight: 700;
+      font-style: normal;
+      padding: 0 4px;
+    }
+  }
+}
