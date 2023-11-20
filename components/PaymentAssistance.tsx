@@ -1,4 +1,3 @@
-import Link from "next/link";
 import s from "../styles/components/PaymentAssistance.module.scss";
 
 export const PaymentAssistance = () => {
@@ -25,6 +24,14 @@ export const PaymentAssistance = () => {
             target="_blank"
           >
             Apply for scratch pay
+          </a>
+          <a
+            className={s.cta}
+            href="https://vetbilling.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            VetBilling
           </a>
         </div>
       </div>
