@@ -31,7 +31,7 @@ export const PaymentAssistance = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            VetBilling
+            Apply for VetBilling
           </a>
         </div>
       </div>
