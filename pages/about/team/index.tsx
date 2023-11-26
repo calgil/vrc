@@ -1,8 +1,8 @@
 import { Hero } from "@/components/Hero";
 import { CustomMetadata, Meta } from "@/components/Meta";
-import s from "../../styles/pages/Staff.module.scss";
+import s from "../../../styles/pages/Staff.module.scss";
 
-export default function Staff() {
+export default function Team() {
   const customMetadata: CustomMetadata = {
     title: "Our Staff",
   };
