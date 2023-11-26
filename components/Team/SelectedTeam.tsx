@@ -1,3 +1,3 @@
 export const SelectedTeam = () => {
-  return <div>Doctor Profile</div>;
+  return <div>Selected Team</div>;
 };

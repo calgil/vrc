@@ -1,0 +1,7 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.teamContainer {
+  display: flex;
+  align-items: flex-start;
+}

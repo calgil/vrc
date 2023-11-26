@@ -1,8 +1,9 @@
 import { Hero } from "@/components/Hero";
 import { CustomMetadata, Meta } from "@/components/Meta";
-import s from "../../../styles/pages/Staff.module.scss";
+import s from "../../../styles/pages/TeamPage.module.scss";
+import { Team } from "@/components/Team/Team";
 
-export default function Team() {
+export default function TeamPage() {
   const customMetadata: CustomMetadata = {
     title: "Our Staff",
   };
@@ -23,16 +24,7 @@ export default function Team() {
             experts in their craft. We use that expertise to bring healing and
             confidence to you and your family.
           </p>
-          <ul className={s.teamSelection}>
-            <li className={s.team}>Anesthesiology</li>
-            <li className={s.team}>Cardiology</li>
-            <li className={s.team}>Diagnostics</li>
-            <li className={s.team}>Emergency</li>
-            <li className={s.team}>Exotics</li>
-            <li className={s.team}>Internal Medicine</li>
-            <li className={s.team}>Rehabilitation</li>
-            <li className={s.team}>Surgery</li>
-          </ul>
+          <Team />
         </section>
       </main>
     </>
