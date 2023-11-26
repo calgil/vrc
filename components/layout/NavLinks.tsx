@@ -195,6 +195,15 @@ export const NavLinks = () => {
                   </li>
                   <li>
                     <Link
+                      href="/about/team"
+                      className="dropdown-item"
+                      onClick={scrollToTop}
+                    >
+                      Our Team
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       href="/about/careers"
                       className="dropdown-item"
                       onClick={scrollToTop}
