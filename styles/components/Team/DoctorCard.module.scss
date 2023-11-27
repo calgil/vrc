@@ -1,0 +1,13 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.cardBody {
+  border-radius: 8px;
+  background: linear-gradient(
+      0deg,
+      rgba(1, 109, 118, 0.1) 0%,
+      rgba(1, 109, 118, 0.1) 100%
+    ),
+    #fff;
+  padding: 20px;
+}
