@@ -54,7 +54,7 @@ export const footerLinks: FooterLinkColumn[] = [
     mainLink: "/about",
     links: [
       { label: "Our Story", url: "/about" },
-      { label: "Our Team", url: "/about/staff" },
+      { label: "Our Team", url: "/about/team" },
       { label: "Vision & Values", url: "/about" },
       { label: "News & Events", url: "/news" },
       { label: "Careers", url: "/about/careers" },

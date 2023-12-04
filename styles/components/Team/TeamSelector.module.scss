@@ -1,0 +1,58 @@
+@use "../../abstracts" as a;
+@use "../../utilities";
+
+.selectContainer {
+  border-right: 1px solid rgba(153, 153, 153, 1);
+  min-width: 240px;
+  position: relative;
+  padding-left: 15px;
+
+  @include a.media("900") {
+    display: none;
+  }
+
+  .sidebar {
+    width: 220px;
+    .links {
+      list-style: none;
+      padding-bottom: 20px;
+
+      .link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        padding: 1px 8px;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: normal;
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          color: a.$redAccent;
+        }
+      }
+      .link.active {
+        background-color: a.$redAccent;
+        color: a.$textHighContrast;
+      }
+    }
+  }
+}
+.mobileSidebar {
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+
+  @include a.minWidth("900") {
+    display: none;
+  }
+
+  .mobileSelect {
+    @extend .inputBase;
+    padding: 10px;
+    width: fit-content;
+  }
+}

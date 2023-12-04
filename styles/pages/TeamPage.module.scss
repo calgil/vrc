@@ -1,17 +1,17 @@
 @use "../abstracts" as a;
 @use "../utilities";
 
-.formContainer {
-  max-width: 800px;
-  margin: 0 auto;
+.teamContainer {
+  padding-top: 40px;
+  @extend .container;
 
-  .formTitle {
+  .title {
     @extend .title;
-    color: a.$purple;
     text-align: center;
   }
-  .formDetails {
+  .content {
     @extend .content;
     text-align: center;
+    padding-bottom: 40px;
   }
 }
