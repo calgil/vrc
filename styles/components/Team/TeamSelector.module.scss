@@ -40,3 +40,19 @@
     }
   }
 }
+.mobileSidebar {
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+
+  @include a.minWidth("900") {
+    display: none;
+  }
+
+  .mobileSelect {
+    @extend .inputBase;
+    padding: 10px;
+    width: fit-content;
+  }
+}

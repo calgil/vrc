@@ -10,4 +10,13 @@
     ),
     #fff;
   padding: 20px;
+
+  .name,
+  .position {
+    @extend .content;
+    margin: 0;
+  }
+  .name {
+    margin-top: 30px;
+  }
 }

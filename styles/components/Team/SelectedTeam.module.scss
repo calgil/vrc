@@ -2,5 +2,13 @@
 @use "../../utilities";
 
 .selectedTeam {
-  padding-left: 32px;
+  padding: 0 32px;
+  padding-bottom: 16px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  @include a.media("900") {
+    padding: 0;
+  }
 }
