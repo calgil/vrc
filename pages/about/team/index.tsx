@@ -13,7 +13,7 @@ export default function TeamPage() {
       <main>
         <Hero
           homepage={false}
-          bgUrl="/pages/about/staff/teamBanner.webp"
+          bgUrl="/pages/about/team/teamBanner.webp"
           heading="Meet Our Team"
           subHeading="Our team is the best in the business!"
         />
