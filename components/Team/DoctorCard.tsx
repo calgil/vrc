@@ -16,13 +16,15 @@ export const DoctorCard = ({ doctorId }: DoctorCardProps) => {
     return <div>Doctor not found</div>;
   }
 
-  const { name, imgUrl, title } = doctor as DoctorData;
+  const { id, name, imgUrl, title } = doctor as DoctorData;
   return (
     <div className={s.cardBody}>
       <Image src={imgUrl} alt={name} width={280} height={280} />
       <p className={s.name}>{name}</p>
       <p className={s.position}>{title}</p>
-      {/* <Link href={"/"}>View Profile</Link> */}
+      <Link className={s.profileLink} href={`/about/team/${id}`}>
+        View Profile
+      </Link>
     </div>
   );
 };

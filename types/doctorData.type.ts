@@ -3,4 +3,5 @@ export type DoctorData = {
   name: string;
   imgUrl: string;
   title?: string;
+  bio?: string;
 };

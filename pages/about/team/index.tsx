@@ -15,7 +15,7 @@ export default function TeamPage() {
           homepage={false}
           bgUrl="/pages/about/team/teamBanner.webp"
           heading="Meet Our Team"
-          subHeading="Our team is the best in the business!"
+          subHeading="text?"
         />
         <section className={s.teamContainer}>
           <h2 className={s.title}>Our Team</h2>
