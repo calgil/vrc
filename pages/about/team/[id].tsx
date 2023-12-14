@@ -5,6 +5,9 @@ import { getDoctorById } from "@/utilities/getDoctorByID";
 import s from "../../../styles/pages/DoctorPage.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { renderDoctorBio } from "@/utilities/renderDoctorBio";
 
 type DoctorPageProps = {
   doctor: DoctorData | null;
@@ -14,7 +17,7 @@ export default function DoctorPage({ doctor }: DoctorPageProps) {
   if (!doctor) {
     return <div>No Doc!</div>;
   }
-  const { name, title, imgUrl, bio } = doctor;
+  const { name, title, profileUrl, bio } = doctor;
   return (
     <main>
       <Hero
@@ -24,15 +27,21 @@ export default function DoctorPage({ doctor }: DoctorPageProps) {
         subHeading="text?"
       />
       <section className={s.doctorContainer}>
-        <Link className={s.backBtn} href="/pages/about/team">
-          {"<"} Back to Team
+        <Link className={s.backBtn} href="/about/team">
+          <FontAwesomeIcon className={s.backArrow} icon={faChevronLeft} />
+          Back to Team
         </Link>
         <div className={s.doctorData}>
-          <Image src={imgUrl} alt={name} width={280} height={280} />
+          {/* TODO: Update data page and remove ternary */}
+          {profileUrl ? (
+            <Image src={profileUrl} alt={name} width={280} height={500} />
+          ) : (
+            <p>no profile url</p>
+          )}
           <div className={s.docText}>
             <h2 className={s.docName}>{name}</h2>
             <h3 className={s.docTitle}>{title}</h3>
-            <p className={s.docBio}>{bio || "Please supply bio"}</p>
+            <p className={s.docBio}>{renderDoctorBio(bio)}</p>
           </div>
         </div>
       </section>
