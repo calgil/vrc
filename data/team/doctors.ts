@@ -57,7 +57,8 @@ export const doctors: DoctorData[] = [
     name: "Dr. Sutton",
     imgUrl: "/pages/team/sutton.webp",
     title: "DVM",
-    bio: "no bio",
+    bio: 'Having moved ten times and lived in eight differing states, Dr. Sutton finds it difficult to claim where he\'s "from", however most of his childhood was spent in Northern Arizona. He moved to Colorado after graduating veterinary school from Washington State University and has worked in the field of veterinary emergency medicine ever since. His professional interests include emergency surgery, transfusion medicine, and wound care.\n\nIn his free time, he enjoys mountain biking, hiking, and camping with his wife and two dogs (who believe they are people).',
+    profileUrl: "/pages/team/profiles/sutton.webp",
   },
   {
     id: 8,
