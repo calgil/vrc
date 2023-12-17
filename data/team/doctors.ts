@@ -19,10 +19,11 @@ export const doctors: DoctorData[] = [
   },
   {
     id: 2,
-    name: "Dr. Bulter",
+    name: "Dr. Butler",
     imgUrl: "/pages/team/bulter.webp",
     title: "DVM",
-    bio: "no bio",
+    bio: "Dr. Brigitte Butler grew up in Washington State but earned her Bachelor of Science in Biology at the University of Michigan (GO BLUE!). Dr. Butler then graduated with her Doctor of Veterinary Medicine from Washington State University. After graduation, she moved to Colorado for a small animal rotating internship in the Denver area. After a few years working as an ER veterinarian in the Denver area, Dr. Butler, her fiancé, and her three-legged dog, Tater Tot, moved to Colorado Springs. Dr. Butler has a special interest in emergency and critical care and surgery. In her free time, she enjoys finding new hiking trails, exploring breweries, and reading.",
+    profileUrl: "/pages/team/profiles/butler.webp",
   },
   {
     id: 3,
@@ -30,6 +31,7 @@ export const doctors: DoctorData[] = [
     imgUrl: "/pages/team/dixon.webp",
     title: "DVM",
     bio: "no bio",
+    profileUrl: "/pages/team/profiles/dixon.webp",
   },
   {
     id: 4,
@@ -37,6 +39,7 @@ export const doctors: DoctorData[] = [
     imgUrl: "/pages/team/summers.webp",
     title: "DVM",
     bio: "no bio",
+    profileUrl: "/pages/team/profiles/summers.webp",
   },
   {
     id: 5,
@@ -44,6 +47,7 @@ export const doctors: DoctorData[] = [
     imgUrl: "/pages/team/plant.webp",
     title: "DVM",
     bio: "no bio",
+    profileUrl: "/pages/team/profiles/plant.webp",
   },
   {
     id: 6,
@@ -51,6 +55,7 @@ export const doctors: DoctorData[] = [
     imgUrl: "/pages/team/stoneburner.webp",
     title: "DVM",
     bio: "no bio",
+    profileUrl: "/pages/team/profiles/stoneburner.webp",
   },
   {
     id: 7,
@@ -66,13 +71,15 @@ export const doctors: DoctorData[] = [
     imgUrl: "/pages/team/balius.webp",
     title: "DVM",
     bio: "no bio",
+    profileUrl: "/pages/team/profiles/balius.webp",
   },
   {
     id: 9,
     name: "Dr. Waite",
     imgUrl: "/pages/team/waite.webp",
     title: "DVM, CCRP, cVMA",
-    bio: "no bio",
+    bio: "Dr. Dani Waite was born and raised in Wyoming. She earned her Bachelor of Science degree in Biology from the University of Wyoming in 2006 and went on to earn her Doctor of Veterinary Medicine degree from Colorado State University in 2011. She spent two years in small animal primary care in Colorado Springs after graduation.\n\nHer love for post-operative care and neurologic recovery fueled her transition to rehabilitation work. Dr. Waite completed internships at an emergency and specialty center and an orthopedic practice while completing coursework for her rehabilitation program and certificate in Veterinary Medical Acupuncture in 2016.\n\nShe has spent the last 6 years working at an emergency and specialty center with a variety of patients in need of rehabilitation.\n\nDr. Waite is passionate about helping her patients and their families live their best lives with improved mobility and pain management.\n\nIn her free time, Dr. Waite enjoys skiing, hiking with her dog Violet, and spending time with her family.",
+    profileUrl: "/pages/team/profiles/waite.webp",
   },
   {
     id: 10,
@@ -88,6 +95,7 @@ export const doctors: DoctorData[] = [
     imgUrl: "/pages/team/ganzer.webp",
     title: "Owner, DVM, CEO",
     bio: "no bio",
+    profileUrl: "/pages/team/profiles/ganzer.webp",
   },
   {
     id: 12,
@@ -95,6 +103,7 @@ export const doctors: DoctorData[] = [
     imgUrl: "/pages/team/hubbell.webp",
     title: "Owner, CFO",
     bio: "no bio",
+    profileUrl: "/pages/team/profiles/hubbell.webp",
   },
   {
     id: 13,
@@ -102,6 +111,7 @@ export const doctors: DoctorData[] = [
     imgUrl: "/pages/team/morgan.webp",
     title: "CSR Manager",
     bio: "no bio",
+    profileUrl: "/pages/team/profiles/morgan.webp",
   },
   {
     id: 14,
@@ -109,12 +119,14 @@ export const doctors: DoctorData[] = [
     imgUrl: "/pages/team/yelton.webp",
     title: "RVTg, Staff Manager",
     bio: "no bio",
+    profileUrl: "/pages/team/profiles/yelton.webp",
   },
   {
     id: 15,
-    name: "Gabby Drak",
-    imgUrl: "/pages/team/drak.webp",
+    name: "Gabby Drake",
+    imgUrl: "/pages/team/drake.webp",
     title: "Laboratory Manager",
     bio: "no bio",
+    profileUrl: "/pages/team/profiles/drake.webp",
   },
 ];
