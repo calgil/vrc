@@ -1,0 +1,42 @@
+@use "../abstracts" as a;
+@use "../utilities";
+
+.doctorContainer {
+  @extend .container;
+  margin-bottom: 40px;
+
+  .backBtn {
+    display: flex;
+    color: a.$primaryTeal;
+    text-decoration: none;
+    margin: 40px 0;
+    font-size: 15px;
+    font-weight: 700;
+
+    .backArrow {
+      width: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .doctorData {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    .docName {
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    .docTitle {
+      color: a.$primaryTeal;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .docBio {
+      @extend .content;
+    }
+  }
+}

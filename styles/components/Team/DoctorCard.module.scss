@@ -19,4 +19,25 @@
   .name {
     margin-top: 30px;
   }
+
+  .position {
+    margin-bottom: 24px;
+  }
+
+  .profileBtn {
+    @extend .btnSecondary;
+    text-decoration: none;
+    border: 2px solid a.$primaryTeal;
+    padding: 4px 8px;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 4px;
+    font-weight: 700;
+    font-size: 16px;
+
+    .rightArrow {
+      width: 16px;
+    }
+  }
 }
